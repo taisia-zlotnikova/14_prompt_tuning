@@ -1,4 +1,3 @@
-
 # load_data.py
 
 from datasets import load_dataset
@@ -6,27 +5,33 @@ from torch.utils.data import DataLoader
 import torch
 from collections import Counter
 
-
-def tokenize_element(element, tokenizer, max_length=128):
+def tokenize_element(element, tokenizer, max_length=256, target_max_len=4):
+    # Encode encoder input
     enc = tokenizer(
         element["passage"],
         element["question"],
         truncation=True,
-        padding="max_length",   # or "longest"
-        max_length=256,
+        padding="max_length",
+        max_length=max_length,
     )
-    enc["labels"] = torch.full((max_length,), -100)
-    label = " yes" if element["label"] else " no"
-    enc["labels"][-1] = torch.tensor(tokenizer([label])["input_ids"][0][0], dtype=torch.long)
-    for k, v in enc.items():
-        if isinstance(v, torch.Tensor):
-            enc[k] = v.clone().detach() 
-        else:
-            enc[k] = torch.tensor(v) 
-    return {"input_ids" : enc["input_ids"],
-            "attention_mask" : enc["attention_mask"],
-            "labels" : enc["labels"]}
 
+    # Encode decoder target
+    target = "yes" if element["label"] else "no"
+    t = tokenizer(
+        target,
+        truncation=True,
+        padding="max_length",
+        max_length=target_max_len
+    )
+    labels = torch.tensor(t["input_ids"], dtype=torch.long)
+
+    # Convert encoder inputs to tensors
+    for k in ["input_ids", "attention_mask"]:
+        enc[k] = torch.tensor(enc[k], dtype=torch.long)
+
+    enc["labels"] = labels
+
+    return enc
 
 class MyDataset(torch.utils.data.Dataset):
     def __init__(self, data, tokenizer):
@@ -38,21 +43,25 @@ class MyDataset(torch.utils.data.Dataset):
     def __getitem__(self, idx):
         return self.data[idx]
 
-def get_superglue_task(task_name, tokenizer, batch_size=2, max_sizes={"train": None, "validation": None, "test": None}):
+def get_superglue_task(task_name, tokenizer, batch_size=2, max_sizes=None):
+
     dataset = load_dataset("super_glue", task_name)
 
-    for name, size in max_sizes.items():
-        if size is not None:
-            dataset[name] = dataset[name].shuffle(seed=42).select(range(size))
-
-    print(Counter(dataset["train"]["label"][:]))
+    if max_sizes:
+        for split in ["train", "validation", "test"]:
+            if split in max_sizes and max_sizes[split]:
+                dataset[split] = (
+                    dataset[split].shuffle(seed=42).select(range(max_sizes[split]))
+                )
+    print("Label distribution TRAIN:", Counter(dataset["train"]["label"]))
+    print("Label distribution VALIDATE:", Counter(dataset["validation"]["label"]))
 
     train_dataset = MyDataset(dataset["train"], tokenizer)
     val_dataset = MyDataset(dataset["validation"], tokenizer)
     test_dataset = MyDataset(dataset["test"], tokenizer)
 
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle = True)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size) 
-    test_loader = DataLoader(test_dataset, batch_size=batch_size)
-
-    return train_loader, val_loader, test_loader
+    return (
+        DataLoader(train_dataset, batch_size=batch_size, shuffle=True),
+        DataLoader(val_dataset, batch_size=batch_size),
+        DataLoader(test_dataset, batch_size=batch_size)
+    )
