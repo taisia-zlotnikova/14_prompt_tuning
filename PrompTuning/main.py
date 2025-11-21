@@ -2,7 +2,7 @@ from train import make_train
 from train2 import make_train2
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from PromptTuningWrapper import PromptTuningWrapper
-from load_data import get_superglue_task
+from load_data import get_superglue_task, tokenize_element
 from validate import validate_model, print_metrics
 from config import device
 
@@ -20,7 +20,6 @@ for p in model.parameters():
 tokenizer = AutoTokenizer.from_pretrained("t5-small")
 
 # Загружаем датасет
-# ПОЧЕМУ В ТЕСТЕ ВМЕСТО LАBEL ЛЕЖАТ -1 ПОЧЕМУ ???????????
 max_sizes = {"train": 1000, "validation": 1000, "test": 100}
 train_loader, val_loader, test_loader = get_superglue_task("boolq", tokenizer, max_sizes=max_sizes)
 
@@ -34,10 +33,10 @@ for prompt_length in prompt_lengths:
     
     # Создаём модель
     prompt_model = PromptTuningWrapper(model, soft_prompt_length = prompt_length, hidden_dim=model.config.hidden_size).to(device)
-
+    prompt_model.model.config.label_smoothing_factor = 0.1
     # Training
     # make_train2(prompt_model, train_loader)
-    make_train(prompt_model, train_loader, lr = 1e-4 )
+    make_train(prompt_model, train_loader, lr = 0.5)
     print("\nОбучение завершено!")
     
     train_metrics = validate_model(prompt_model, train_loader, tokenizer, desc="Train")
