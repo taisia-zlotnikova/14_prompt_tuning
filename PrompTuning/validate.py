@@ -25,6 +25,8 @@ def validate_model(prompt_model, val_loader, tokenizer, desc="Validation"):
 
                 last_pred_token = predictions[i][-1].unsqueeze(0)  # сохраняем размерность
                 last_true_token = labels[i][-1].unsqueeze(0)
+                # last_pred_token = predictions[i][0].unsqueeze(0)  # сохраняем размерность
+                # last_true_token = labels[i][0].unsqueeze(0) 
 
                 # Заменяем -100 если нужно
                 if last_true_token == -100:

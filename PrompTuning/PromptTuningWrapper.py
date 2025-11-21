@@ -34,6 +34,8 @@ class PromptTuningWrapper(nn.Module):
         prompt_mask = torch.ones(batch_size, self.soft_prompt_length, device=attention_mask.device)
         full_prompt_mask = torch.cat([prompt_mask, attention_mask], dim=1)
 
+        # -----------------------------------------
+
         if labels is not None:
             prompt_labels = torch.full((batch_size, self.soft_prompt_length), -100,
                                     device=labels.device)
@@ -47,3 +49,4 @@ class PromptTuningWrapper(nn.Module):
         )
 
         return outputs
+        # ----------------------------------------

@@ -4,6 +4,8 @@
 from datasets import load_dataset
 from torch.utils.data import DataLoader
 import torch
+from collections import Counter
+
 
 def tokenize_element(element, tokenizer, max_length=128):
     enc = tokenizer(
@@ -14,7 +16,7 @@ def tokenize_element(element, tokenizer, max_length=128):
         max_length=256,
     )
     enc["labels"] = torch.full((max_length,), -100)
-    label = "yes" if element["label"] == 1 else "no"
+    label = " yes" if element["label"] else " no"
     enc["labels"][-1] = torch.tensor(tokenizer([label])["input_ids"][0][0], dtype=torch.long)
     for k, v in enc.items():
         if isinstance(v, torch.Tensor):
@@ -24,6 +26,31 @@ def tokenize_element(element, tokenizer, max_length=128):
     return {"input_ids" : enc["input_ids"],
             "attention_mask" : enc["attention_mask"],
             "labels" : enc["labels"]}
+
+# def tokenize_element(element, tokenizer, max_input_length=256):
+#     # Encoder часть — обычная
+#     encoded = tokenizer(
+#         text = f"question: {element['question']} context: {element['passage']}",
+#         truncation=True,
+#         max_length=max_input_length,
+#         padding="max_length",
+#         return_tensors="pt",
+#     )
+
+#     input_ids = encoded["input_ids"].squeeze(0)        # (seq_len,)
+#     attention_mask = encoded["attention_mask"].squeeze(0)
+
+#     label_text = " yes" if element["label"] else " no"
+#     label_ids = tokenizer(label_text, add_special_tokens=False)["input_ids"]  # [150] или [467]
+
+#     labels = torch.full((max_input_length,), -100, dtype=torch.long)  # чтобы не ругался на длину
+#     labels[0] = label_ids[0]        # ставим целевой токен на первую позицию decoder'а
+
+#     return {
+#         "input_ids": input_ids,
+#         "attention_mask": attention_mask,
+#         "labels": labels
+#     }
 
 class MyDataset(torch.utils.data.Dataset):
     def __init__(self, data, tokenizer):
@@ -42,9 +69,7 @@ def get_superglue_task(task_name, tokenizer, batch_size=2, max_sizes={"train": N
         if size is not None:
             dataset[name] = dataset[name].shuffle(seed=42).select(range(size))
 
-    # print(dataset['train'][:]['label'])
-    # print(dataset['validation'][:]["label"])
-    # print(dataset['test'][:]["label"])
+    print(Counter(dataset["train"]["label"][:300]))
 
     train_dataset = MyDataset(dataset["train"], tokenizer)
     val_dataset = MyDataset(dataset["validation"], tokenizer)
