@@ -33,7 +33,7 @@ def validate_model(prompt_model, val_loader, tokenizer, desc="Validation"):
         for batch in tqdm(val_loader, desc=desc):
             input_ids, attention_mask, labels = prepare_batch(batch)
 
-            outputs = prompt_model(input_ids, attention_mask, labels)
+            outputs = prompt_model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
             total_val_loss += outputs.loss.item()
 
             # [B, T, V]

@@ -203,7 +203,7 @@ tokenizer = AutoTokenizer.from_pretrained("t5-small")
 prompt_model = PromptTuningWrapper(model, soft_prompt_length=20, hidden_dim=model.config.hidden_size).to(device)
 
 # Загружаем датасет
-max_sizes = {"train": 1000, "validation": None, "test": 50}
+max_sizes = {"train": None, "validation": None, "test": None}
 train_loader, val_loader = get_superglue_task("boolq", tokenizer, max_sizes=max_sizes)
 
 # Оптимизатор
