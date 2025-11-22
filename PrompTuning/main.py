@@ -12,6 +12,11 @@ from config import device
 model = AutoModelForSeq2SeqLM.from_pretrained("t5-small").to(device)
 tokenizer = AutoTokenizer.from_pretrained("t5-small")
 
+s = "</s>"
+s2 = "<pad>"
+s3 = "."
+print(tokenizer(s), tokenizer(s2), tokenizer(s3))
+
 # Freeze base model
 for p in model.parameters():
     p.requires_grad = False
@@ -20,20 +25,21 @@ for p in model.parameters():
 train_loader, val_loader, test_loader = get_superglue_task(
     "boolq", tokenizer,
     batch_size=2,
-    max_sizes={"train": 200, "validation": 200, "test": 200}
+    max_sizes={"train": 1000, "validation": 1000, "test": 200}
 )
 
 print("Data loaded!")
 
-prompt_length = 20
+prompt_length = 40
 prompt_model = PromptTuningWrapper(
     model,
     soft_prompt_length=prompt_length,
-    hidden_dim=model.config.hidden_size
+    hidden_dim=model.config.hidden_size,
+    tokenizer=tokenizer
 ).to(device)
 
 print("Training...")
-train_loss = make_train(prompt_model, train_loader, lr=0.3)
+train_loss = make_train(prompt_model, train_loader, lr=0.03)
 print("Train loss:", train_loss)
 
 print("\nTrain:")

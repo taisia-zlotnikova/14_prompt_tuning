@@ -1,53 +1,86 @@
-# validate.py
-
 import torch
 from tqdm import tqdm
-from collections import Counter
+from utils import prepare_batch
 
-def decode_answer(text):
-    text = text.strip().lower()
-    if text.startswith("yes"):
-        return 1
-    if text.startswith("no"):
-        return 0
-    return 0  # fallback
+def clean_token(text):
+    text = text.replace("▁", "")
+    text = text.replace("<pad>", "")
+    text = text.replace("</s>", "")
+    return text.strip().lower()
 
-def validate_model(prompt_model, loader, tokenizer, desc="Validation"):
+def extract_first_label_token(label_ids, tokenizer):
+    """
+    Находим первый НЕ -100 и НЕ <pad> токен в label.
+    """
+    pad = tokenizer.pad_token_id
+
+    for tok in label_ids:
+        if tok != -100 and tok != pad and tok != 1 and tok != 3 and tok != 0:
+            return tok
+
+    # fallback — крайне редко
+    return pad
+
+
+def validate_model(prompt_model, val_loader, tokenizer, desc="Validation"):
     prompt_model.eval()
-    total = 0
+    total_val_loss = 0
     correct = 0
+    total = 0
+    freq = {}
 
-    all_preds = []
     with torch.no_grad():
-        for batch in tqdm(loader, desc=desc):
-            input_ids = batch["input_ids"].to(prompt_model.soft_prompt.device)
-            attention_mask = batch["attention_mask"].to(prompt_model.soft_prompt.device)
-            labels = batch["labels"].to(prompt_model.soft_prompt.device)
+        for batch in tqdm(val_loader, desc=desc):
+            input_ids, attention_mask, labels = prepare_batch(batch)
 
-            # Generate answer
-            outputs = prompt_model.model.generate(
-                input_ids=input_ids,
-                attention_mask=attention_mask,
-                max_length=4
-            )
+            outputs = prompt_model(input_ids, attention_mask, labels)
+            total_val_loss += outputs.loss.item()
 
-            text = [tokenizer.decode(o) for o in outputs]
-            preds = [decode_answer(tokenizer.decode(o)) for o in outputs]
-            all_preds.extend(preds)
+            # [B, T, V]
+            logits = outputs.logits
+            predictions = torch.argmax(logits, dim=-1)
 
-            # get true labels
-            true_ids = labels[:, 0].tolist()   # first token of label (yes/no)
-            true_texts = [decode_answer(tokenizer.decode([tid])) for tid in true_ids]
+            for i in range(len(labels)):
 
-            break
+                # --- TRUE ---
+                true_tok = extract_first_label_token(labels[i], tokenizer)
+                true_tok = tokenizer.decode([true_tok])
+                # true_text = clean_token(true_tok)
+                true_text = true_tok
 
-            for p, t in zip(preds, true_texts):
-                total += 1
-                if p == t:
+                # --- PRED ---
+                # print(predictions[i])
+                pred_tok = extract_first_label_token(predictions[i], tokenizer)   # первое предсказание decoder-a
+                pred_tok = tokenizer.decode([pred_tok])
+                pred_text = pred_tok
+                # pred_text = clean_token(pred_tok)
+
+                # print(true_text, pred_text)
+
+                # считаем частоту
+                freq[pred_text] = freq.get(pred_text, 0) + 1
+
+                # бинарное сравнение
+                if true_text in ["yes", "no"] and pred_text == true_text:
                     correct += 1
-    print(Counter(all_preds))
+
+                total += 1
+
+    avg_loss = total_val_loss / len(val_loader)
     acc = correct / total
-    return {"accuracy": acc}
+
+    print("\nPrediction frequencies:", freq)
+
+    return {
+        "loss": avg_loss,
+        "accuracy": acc,
+        "correct_predictions": correct,
+        "total_predictions": total
+    }
+
 
 def print_metrics(metrics, phase="Validation"):
-    print(f"{phase} accuracy: {metrics['accuracy']:.4f}")
+    print(f"\n📊 {phase} Metrics:")
+    print(f"   Loss: {metrics['loss']:.4f}")
+    print(f"   Accuracy: {metrics['accuracy']:.4f} "
+          f"({metrics['correct_predictions']}/{metrics['total_predictions']})")

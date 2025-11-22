@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 
 class PromptTuningWrapper(nn.Module):
-    def __init__(self, model, soft_prompt_length, hidden_dim):
+    def __init__(self, model, soft_prompt_length, hidden_dim, tokenizer):
         super().__init__()
 
         self.model = model
@@ -17,6 +17,7 @@ class PromptTuningWrapper(nn.Module):
         self.soft_prompt = nn.Parameter(
             torch.randn(soft_prompt_length, hidden_dim) * 0.02
         )
+
 
     def forward(self, input_ids, attention_mask, labels):
         batch_size = input_ids.size(0)
