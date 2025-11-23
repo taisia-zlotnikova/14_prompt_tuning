@@ -1,0 +1,88 @@
+# Экспериментальная конфигурация: Model Tuning vs Prompt Tuning
+# Раздел 5: Гипотеза переобучения
+
+experiments:
+  experiment_1_qa:
+    name: "QA Task (MRQA 2019 + SQuAD)"
+    description: "Сравнение generalization на задаче question-answering"
+    task_type: "question_answering"
+    
+    datasets:
+      train: "squad"  # SQuAD для обучения
+      eval:
+        - "squad_dev"  # In-distribution test
+        - "mrqa_newsqa"  # Out-of-distribution 1
+        - "mrqa_searchqa"  # Out-of-distribution 2
+        - "mrqa_triviaqa"  # Out-of-distribution 3
+        - "mrqa_hotpotqa"  # Out-of-distribution 4
+    
+    model_config:
+      base_model: "t5-base"  # t5-base вместо XXL для быстрого экспериментирования
+      max_source_length: 512
+      max_target_length: 50
+      batch_size: 32
+      num_epochs: 3
+      learning_rate: 1e-3
+      warmup_steps: 500
+    
+    prompt_tuning_config:
+      prompt_length: 20  # Длина промпта в токенах
+      init_from_vocab: true
+      init_text: "question answering: "
+    
+    model_tuning_config:
+      finetune_type: "full"  # all parameters updated
+      freeze_encoder: false
+      freeze_decoder: false
+
+  experiment_2_paraphrase:
+    name: "Paraphrase Detection (QQP + MRPC)"
+    description: "Кросс-датасетное тестирование на задаче парафразирования"
+    task_type: "paraphrase_detection"
+    
+    datasets:
+      train_eval_pairs:
+        - train: "qqp"
+          eval: ["qqp", "mrpc"]  # обучение на QQP, тестирование на обоих
+        - train: "mrpc"
+          eval: ["mrpc", "qqp"]  # обучение на MRPC, тестирование на обоих
+    
+    model_config:
+      base_model: "t5-base"
+      max_source_length: 256
+      max_target_length: 10
+      batch_size: 32
+      num_epochs: 10
+      learning_rate: 1e-3
+      warmup_steps: 500
+    
+    prompt_tuning_config:
+      prompt_length: 15
+      init_from_vocab: true
+      init_text: "paraphrase: "
+    
+    model_tuning_config:
+      finetune_type: "full"
+      freeze_encoder: false
+      freeze_decoder: false
+
+# Метрики для сравнения
+metrics:
+  qa:
+    - "exact_match"
+    - "f1_score"
+    - "token_accuracy"
+  paraphrase:
+    - "accuracy"
+    - "f1_macro"
+    - "f1_weighted"
+    - "auc_roc"
+
+# Анализ переобучения
+overfitting_analysis:
+  enabled: true
+  compute:
+    - "train_test_gap"  # разница между train и test метриками
+    - "distribution_shift_impact"  # влияние распределения датасета
+    - "spurious_correlation_analysis"  # анализ ложных корреляций (через attention)
+    - "vocabulary_specialization"  # специализация словаря модели
