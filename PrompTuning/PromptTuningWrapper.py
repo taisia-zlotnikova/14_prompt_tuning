@@ -24,62 +24,43 @@ class PromptTuningWrapper(nn.Module):
             torch.randn(soft_prompt_length, hidden_dim) * 0.02
         )
 
-    # def __init__(self, model, soft_prompt_length, hidden_dim, tokenizer, init_text=None):
-    #     super().__init__()
-        
-    #     self.model = model
-    #     self.soft_prompt_length = soft_prompt_length
-    #     self.hidden_dim = hidden_dim
-    #     self.tokenizer = tokenizer
-
-    #     for p in self.model.parameters():
-    #         p.requires_grad = False
-
-    #     # Инициализация из реальных слов
-    #     if init_text is None:
-    #         # Хороший промпт для BoolQ
-    #         init_text = "Answer the question based on the passage. Passage: {passage} Question: {question} Answer:"
-        
-    #     # Токенизируем и берем эмбеддинги
-    #     init_tokens = tokenizer(
-    #         init_text, 
-    #         max_length=soft_prompt_length, 
-    #         truncation=True, 
-    #         return_tensors="pt"
-    #     )
-        
-    #     init_ids = init_tokens["input_ids"].squeeze(0)
-        
-    #     # Берем эмбеддинги этих токенов как начальные значения
-    #     with torch.no_grad():
-    #         init_embeddings = model.get_input_embeddings()(init_ids)
-        
-    #     # Если текст короче, чем нужная длина - дополняем случайными векторами
-    #     if init_embeddings.size(0) < soft_prompt_length:
-    #         padding_length = soft_prompt_length - init_embeddings.size(0)
-    #         padding = torch.randn(padding_length, hidden_dim) * 0.01
-    #         init_embeddings = torch.cat([init_embeddings, padding], dim=0)
-    #     elif init_embeddings.size(0) > soft_prompt_length:
-    #         init_embeddings = init_embeddings[:soft_prompt_length]
-        
-    #     self.soft_prompt = nn.Parameter(init_embeddings)
-
     def forward(self, input_ids, attention_mask, labels=None):
-        input_embeds = self.model.get_input_embeddings()(input_ids)
-        batch_size = input_ids.size(0)
+        batch_size = input_ids.shape[0]
+        
+        # Получаем эмбеддинги реального ввода
+        input_embeds = self.model.shared(input_ids)  # или get_input_embeddings()
 
-        # Добавляем soft prompt
-        expanded_prompt = self.soft_prompt.unsqueeze(0).expand(batch_size, -1, -1)
-        full_embeds = torch.cat([expanded_prompt, input_embeds], dim=1)
+        # Создаём soft prompt эмбеддинги
+        soft_prompt_embeds = self.soft_prompt.unsqueeze(0).expand(batch_size, -1, -1)
 
-        # Расширяем attention_mask
-        prompt_mask = torch.ones(batch_size, self.soft_prompt_length, 
-                                dtype=attention_mask.dtype, device=attention_mask.device)
+        # Конкатенируем: [soft_prompt] + [input]
+        full_embeds = torch.cat([soft_prompt_embeds, input_embeds], dim=1)
+
+        # Расширяем attention mask
+        prompt_mask = torch.ones(batch_size, self.soft_prompt_length, dtype=torch.long, device=input_ids.device)
         full_attention_mask = torch.cat([prompt_mask, attention_mask], dim=1)
+
+        # КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ: маскируем labels на позициях soft prompt
+        if labels is not None:
+            # Создаём новые labels: длина = soft_prompt_length + original_seq_len
+            seq_len = labels.shape[1]
+            new_labels = torch.full(
+                (batch_size, self.soft_prompt_length + seq_len),
+                fill_value=-100,  # игнорируем в loss
+                dtype=labels.dtype,
+                device=labels.device
+            )
+            # Копируем оригинальные labels, сдвигаем вправо на soft_prompt_length
+            new_labels[:, self.soft_prompt_length:] = labels
+            # Где был pad_token_id (0) — ставим -100 (чтобы не учитывать в loss)
+            labels = torch.where(labels == self.model.config.pad_token_id, -100, labels)
+            new_labels[:, self.soft_prompt_length:] = labels
+        else:
+            new_labels = None
 
         outputs = self.model(
             inputs_embeds=full_embeds,
             attention_mask=full_attention_mask,
-            labels=labels  
+            labels=new_labels
         )
         return outputs
