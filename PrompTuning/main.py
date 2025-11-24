@@ -62,7 +62,7 @@ def my_solve(task_name, model_func, max_sizes, lr, tokenizer, train_loader, val_
 
 def run_task(task_name, max_sizes, lr, init_prompt='', balance_classes=False):
     print("🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻")
-    print(f"                   ▶️  RUNNING TASK {task_name}\n")
+    print(f"                   ▶️▶️▶️  RUNNING TASK {task_name}   ▶️▶️▶️ \n")
 
     tokenizer = AutoTokenizer.from_pretrained(name_model)
     # Load data
@@ -75,10 +75,10 @@ def run_task(task_name, max_sizes, lr, init_prompt='', balance_classes=False):
     )
     print("\n🟢 Data loaded!")
 
-    print("\n✏️  My model:")
+    print("\n✏️✏️  My model:")
     my_solve(task_name, my_model, max_sizes=max_sizes, lr=lr, tokenizer=tokenizer, train_loader=train_loader, val_loader=val_loader, init_prompt=init_prompt)
 
-    print("\n✏️   Peft model:")
+    print("\n✏️✏️   Peft model:")
     my_solve(task_name, peft_model, max_sizes=max_sizes, lr=lr, tokenizer=tokenizer, train_loader=train_loader, val_loader=val_loader, init_prompt=init_prompt)
 
     print("🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺\n")
@@ -95,4 +95,10 @@ def run_task(task_name, max_sizes, lr, init_prompt='', balance_classes=False):
 # run_task('boolq', max_sizes = {"train": 500, "validation": 500, "test": 1}, lr=0.01, init_prompt='', balance_classes=False) # 0.001 
 # run_task("copa", max_sizes={"train": 500, "validation": 500, "test": 1}, lr=0.03, init_prompt='', balance_classes=False)
 # run_task("rte", max_sizes={"train": 500, "validation": 500, "test": 1}, lr=0.03, init_prompt='', balance_classes=False)
-run_task("wic", max_sizes={"train": 50, "validation": 50, "test": 1}, lr=0.03, init_prompt='', balance_classes=False)
+# run_task("wic", max_sizes={"train": 50, "validation": 50, "test": 1}, lr=0.03, init_prompt='', balance_classes=False)
+
+task_names = ['cb', 'boolq', 'copa', 'rte', 'wic']
+for task_name in task_names:
+    max_sizes = {"train": 100, "validation": 100, "test": 1}
+
+    run_task(task_name, max_sizes, lr=0.03, init_prompt='', balance_classes=False)
