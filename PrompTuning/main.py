@@ -13,9 +13,6 @@ torch.cuda.empty_cache()
 
 # DEVICE
 torch.cuda.set_device(5)
-#
-
-## DlaBrYkLqkvQGzra04aP ##
 
 name_model = "t5-small"
 
