@@ -4,34 +4,31 @@ from datasets import load_dataset
 from torch.utils.data import DataLoader
 import torch
 from collections import Counter
-
-def tokenize_element(element, tokenizer, max_length=256, target_max_len=4):
-    # Encode encoder input
-    enc = tokenizer(
-        element["passage"],
-        element["question"],
+def tokenize_element(element, tokenizer, prompt_length=10):
+    input_text = f"question: {element['question']} context: {element['passage']}"
+    target_text = "yes" if element["label"] else "no"
+    
+    # Токенизируем вход
+    input_enc = tokenizer(
+        input_text,
         truncation=True,
         padding="max_length",
-        max_length=max_length,
+        max_length=512 - prompt_length,
+        return_tensors="pt"
     )
-
-    # Encode decoder target
-    target = "yes" if element["label"] else "no"
-    t = tokenizer(
-        target,
-        truncation=True,
-        padding="max_length",
-        max_length=target_max_len
+    
+    # Токенизируем цель БЕЗ паддинга!
+    target_enc = tokenizer(
+        target_text,
+        add_special_tokens=True,  # Для T5 обычно нужны специальные токены
+        return_tensors="pt"       # НЕ используем padding="max_length"!
     )
-    labels = torch.tensor(t["input_ids"], dtype=torch.long)
-
-    # Convert encoder inputs to tensors
-    for k in ["input_ids", "attention_mask"]:
-        enc[k] = torch.tensor(enc[k], dtype=torch.long)
-
-    enc["labels"] = labels
-
-    return enc
+    
+    return {
+        "input_ids": input_enc["input_ids"].squeeze(0),
+        "attention_mask": input_enc["attention_mask"].squeeze(0),
+        "labels": target_enc["input_ids"].squeeze(0)  # Теперь это [token_id, eos_token_id]
+    }
 
 class MyDataset(torch.utils.data.Dataset):
     def __init__(self, data, tokenizer):

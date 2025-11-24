@@ -9,13 +9,9 @@ from validate import validate_model, print_metrics
 from config import device
 
 # Load T5
-model = AutoModelForSeq2SeqLM.from_pretrained("t5-small").to(device)
-tokenizer = AutoTokenizer.from_pretrained("t5-small")
-
-s = "</s>"
-s2 = "<pad>"
-s3 = "."
-print(tokenizer(s), tokenizer(s2), tokenizer(s3))
+name_model = "t5-small"
+model = AutoModelForSeq2SeqLM.from_pretrained(name_model).to(device)
+tokenizer = AutoTokenizer.from_pretrained(name_model)
 
 # Freeze base model
 for p in model.parameters():
@@ -25,12 +21,12 @@ for p in model.parameters():
 train_loader, val_loader, test_loader = get_superglue_task(
     "boolq", tokenizer,
     batch_size=2,
-    max_sizes={"train": 1000, "validation": 1000, "test": 200}
+    max_sizes={"train": 500, "validation": 500, "test": 200}
 )
 
 print("Data loaded!")
 
-prompt_length = 40
+prompt_length = 20
 prompt_model = PromptTuningWrapper(
     model,
     soft_prompt_length=prompt_length,
@@ -39,7 +35,7 @@ prompt_model = PromptTuningWrapper(
 ).to(device)
 
 print("Training...")
-train_loss = make_train(prompt_model, train_loader, lr=0.03)
+train_loss = make_train(prompt_model, train_loader, lr=0.0001)
 print("Train loss:", train_loss)
 
 print("\nTrain:")
