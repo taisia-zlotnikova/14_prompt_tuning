@@ -4,7 +4,7 @@ import torch.nn as nn
 
 
 class PromptTuningWrapper(nn.Module):
-    def __init__(self, model, soft_prompt_length, hidden_dim, tokenizer):
+    def __init__(self, model, soft_prompt_length, hidden_dim, tokenizer, init_prompt=""):
         """
         model - базовая модель для prompt tuning
         soft_prompt_length — длина обучаемого эмбеддинга
@@ -23,6 +23,12 @@ class PromptTuningWrapper(nn.Module):
         self.soft_prompt = nn.Parameter(
             torch.randn(soft_prompt_length, hidden_dim) * 0.02
         )
+        # if init_prompt is None:
+        #     self.soft_prompt = nn.Parameter(
+        #         torch.randn(soft_prompt_length, hidden_dim) * 0.02
+        #     )
+        # else:
+
 
     def forward(self, input_ids, attention_mask, labels=None):
         batch_size = input_ids.shape[0]
@@ -40,27 +46,9 @@ class PromptTuningWrapper(nn.Module):
         prompt_mask = torch.ones(batch_size, self.soft_prompt_length, dtype=torch.long, device=input_ids.device)
         full_attention_mask = torch.cat([prompt_mask, attention_mask], dim=1)
 
-        # КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ: маскируем labels на позициях soft prompt
-        if labels is not None:
-            # Создаём новые labels: длина = soft_prompt_length + original_seq_len
-            seq_len = labels.shape[1]
-            new_labels = torch.full(
-                (batch_size, self.soft_prompt_length + seq_len),
-                fill_value=-100,  # игнорируем в loss
-                dtype=labels.dtype,
-                device=labels.device
-            )
-            # Копируем оригинальные labels, сдвигаем вправо на soft_prompt_length
-            new_labels[:, self.soft_prompt_length:] = labels
-            # Где был pad_token_id (0) — ставим -100 (чтобы не учитывать в loss)
-            labels = torch.where(labels == self.model.config.pad_token_id, -100, labels)
-            new_labels[:, self.soft_prompt_length:] = labels
-        else:
-            new_labels = None
-
         outputs = self.model(
             inputs_embeds=full_embeds,
             attention_mask=full_attention_mask,
-            labels=new_labels
+            labels=labels
         )
         return outputs

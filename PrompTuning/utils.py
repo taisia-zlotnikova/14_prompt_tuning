@@ -20,4 +20,5 @@ def prepare_batch(batch):
     input_ids = torch.stack([item for item in batch["input_ids"]]).to(device)
     attention_mask = torch.stack([item for item in batch["attention_mask"]]).to(device)
     labels = torch.stack([item for item in batch["labels"]]).to(device)
+    
     return input_ids, attention_mask, labels
