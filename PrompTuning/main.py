@@ -12,15 +12,13 @@ from config import device
 torch.cuda.empty_cache()
 
 # DEVICE
-torch.cuda.set_device(5)
+torch.cuda.set_device(4)
 
 name_model = "t5-small"
 
-def my_model(tokenizer, prompt_length=20):
+def my_model(tokenizer, prompt_length=20, init_prompt=''):
     # Load T5
     model = AutoModelForSeq2SeqLM.from_pretrained(name_model).to(device)
-    init_prompt = "no. no. no. no. return no."
-    init_prompt = ""
 
     # Freeze base model
     for p in model.parameters():
@@ -36,20 +34,20 @@ def my_model(tokenizer, prompt_length=20):
 
     return prompt_model
 
-def peft_model(tokenizer, prompt_length=20):
+def peft_model(tokenizer, prompt_length=20, init_prompt=''):
     model = T5ForConditionalGeneration.from_pretrained(name_model)
 
     config = PromptTuningConfig(
         task_type="SEQ_2_SEQ_LM",
         num_virtual_tokens=prompt_length,
-        prompt_tuning_init_text="Is the answer to given question true or false?"
+        prompt_tuning_init_text = init_prompt
     )
     prompt_model = get_peft_model(model, config).to(device)
     return prompt_model
 
-def my_solve(task_name, model_func, max_sizes, lr, tokenizer, train_loader, val_loader):
+def my_solve(task_name, model_func, max_sizes, lr, tokenizer, train_loader, val_loader, init_prompt):
     prompt_length = 20
-    prompt_model = model_func(tokenizer, prompt_length)
+    prompt_model = model_func(tokenizer, prompt_length, init_prompt)
 
     print("Training...")
     train_loss = make_train(prompt_model, train_loader, lr=lr)
@@ -62,7 +60,7 @@ def my_solve(task_name, model_func, max_sizes, lr, tokenizer, train_loader, val_
     val_metrics = validate_model(prompt_model, val_loader, tokenizer, desc="Validation")
     print_metrics(val_metrics, phase="Validation")
 
-def run_task(task_name, max_sizes, lr):
+def run_task(task_name, max_sizes, lr, init_prompt='', balance_classes=False):
     print("🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻")
     print(f"                   ▶️  RUNNING TASK {task_name}\n")
 
@@ -73,19 +71,28 @@ def run_task(task_name, max_sizes, lr):
         tokenizer,
         batch_size=2,
         max_sizes=max_sizes,
-        balance_classes=True
+        balance_classes=balance_classes
     )
-    print("Data loaded!")
+    print("\n🟢 Data loaded!")
 
-    my_solve(task_name, my_model, max_sizes=max_sizes, lr=lr, tokenizer=tokenizer, train_loader=train_loader, val_loader=val_loader)
-    # my_solve(task_name, peft_model, max_sizes=max_sizes, lr=lr, tokenizer=tokenizer, train_loader=train_loader, val_loader=val_loader)
+    print("\n✏️  My model:")
+    my_solve(task_name, my_model, max_sizes=max_sizes, lr=lr, tokenizer=tokenizer, train_loader=train_loader, val_loader=val_loader, init_prompt=init_prompt)
+
+    print("\n✏️   Peft model:")
+    my_solve(task_name, peft_model, max_sizes=max_sizes, lr=lr, tokenizer=tokenizer, train_loader=train_loader, val_loader=val_loader, init_prompt=init_prompt)
 
     print("🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺\n")
     print("\n➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
     print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖\n")
 
-run_task("cb", max_sizes={"train": None, "validation": None, "test": 1}, lr=0.003)
-run_task('boolq', max_sizes = {"train": None, "validation": None, "test": 1}, lr=0.001) # 0.001 
-run_task("copa", max_sizes={"train": None, "validation": None, "test": 1}, lr=0.003)
-run_task("rte", max_sizes={"train": None, "validation": None, "test": 1}, lr=0.003)
+# run_task("cb", max_sizes={"train": None, "validation": None, "test": 1}, lr=0.003)
+# run_task('boolq', max_sizes = {"train": None, "validation": None, "test": 1}, lr=0.001) # 0.001 
+# run_task("copa", max_sizes={"train": None, "validation": None, "test": 1}, lr=0.003)
+# run_task("rte", max_sizes={"train": None, "validation": None, "test": 1}, lr=0.003)
 
+
+# run_task("cb", max_sizes={"train": 500, "validation": 500, "test": 1}, lr=0.03, init_prompt='', balance_classes=False)
+# run_task('boolq', max_sizes = {"train": 500, "validation": 500, "test": 1}, lr=0.01, init_prompt='', balance_classes=False) # 0.001 
+# run_task("copa", max_sizes={"train": 500, "validation": 500, "test": 1}, lr=0.03, init_prompt='', balance_classes=False)
+# run_task("rte", max_sizes={"train": 500, "validation": 500, "test": 1}, lr=0.03, init_prompt='', balance_classes=False)
+run_task("wic", max_sizes={"train": 50, "validation": 50, "test": 1}, lr=0.03, init_prompt='', balance_classes=False)

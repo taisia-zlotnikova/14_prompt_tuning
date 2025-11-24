@@ -1,0 +1,42 @@
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK wic
+
+Final label distribution TRAIN: Counter({0: 25, 1: 25})
+
+🟢 Data loaded!
+
+✏️  My model:
+Training...
+
+Train:
+Prediction counts: {'not': 13, 'the': 33, '': 3, 'word': 1}
+
+📊 Train Metrics:
+   Accuracy: 0.0000 (0/50)
+
+Validation:
+Prediction counts: {'the': 29, '': 7, 'not': 14}
+
+📊 Validation Metrics:
+   Accuracy: 0.0000 (0/50)
+
+✏️   Peft model:
+Training...
+
+Train:
+Prediction counts: {'': 49, 'True': 1}
+
+📊 Train Metrics:
+   Accuracy: 0.0000 (0/50)
+
+Validation:
+Prediction counts: {'': 49, 'True': 1}
+
+📊 Validation Metrics:
+   Accuracy: 0.0000 (0/50)
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+

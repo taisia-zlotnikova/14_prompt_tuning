@@ -7,33 +7,46 @@ from collections import Counter
 import random
 import math
 
-def tokenize_element(element, tokenizer, prompt_length=10, task_name='cb'):
+def get_input_and_target(element, task_name):
+    label = element['label']
+
     if task_name == 'boolq':
         input_text = f"question: {element['question']} context: {element['passage']}"
-        target_text = "yes" if element["label"] else "no"
+        target_text = "yes" if label else "no"
+
     elif task_name == 'cb':
         input_text = f"premise: {element['premise']} hypothesis: {element['hypothesis']}"
-        label = element["label"]
         if label == 0:
             target_text = "entailment"
         elif label == 1:
             target_text = "contradiction"
         else:
             target_text = "neutral"
+
     elif task_name == "rte":
         input_text = f"premise: {element['premise']} hypothesis: {element['hypothesis']}"
-        label = element["label"]
         if label == 0:
             target_text = "entailment"
         else:
-            target_text = "not entailment"
+            target_text = "not"
+
     elif task_name == 'copa':
         input_text = f"premise: {element['premise']} question: {element['question']}. 1: {element['choice1']}. 2: {element['choice2']}"
-        label = element['label']
         if label == 0:
             target_text = "first"
         else:
             target_text = "second"
+    elif task_name == 'wic':
+        input_text = f"word: {element['word']}. 1: {element['sentence1']} 2: {element['sentence1']}"
+        if label:
+            target_text = "same"
+        else:
+            target_text = "different"
+    
+    return input_text, target_text
+
+def tokenize_element(element, tokenizer, prompt_length=10, task_name='cb'):
+    input_text, target_text = get_input_and_target(element, task_name)
 
     target_enc = tokenizer(
         target_text,
@@ -115,17 +128,14 @@ def get_superglue_task(task_name, tokenizer, batch_size=2, max_sizes=None, balan
             # Если max_sizes не указан, используем обычную балансировку
             balanced_train_data = balance_dataset_with_max_size(dataset["train"], task_name, len(dataset["train"]))
             dataset["train"] = dataset["train"].from_list(balanced_train_data)
-    elif "train" in dataset:
-        dataset["train"] = (
-            dataset["train"].shuffle(seed=42).select(range(max_sizes["train"]))
-        )
     
     # Применяем max_sizes к другим сплитам (без балансировки)
     if max_sizes:
-        for split in ["validation", "test"]:
+        for split in ["train", "validation", "test"]:
             if split in max_sizes and max_sizes[split] and split in dataset:
+                sz = min(max_sizes[split], len(dataset[split]))
                 dataset[split] = (
-                    dataset[split].shuffle(seed=42).select(range(max_sizes[split]))
+                    dataset[split].shuffle(seed=42).select(range(sz))
                 )
 
     print("Final label distribution TRAIN:", Counter(dataset["train"]["label"]))
