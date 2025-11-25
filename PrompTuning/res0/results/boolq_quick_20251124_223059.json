@@ -1,0 +1,30 @@
+{
+  "task": "boolq",
+  "search_mode": "quick",
+  "best_config": {
+    "lr": 0.001,
+    "balance_classes": true,
+    "init_prompt": "",
+    "accuracy": 0.6211009174311927
+  },
+  "best_accuracy": 0.6211009174311927,
+  "all_results": [
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": true,
+        "init_prompt": ""
+      },
+      "accuracy": 0.6211009174311927
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": false,
+        "init_prompt": "Classify:"
+      },
+      "accuracy": 0.5808868501529052
+    }
+  ],
+  "timestamp": "20251124_223059"
+}

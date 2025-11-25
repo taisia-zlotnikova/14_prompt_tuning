@@ -41,12 +41,8 @@ def validate_model(prompt_model, val_loader, tokenizer, desc="Validation"):
                 total += 1
 
     print(f'Prediction counts: {counts}')
-    return {
-        "loss": total_loss / len(val_loader),
-        "accuracy": correct / total if total > 0 else 0,
-        "correct_predictions": correct,
-        "total_predictions": total
-    }
+    accuracy = correct / total if total > 0 else 0
+    return accuracy  # ← ВОЗВРАЩАЕМ ЧИСЛО, а не словарь!
 
 def print_metrics(metrics, phase="Validation"):
     """

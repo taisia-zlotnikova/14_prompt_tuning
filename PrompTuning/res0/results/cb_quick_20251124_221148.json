@@ -1,0 +1,30 @@
+{
+  "task": "cb",
+  "search_mode": "quick",
+  "best_config": {
+    "lr": 0.01,
+    "balance_classes": false,
+    "init_prompt": "Classify:",
+    "accuracy": 0.6875
+  },
+  "best_accuracy": 0.6875,
+  "all_results": [
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": true,
+        "init_prompt": ""
+      },
+      "accuracy": 0.3303571428571429
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": false,
+        "init_prompt": "Classify:"
+      },
+      "accuracy": 0.6875
+    }
+  ],
+  "timestamp": "20251124_221148"
+}

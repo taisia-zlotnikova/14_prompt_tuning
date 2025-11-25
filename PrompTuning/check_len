@@ -1,0 +1,555 @@
+
+============================================================
+📊 Analyzing prompt length for: cb
+============================================================
+
+🔍 Testing prompt_length = 5
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'Classify the relationship:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'': 13, 'entailment': 21, 'contradiction': 22}
+   My Model Accuracy: 0.7321
+🎯 Final My Model Accuracy: 0.7321
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'': 11, 'entailment': 18, 'contradiction': 27}
+   PEFT Model Accuracy: 0.7143
+🎯 Final PEFT Model Accuracy: 0.7143
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.7321, PEFT Model: 0.7143
+
+🔍 Testing prompt_length = 10
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'Classify the relationship:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'neutral': 5, 'entailment': 15, 'contradiction': 31, '': 5}
+   My Model Accuracy: 0.7321
+🎯 Final My Model Accuracy: 0.7321
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'': 10, 'neutral': 2, 'entailment': 18, 'contradiction': 26}
+   PEFT Model Accuracy: 0.7321
+🎯 Final PEFT Model Accuracy: 0.7321
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.7321, PEFT Model: 0.7321
+
+🔍 Testing prompt_length = 15
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'Classify the relationship:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'': 9, 'entailment': 8, 'contradiction': 39}
+   My Model Accuracy: 0.5714
+🎯 Final My Model Accuracy: 0.5714
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'': 6, 'contradiction': 35, 'entailment': 15}
+   PEFT Model Accuracy: 0.7321
+🎯 Final PEFT Model Accuracy: 0.7321
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.5714, PEFT Model: 0.7321
+
+🔍 Testing prompt_length = 20
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'Classify the relationship:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'contradiction': 40, '': 6, 'entailment': 10}
+   My Model Accuracy: 0.6429
+🎯 Final My Model Accuracy: 0.6429
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'': 2, 'contradiction': 49, 'entailment': 5}
+   PEFT Model Accuracy: 0.5536
+🎯 Final PEFT Model Accuracy: 0.5536
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.6429, PEFT Model: 0.5536
+
+🔍 Testing prompt_length = 25
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'Classify the relationship:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'': 10, 'entailment': 19, 'contradiction': 27}
+   My Model Accuracy: 0.7500
+🎯 Final My Model Accuracy: 0.7500
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'': 11, 'entailment': 20, 'contradiction': 25}
+   PEFT Model Accuracy: 0.7500
+🎯 Final PEFT Model Accuracy: 0.7500
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.7500, PEFT Model: 0.7500
+
+🔍 Testing prompt_length = 30
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'Classify the relationship:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'contradiction': 48, '': 4, 'entailment': 4}
+   My Model Accuracy: 0.5536
+🎯 Final My Model Accuracy: 0.5536
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'contradiction': 51, 'neutral': 1, 'entailment': 3, '': 1}
+   PEFT Model Accuracy: 0.5714
+🎯 Final PEFT Model Accuracy: 0.5714
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.5536, PEFT Model: 0.5714
+
+============================================================
+📊 Analyzing prompt length for: copa
+============================================================
+
+🔍 Testing prompt_length = 5
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK copa
+
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.003, 'init_prompt': 'Choose the correct cause/effect:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'not': 64, 'second': 34, 'first': 2}
+   My Model Accuracy: 0.1300
+🎯 Final My Model Accuracy: 0.1300
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not': 93, '2': 7}
+   PEFT Model Accuracy: 0.0000
+🎯 Final PEFT Model Accuracy: 0.0000
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.1300, PEFT Model: 0.0000
+
+🔍 Testing prompt_length = 10
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK copa
+
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.003, 'init_prompt': 'Choose the correct cause/effect:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'': 23, 'not': 62, '2': 14, '1': 1}
+   My Model Accuracy: 0.0000
+🎯 Final My Model Accuracy: 0.0000
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'': 14, 'not': 80, '2': 6}
+   PEFT Model Accuracy: 0.0000
+🎯 Final PEFT Model Accuracy: 0.0000
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.0000, PEFT Model: 0.0000
+
+🔍 Testing prompt_length = 15
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK copa
+
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.003, 'init_prompt': 'Choose the correct cause/effect:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'second': 100}
+   My Model Accuracy: 0.4500
+🎯 Final My Model Accuracy: 0.4500
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not': 85, '': 7, '2': 8}
+   PEFT Model Accuracy: 0.0000
+🎯 Final PEFT Model Accuracy: 0.0000
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.4500, PEFT Model: 0.0000
+
+🔍 Testing prompt_length = 20
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK copa
+
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.003, 'init_prompt': 'Choose the correct cause/effect:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'second': 100}
+   My Model Accuracy: 0.4500
+🎯 Final My Model Accuracy: 0.4500
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not': 99, '': 1}
+   PEFT Model Accuracy: 0.0000
+🎯 Final PEFT Model Accuracy: 0.0000
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.4500, PEFT Model: 0.0000
+
+🔍 Testing prompt_length = 25
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK copa
+
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.003, 'init_prompt': 'Choose the correct cause/effect:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'first': 98, 'second': 2}
+   My Model Accuracy: 0.5500
+🎯 Final My Model Accuracy: 0.5500
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not': 98, '2': 2}
+   PEFT Model Accuracy: 0.0000
+🎯 Final PEFT Model Accuracy: 0.0000
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.5500, PEFT Model: 0.0000
+
+🔍 Testing prompt_length = 30
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK copa
+
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.003, 'init_prompt': 'Choose the correct cause/effect:', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'first': 38, 'second': 62}
+   My Model Accuracy: 0.5100
+🎯 Final My Model Accuracy: 0.5100
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not': 100}
+   PEFT Model Accuracy: 0.0000
+🎯 Final PEFT Model Accuracy: 0.0000
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.5100, PEFT Model: 0.0000
+
+============================================================
+📊 Analyzing prompt length for: rte
+============================================================
+
+🔍 Testing prompt_length = 5
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK rte
+
+Total classes: 2, examples per class: 1245
+Class 1: took all 1241 (less than 1245)
+Class 0: took 1245 from 1249
+Final label distribution TRAIN: Counter({0: 1245, 1: 1241})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.001, 'init_prompt': 'Does the premise support the hypothesis?', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'not_': 122, 'not': 147, 'entailment': 4, '': 4}
+   My Model Accuracy: 0.0325
+🎯 Final My Model Accuracy: 0.0325
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not_': 48, 'neutral': 60, '': 50, 'entailment': 73, 'True': 9, 'not': 33, 'contradiction': 1, 'Fal': 2, 'Fel': 1}
+   PEFT Model Accuracy: 0.2635
+🎯 Final PEFT Model Accuracy: 0.2635
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.0325, PEFT Model: 0.2635
+
+🔍 Testing prompt_length = 10
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK rte
+
+Total classes: 2, examples per class: 1245
+Class 1: took all 1241 (less than 1245)
+Class 0: took 1245 from 1249
+Final label distribution TRAIN: Counter({0: 1245, 1: 1241})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.001, 'init_prompt': 'Does the premise support the hypothesis?', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'not': 256, 'not_': 20, ' not': 1}
+   My Model Accuracy: 0.4007
+🎯 Final My Model Accuracy: 0.4007
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'': 109, 'entailment': 58, '.': 37, 'prosecutors': 1, 'a': 24, 'not': 7, 'not_': 16, 'True': 7, 'neutral': 8, '73': 1, 'mol': 1, 'lander': 1, 'Fal': 1, 't': 1, 'COL': 1, 'Y': 1, 'Fel': 1, 'o': 1, 'p': 1}
+   PEFT Model Accuracy: 0.2094
+🎯 Final PEFT Model Accuracy: 0.2094
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.4007, PEFT Model: 0.2094
+
+🔍 Testing prompt_length = 15
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK rte
+
+Total classes: 2, examples per class: 1245
+Class 1: took all 1241 (less than 1245)
+Class 0: took 1245 from 1249
+Final label distribution TRAIN: Counter({0: 1245, 1: 1241})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.001, 'init_prompt': 'Does the premise support the hypothesis?', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'': 58, 'not': 156, 'entailment': 63}
+   My Model Accuracy: 0.4910
+🎯 Final My Model Accuracy: 0.4910
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not_': 85, 'not': 89, '': 44, '.': 14, 'a': 28, 'Reuters': 1, 'o': 2, 'True': 3, '73': 1, "'": 1, 'Fal': 2, 'Y': 1, 'not all': 1, 'Fel': 1, 'entailment': 3, 'p': 1}
+   PEFT Model Accuracy: 0.0108
+🎯 Final PEFT Model Accuracy: 0.0108
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.4910, PEFT Model: 0.0108
+
+🔍 Testing prompt_length = 20
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK rte
+
+Total classes: 2, examples per class: 1245
+Class 1: took all 1241 (less than 1245)
+Class 0: took 1245 from 1249
+Final label distribution TRAIN: Counter({0: 1245, 1: 1241})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.001, 'init_prompt': 'Does the premise support the hypothesis?', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'not': 277}
+   My Model Accuracy: 0.4729
+🎯 Final My Model Accuracy: 0.4729
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not_': 115, 'not': 128, '': 15, 'a': 11, 'True': 2, "'": 1, 'Fal': 2, 'not all': 1, 'entailment': 1, 'not only': 1}
+   PEFT Model Accuracy: 0.0072
+🎯 Final PEFT Model Accuracy: 0.0072
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.4729, PEFT Model: 0.0072
+
+🔍 Testing prompt_length = 25
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK rte
+
+Total classes: 2, examples per class: 1245
+Class 1: took all 1241 (less than 1245)
+Class 0: took 1245 from 1249
+Final label distribution TRAIN: Counter({0: 1245, 1: 1241})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.001, 'init_prompt': 'Does the premise support the hypothesis?', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'not': 277}
+   My Model Accuracy: 0.4729
+🎯 Final My Model Accuracy: 0.4729
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not_': 114, 'not': 125, '': 17, 'e': 2, 'a': 11, '.': 5, 'Jeremy': 1, '73': 1, 'Fal': 1}
+   PEFT Model Accuracy: 0.0000
+🎯 Final PEFT Model Accuracy: 0.0000
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.4729, PEFT Model: 0.0000
+
+🔍 Testing prompt_length = 30
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK rte
+
+Total classes: 2, examples per class: 1245
+Class 1: took all 1241 (less than 1245)
+Class 0: took 1245 from 1249
+Final label distribution TRAIN: Counter({0: 1245, 1: 1241})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.001, 'init_prompt': 'Does the premise support the hypothesis?', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'not': 277}
+   My Model Accuracy: 0.4729
+🎯 Final My Model Accuracy: 0.4729
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'not_': 127, 'not': 142, 'a': 2, 'not only': 1, '.': 2, '': 3}
+   PEFT Model Accuracy: 0.0000
+🎯 Final PEFT Model Accuracy: 0.0000
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   📈 My Model: 0.4729, PEFT Model: 0.0000
+📊 Graphs saved to plots/cb_prompt_length_analysis_20251125_114509.png
+
+🏆 BEST PROMPT LENGTHS for cb:
+   My Model:  length=25, accuracy=0.7500
+   PEFT Model: length=25, accuracy=0.7500
+📊 Graphs saved to plots/copa_prompt_length_analysis_20251125_114509.png
+
+🏆 BEST PROMPT LENGTHS for copa:
+   My Model:  length=25, accuracy=0.5500
+   PEFT Model: length=5, accuracy=0.0000
+📊 Graphs saved to plots/rte_prompt_length_analysis_20251125_114510.png
+
+🏆 BEST PROMPT LENGTHS for rte:
+   My Model:  length=15, accuracy=0.4910
+   PEFT Model: length=5, accuracy=0.2635

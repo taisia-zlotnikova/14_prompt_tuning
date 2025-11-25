@@ -1,0 +1,30 @@
+{
+  "task": "rte",
+  "search_mode": "quick",
+  "best_config": {
+    "lr": 0.01,
+    "balance_classes": false,
+    "init_prompt": "Classify:",
+    "accuracy": 0.4729241877256318
+  },
+  "best_accuracy": 0.4729241877256318,
+  "all_results": [
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": true,
+        "init_prompt": ""
+      },
+      "accuracy": 0.2364620938628159
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": false,
+        "init_prompt": "Classify:"
+      },
+      "accuracy": 0.4729241877256318
+    }
+  ],
+  "timestamp": "20251124_223658"
+}

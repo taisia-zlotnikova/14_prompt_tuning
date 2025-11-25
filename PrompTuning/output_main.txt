@@ -1,42 +1,206 @@
-🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
-                   ▶️  RUNNING TASK wic
+🚀 Starting hyperparameter search...
 
-Final label distribution TRAIN: Counter({0: 25, 1: 25})
+============================================================
+🚀 Running QUICK strategy
+============================================================
 
-🟢 Data loaded!
+📋 Task: cb
+🔍 Testing 2 configurations for cb (quick mode)
 
-✏️  My model:
-Training...
+🎯 Config 1/2
+   LR: 0.001, Balance: True, Prompt: ''
 
-Train:
-Prediction counts: {'not': 13, 'the': 33, '': 3, 'word': 1}
+🧪 Experiment 1
+   LR: 0.001, Balance: True, Prompt: ''
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
 
-📊 Train Metrics:
-   Accuracy: 0.0000 (0/50)
+   Testing My Model...
+Prediction counts: {'neutral': 41, 'contradiction': 15}
+   My Model Accuracy: 0.3214
 
-Validation:
-Prediction counts: {'the': 29, '': 7, 'not': 14}
+   Testing PEFT Model...
+Prediction counts: {'': 30, 'entailment': 19, 'not': 1, 'True': 3, 'rat': 1, 'u': 1, 'neutral': 1}
+   PEFT Model Accuracy: 0.3393
+   🎯 Average Accuracy: 0.3304
+   🏆 NEW BEST! Accuracy: 0.3304
 
-📊 Validation Metrics:
-   Accuracy: 0.0000 (0/50)
+🎯 Config 2/2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
 
-✏️   Peft model:
-Training...
+🧪 Experiment 2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
 
-Train:
-Prediction counts: {'': 49, 'True': 1}
+   Testing My Model...
+Prediction counts: {'contradiction': 38, 'entailment': 13, '': 5}
+   My Model Accuracy: 0.7143
 
-📊 Train Metrics:
-   Accuracy: 0.0000 (0/50)
+   Testing PEFT Model...
+Prediction counts: {'': 14, 'entailment': 19, 'contradiction': 20, 'neutral': 3}
+   PEFT Model Accuracy: 0.6607
+   🎯 Average Accuracy: 0.6875
+   🏆 NEW BEST! Accuracy: 0.6875
+💾 Results saved to results/cb_quick_20251124_221148.json
+✅ cb - Best: 0.6875 with {'lr': 0.01, 'balance_classes': False, 'init_prompt': 'Classify:'}
 
-Validation:
-Prediction counts: {'': 49, 'True': 1}
+📋 Task: boolq
+🔍 Testing 2 configurations for boolq (quick mode)
 
-📊 Validation Metrics:
-   Accuracy: 0.0000 (0/50)
-🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+🎯 Config 1/2
+   LR: 0.001, Balance: True, Prompt: ''
 
+🧪 Experiment 1
+   LR: 0.001, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
 
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+   Testing My Model...
+Prediction counts: {'yes': 3258, 'no': 12}
+   My Model Accuracy: 0.6211
 
+   Testing PEFT Model...
+Prediction counts: {'yes': 3268, 'no': 2}
+   PEFT Model Accuracy: 0.6211
+   🎯 Average Accuracy: 0.6211
+   🏆 NEW BEST! Accuracy: 0.6211
+
+🎯 Config 2/2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
+
+🧪 Experiment 2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+
+   Testing My Model...
+Prediction counts: {'no': 903, 'yes': 2367}
+   My Model Accuracy: 0.5633
+
+   Testing PEFT Model...
+Prediction counts: {'yes': 2944, 'no': 326}
+   PEFT Model Accuracy: 0.5985
+   🎯 Average Accuracy: 0.5809
+   📊 Accuracy: 0.5809
+💾 Results saved to results/boolq_quick_20251124_223059.json
+✅ boolq - Best: 0.6211 with {'lr': 0.001, 'balance_classes': True, 'init_prompt': ''}
+
+📋 Task: copa
+🔍 Testing 2 configurations for copa (quick mode)
+
+🎯 Config 1/2
+   LR: 0.001, Balance: True, Prompt: ''
+
+🧪 Experiment 1
+   LR: 0.001, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+
+   Testing My Model...
+Prediction counts: {'second': 84, 'not': 16}
+   My Model Accuracy: 0.3400
+
+   Testing PEFT Model...
+Prediction counts: {'not': 95, 'Fal': 2, 'True': 2, '': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Average Accuracy: 0.1700
+   🏆 NEW BEST! Accuracy: 0.1700
+
+🎯 Config 2/2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
+
+🧪 Experiment 2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+
+   Testing My Model...
+Prediction counts: {'first': 67, 'second': 33}
+   My Model Accuracy: 0.5600
+
+   Testing PEFT Model...
+Prediction counts: {'second': 27, 'not': 69, '': 4}
+   PEFT Model Accuracy: 0.0800
+   🎯 Average Accuracy: 0.3200
+   🏆 NEW BEST! Accuracy: 0.3200
+💾 Results saved to results/copa_quick_20251124_223203.json
+✅ copa - Best: 0.3200 with {'lr': 0.01, 'balance_classes': False, 'init_prompt': 'Classify:'}
+
+📋 Task: rte
+🔍 Testing 2 configurations for rte (quick mode)
+
+🎯 Config 1/2
+   LR: 0.001, Balance: True, Prompt: ''
+
+🧪 Experiment 1
+   LR: 0.001, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 1245
+Class 1: took all 1241 (less than 1245)
+Class 0: took 1245 from 1249
+Final label distribution TRAIN: Counter({0: 1245, 1: 1241})
+
+   Testing My Model...
+Prediction counts: {'not': 277}
+   My Model Accuracy: 0.4729
+
+   Testing PEFT Model...
+Prediction counts: {'not_': 92, 'not': 107, '': 39, 'a': 36, "'": 1, '.': 2}
+   PEFT Model Accuracy: 0.0000
+   🎯 Average Accuracy: 0.2365
+   🏆 NEW BEST! Accuracy: 0.2365
+
+🎯 Config 2/2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
+
+🧪 Experiment 2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
+Final label distribution TRAIN: Counter({0: 1249, 1: 1241})
+
+   Testing My Model...
+Prediction counts: {'not': 277}
+   My Model Accuracy: 0.4729
+
+   Testing PEFT Model...
+Prediction counts: {'not': 277}
+   PEFT Model Accuracy: 0.4729
+   🎯 Average Accuracy: 0.4729
+   🏆 NEW BEST! Accuracy: 0.4729
+💾 Results saved to results/rte_quick_20251124_223658.json
+✅ rte - Best: 0.4729 with {'lr': 0.01, 'balance_classes': False, 'init_prompt': 'Classify:'}
+
+📋 Task: wic
+🔍 Testing 2 configurations for wic (quick mode)
+
+🎯 Config 1/2
+   LR: 0.001, Balance: True, Prompt: ''
+
+🧪 Experiment 1
+   LR: 0.001, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 2714
+Class 0: took 2714 from 2714
+Class 1: took 2714 from 2714
+Final label distribution TRAIN: Counter({1: 2714, 0: 2714})
+
+   Testing My Model...
+Prediction counts: {'different': 27, 'same': 611}
+   My Model Accuracy: 0.5078
+
+   Testing PEFT Model...
+Prediction counts: {'not': 615, 'same': 22, '': 1}
+   PEFT Model Accuracy: 0.0172
+   🎯 Average Accuracy: 0.2625
+   🏆 NEW BEST! Accuracy: 0.2625
+
+🎯 Config 2/2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
+
+🧪 Experiment 2
+   LR: 0.01, Balance: False, Prompt: 'Classify:'
+Final label distribution TRAIN: Counter({0: 2714, 1: 2714})
+
+   Testing My Model...

@@ -1,0 +1,364 @@
+🚀 Starting hyperparameter search...
+
+======================================================================
+🚀 Running SMART strategy
+======================================================================
+
+📋 Task: copa
+🔧 Generated FULL grid: 36 configurations for copa
+   (LRs: 6, Balance: 2, Prompts: 3)
+🔍 Testing 36 configurations for copa (smart mode)
+
+🎯 Config 1/36
+   LR: 0.0001, Balance: True, Prompt: ''
+
+🧪 Experiment 1
+   LR: 0.0001, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 95, '': 5}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'': 94, 'not': 6}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 2/36
+   LR: 0.0001, Balance: True, Prompt: 'Choose the correct cause/effect:'
+
+🧪 Experiment 2
+   LR: 0.0001, Balance: True, Prompt: 'Choose the correct cause/effect:'
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 100}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'': 78, 'not': 22}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 3/36
+   LR: 0.0001, Balance: True, Prompt: 'first, second'
+
+🧪 Experiment 3
+   LR: 0.0001, Balance: True, Prompt: 'first, second'
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 86, 'negative': 2, 'Fal': 1, '': 11}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'': 100}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 4/36
+   LR: 0.0001, Balance: False, Prompt: ''
+
+🧪 Experiment 4
+   LR: 0.0001, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 91, '': 8, 'True': 1}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'': 93, '2': 4, 'question': 3}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 5/36
+   LR: 0.0001, Balance: False, Prompt: 'Choose the correct cause/effect:'
+
+🧪 Experiment 5
+   LR: 0.0001, Balance: False, Prompt: 'Choose the correct cause/effect:'
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 100}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'': 39, 'not': 61}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 6/36
+   LR: 0.0001, Balance: False, Prompt: 'first, second'
+
+🧪 Experiment 6
+   LR: 0.0001, Balance: False, Prompt: 'first, second'
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'': 15, 'not': 82, 'negative': 2, 'Fal': 1}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'': 73, '2': 27}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 7/36
+   LR: 0.0003, Balance: True, Prompt: ''
+
+🧪 Experiment 7
+   LR: 0.0003, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 100}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'': 98, 'not': 2}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 8/36
+   LR: 0.0003, Balance: True, Prompt: 'Choose the correct cause/effect:'
+
+🧪 Experiment 8
+   LR: 0.0003, Balance: True, Prompt: 'Choose the correct cause/effect:'
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 100}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'not': 94, '': 6}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 9/36
+   LR: 0.0003, Balance: True, Prompt: 'first, second'
+
+🧪 Experiment 9
+   LR: 0.0003, Balance: True, Prompt: 'first, second'
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'': 53, 'not': 46, 'negative': 1}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'not': 86, '': 14}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 10/36
+   LR: 0.0003, Balance: False, Prompt: ''
+
+🧪 Experiment 10
+   LR: 0.0003, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 99, '2': 1}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'': 78, 'not': 21, '2': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 11/36
+   LR: 0.0003, Balance: False, Prompt: 'Choose the correct cause/effect:'
+
+🧪 Experiment 11
+   LR: 0.0003, Balance: False, Prompt: 'Choose the correct cause/effect:'
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 100}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'not': 91, '': 9}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 12/36
+   LR: 0.0003, Balance: False, Prompt: 'first, second'
+
+🧪 Experiment 12
+   LR: 0.0003, Balance: False, Prompt: 'first, second'
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'': 65, 'not': 35}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'': 67, 'not': 29, 'question': 4}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 13/36
+   LR: 0.001, Balance: True, Prompt: ''
+
+🧪 Experiment 13
+   LR: 0.001, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 100}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'not': 95, '': 5}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 14/36
+   LR: 0.001, Balance: True, Prompt: 'Choose the correct cause/effect:'
+
+🧪 Experiment 14
+   LR: 0.001, Balance: True, Prompt: 'Choose the correct cause/effect:'
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'second': 100}
+   My Model Accuracy: 0.4500
+   Testing PEFT Model...
+Prediction counts: {'not': 99, 'True': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.4500, PEFT Model: 0.0000
+   🏆 NEW BEST My Model! Accuracy: 0.4500
+
+🎯 Config 15/36
+   LR: 0.001, Balance: True, Prompt: 'first, second'
+
+🧪 Experiment 15
+   LR: 0.001, Balance: True, Prompt: 'first, second'
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'second': 50, 'not': 50}
+   My Model Accuracy: 0.1600
+   Testing PEFT Model...
+Prediction counts: {'': 10, 'not': 90}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.1600, PEFT Model: 0.0000
+
+🎯 Config 16/36
+   LR: 0.001, Balance: False, Prompt: ''
+
+🧪 Experiment 16
+   LR: 0.001, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'not': 100}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...
+Prediction counts: {'not': 92, '2': 1, '': 5, 'True': 2}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0000, PEFT Model: 0.0000
+
+🎯 Config 17/36
+   LR: 0.001, Balance: False, Prompt: 'Choose the correct cause/effect:'
+
+🧪 Experiment 17
+   LR: 0.001, Balance: False, Prompt: 'Choose the correct cause/effect:'
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'': 64, 'second': 23, 'not': 13}
+   My Model Accuracy: 0.0700
+   Testing PEFT Model...
+Prediction counts: {'not': 98, 'True': 2}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0700, PEFT Model: 0.0000
+
+🎯 Config 18/36
+   LR: 0.001, Balance: False, Prompt: 'first, second'
+
+🧪 Experiment 18
+   LR: 0.001, Balance: False, Prompt: 'first, second'
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'second': 100}
+   My Model Accuracy: 0.4500
+   Testing PEFT Model...
+Prediction counts: {'not': 83, '': 10, 'True': 7}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.4500, PEFT Model: 0.0000
+
+🎯 Config 19/36
+   LR: 0.003, Balance: True, Prompt: ''
+
+🧪 Experiment 19
+   LR: 0.003, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'second': 100}
+   My Model Accuracy: 0.4500
+   Testing PEFT Model...
+Prediction counts: {'not': 87, '2': 10, '': 3}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.4500, PEFT Model: 0.0000
+
+   🎯 Config 20/36
+      LR: 0.003, Balance: True, Prompt: 'Choose the correct cause/effect:'
+
+                                                      🧪 Experiment 20
+                                                         LR: 0.003, Balance: True, Prompt: 'Choose the correct cause/effect:'
+                                                      Total classes: 2, examples per class: 200
+                                                      Class 0: took all 195 (less than 200)
+                                                      Class 1: took 200 from 205
+                                                      Final label distribution TRAIN: Counter({1: 200, 0: 195})
+                                                         Testing My Model...
+                                                      Prediction counts: {'first': 88, 'second': 12}
+                                                         My Model Accuracy: 0.5900
+                                                         Testing PEFT Model...
+                                                      Prediction counts: {'not': 93, '2': 5, '': 2}
+                                                         PEFT Model Accuracy: 0.0000
+                                                         🎯 Results - My Model: 0.5900, PEFT Model: 0.0000
+                                                         🏆 NEW BEST My Model! Accuracy: 0.5900
+
+                                                   🎯 Config 21/36
+                                                      LR: 0.003, Balance: True, Prompt: 'first, second'
+
+🧪 Experiment 21
+   LR: 0.003, Balance: True, Prompt: 'first, second'
+Total classes: 2, examples per class: 200
+Class 0: took all 195 (less than 200)
+Class 1: took 200 from 205
+Final label distribution TRAIN: Counter({1: 200, 0: 195})
+   Testing My Model...
+Prediction counts: {'first': 98, 'second': 2}
+   My Model Accuracy: 0.5300
+   Testing PEFT Model...
+Prediction counts: {'not': 95, '2': 2, '': 3}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.5300, PEFT Model: 0.0000
+
+🎯 Config 22/36
+   LR: 0.003, Balance: False, Prompt: ''
+
+🧪 Experiment 22
+   LR: 0.003, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...
+Prediction counts: {'second': 100}
+   My Model Accuracy: 0.4500
+   Testing PEFT Model...
+Prediction counts: {'not': 98, '': 2}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.4500, PEFT Model: 0.0000
+
+🎯 Config 23/36
+   LR: 0.003, Balance: False, Prompt: 'Choose the correct cause/effect:'
+
+🧪 Experiment 23
+   LR: 0.003, Balance: False, Prompt: 'Choose the correct cause/effect:'
+Final label distribution TRAIN: Counter({1: 205, 0: 195})
+   Testing My Model...

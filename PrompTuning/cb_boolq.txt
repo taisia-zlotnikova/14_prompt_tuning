@@ -1,0 +1,1317 @@
+🚀 Starting hyperparameter search...
+
+======================================================================
+🚀 Running SMART strategy
+======================================================================
+
+📋 Task: cb
+🔧 Generated FULL grid: 36 configurations for cb
+   (LRs: 6, Balance: 2, Prompts: 3)
+🔍 Testing 36 configurations for cb (smart mode)
+
+🎯 Config 1/36
+   LR: 0.0001, Balance: True, Prompt: ''
+
+🧪 Experiment 1
+   LR: 0.0001, Balance: True, Prompt: ''
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 32, 'a': 2, '.': 11, 'not': 1, 'True': 2, 'During': 1, "'": 1, 'entailment': 4, 'rat': 1, 'u': 1}
+   My Model Accuracy: 0.0714
+   Testing PEFT Model...
+Prediction counts: {'': 35, 'u': 2, '.': 18, 'a': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.0714, PEFT Model: 0.0000
+   🏆 NEW BEST My Model! Accuracy: 0.0714
+
+🎯 Config 2/36
+   LR: 0.0001, Balance: True, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 2
+   LR: 0.0001, Balance: True, Prompt: 'Classify the relationship:'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 23, 'neutral': 27, 'not': 3, '': 1, 'entailment': 2}
+   My Model Accuracy: 0.4286
+   Testing PEFT Model...
+Prediction counts: {'': 35, 'u': 2, '.': 8, 'a': 9, 'rat': 1, 'he': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.4286, PEFT Model: 0.0000
+   🏆 NEW BEST My Model! Accuracy: 0.4286
+
+🎯 Config 3/36
+   LR: 0.0001, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 3
+   LR: 0.0001, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'neutral': 22, 'not': 10, 'contradiction': 24}
+   My Model Accuracy: 0.3571
+   Testing PEFT Model...
+Prediction counts: {'': 36, 'a': 6, '.': 10, "'": 1, 'rat': 1, 'u': 1, 'he': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.3571, PEFT Model: 0.0000
+
+🎯 Config 4/36
+   LR: 0.0001, Balance: False, Prompt: ''
+
+🧪 Experiment 4
+   LR: 0.0001, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 15, 'entailment': 17, 'True': 16, 'Fal': 1, '.': 1, 'neutral': 2, 'contradiction': 2, 'not': 1, 'u': 1}
+   My Model Accuracy: 0.3393
+   Testing PEFT Model...
+Prediction counts: {'not': 12, '': 22, 'entailment': 15, '.': 3, 'rat': 1, 'u': 1, 'contradiction': 1, 'True': 1}
+   PEFT Model Accuracy: 0.2857
+   🎯 Results - My Model: 0.3393, PEFT Model: 0.2857
+   🏆 NEW BEST PEFT Model! Accuracy: 0.2857
+
+🎯 Config 5/36
+   LR: 0.0001, Balance: False, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 5
+   LR: 0.0001, Balance: False, Prompt: 'Classify the relationship:'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 28, 'neutral': 23, 'not': 3, '': 1, 'entailment': 1}
+   My Model Accuracy: 0.4464
+   Testing PEFT Model...
+Prediction counts: {'': 32, 'a': 4, '.': 6, 'entailment': 7, 'not': 1, "'": 1, 'True': 1, 'rat': 1, 'u': 1, 'neutral': 1, 'Je': 1}
+   PEFT Model Accuracy: 0.1250
+   🎯 Results - My Model: 0.4464, PEFT Model: 0.1250
+   🏆 NEW BEST My Model! Accuracy: 0.4464
+
+🎯 Config 6/36
+   LR: 0.0001, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 6
+   LR: 0.0001, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'neutral': 21, 'not': 10, 'contradiction': 25}
+   My Model Accuracy: 0.3750
+   Testing PEFT Model...
+Prediction counts: {'': 31, '.': 14, 'A': 5, 'entailment': 4, "'": 1, 'u': 1}
+   PEFT Model Accuracy: 0.0714
+   🎯 Results - My Model: 0.3750, PEFT Model: 0.0714
+
+🎯 Config 7/36
+   LR: 0.0003, Balance: True, Prompt: ''
+
+🧪 Experiment 7
+   LR: 0.0003, Balance: True, Prompt: ''
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'neutral': 41, 'not': 3, 'contradiction': 7, 'Fal': 4, 'entailment': 1}
+   My Model Accuracy: 0.2143
+   Testing PEFT Model...
+Prediction counts: {'': 34, '.': 16, "'": 1, 'A': 1, 'a': 2, 'rat': 1, 'u': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.2143, PEFT Model: 0.0000
+
+🎯 Config 8/36
+   LR: 0.0003, Balance: True, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 8
+   LR: 0.0003, Balance: True, Prompt: 'Classify the relationship:'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 34, 'neutral': 12, 'not': 2, '': 4, 'entailment': 4}
+   My Model Accuracy: 0.5000
+   Testing PEFT Model...
+Prediction counts: {'': 32, 'a': 10, '.': 7, 'A': 4, "'": 1, 'rat': 1, 'u': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.5000, PEFT Model: 0.0000
+   🏆 NEW BEST My Model! Accuracy: 0.5000
+
+🎯 Config 9/36
+   LR: 0.0003, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 9
+   LR: 0.0003, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'neutral': 17, 'not': 8, 'contradiction': 25, 'entailment': 5, '': 1}
+   My Model Accuracy: 0.5000
+   Testing PEFT Model...
+Prediction counts: {'': 35, 'a': 11, '.': 5, 'not': 1, 'rat': 1, 'u': 1, 'entailment': 2}
+   PEFT Model Accuracy: 0.0357
+   🎯 Results - My Model: 0.5000, PEFT Model: 0.0357
+
+🎯 Config 10/36
+   LR: 0.0003, Balance: False, Prompt: ''
+
+🧪 Experiment 10
+   LR: 0.0003, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 30, 'entailment': 23, 'not': 1, 'contradiction': 2}
+   My Model Accuracy: 0.4464
+   Testing PEFT Model...
+Prediction counts: {'': 25, 'neutral': 9, 'entailment': 12, 'a': 3, '.': 4, 'contradiction': 1, 'rat': 1, 'u': 1}
+   PEFT Model Accuracy: 0.2500
+   🎯 Results - My Model: 0.4464, PEFT Model: 0.2500
+
+🎯 Config 11/36
+   LR: 0.0003, Balance: False, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 11
+   LR: 0.0003, Balance: False, Prompt: 'Classify the relationship:'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 43, 'neutral': 6, 'not': 1, 'entailment': 3, '': 3}
+   My Model Accuracy: 0.5357
+   Testing PEFT Model...
+Prediction counts: {'': 34, '.': 14, 'entailment': 3, "'": 1, 'a': 2, 'rat': 1, 'u': 1}
+   PEFT Model Accuracy: 0.0536
+   🎯 Results - My Model: 0.5357, PEFT Model: 0.0536
+   🏆 NEW BEST My Model! Accuracy: 0.5357
+
+🎯 Config 12/36
+   LR: 0.0003, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 12
+   LR: 0.0003, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'neutral': 10, 'not': 5, 'contradiction': 31, 'entailment': 8, '': 2}
+   My Model Accuracy: 0.5893
+   Testing PEFT Model...
+Prediction counts: {'': 27, 'neutral': 11, '.': 8, 'contradiction': 1, 'entailment': 5, 'True': 2, "'": 1, 'u': 1}
+   PEFT Model Accuracy: 0.1250
+   🎯 Results - My Model: 0.5893, PEFT Model: 0.1250
+   🏆 NEW BEST My Model! Accuracy: 0.5893
+
+🎯 Config 13/36
+   LR: 0.001, Balance: True, Prompt: ''
+
+🧪 Experiment 13
+   LR: 0.001, Balance: True, Prompt: ''
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'neutral': 37, 'not': 2, 'contradiction': 16, '': 1}
+   My Model Accuracy: 0.3393
+   Testing PEFT Model...
+Prediction counts: {'': 24, 'a': 2, '.': 4, 'True': 9, 'not': 5, 'entailment': 9, "'": 1, 'u': 1, 'Fal': 1}
+   PEFT Model Accuracy: 0.1607
+   🎯 Results - My Model: 0.3393, PEFT Model: 0.1607
+
+🎯 Config 14/36
+   LR: 0.001, Balance: True, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 14
+   LR: 0.001, Balance: True, Prompt: 'Classify the relationship:'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 46, 'neutral': 8, 'entailment': 1, '': 1}
+   My Model Accuracy: 0.5179
+   Testing PEFT Model...
+Prediction counts: {'': 32, 'entailment': 10, 'a': 2, '.': 6, 'not': 1, 'A': 2, "'": 1, 'rat': 1, 'u': 1}
+   PEFT Model Accuracy: 0.1786
+   🎯 Results - My Model: 0.5179, PEFT Model: 0.1786
+
+🎯 Config 15/36
+   LR: 0.001, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 15
+   LR: 0.001, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 16, 'entailment': 21, 'contradiction': 19}
+   My Model Accuracy: 0.6786
+   Testing PEFT Model...
+Prediction counts: {'not': 14, '': 20, 'entailment': 18, 'neutral': 2, 'u': 1, 'True': 1}
+   PEFT Model Accuracy: 0.3214
+   🎯 Results - My Model: 0.6786, PEFT Model: 0.3214
+   🏆 NEW BEST My Model! Accuracy: 0.6786
+   🏆 NEW BEST PEFT Model! Accuracy: 0.3214
+
+🎯 Config 16/36
+   LR: 0.001, Balance: False, Prompt: ''
+
+🧪 Experiment 16
+   LR: 0.001, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'neutral': 18, 'entailment': 12, 'contradiction': 17, '': 9}
+   My Model Accuracy: 0.5357
+   Testing PEFT Model...
+Prediction counts: {'neutral': 39, 'not': 4, '': 2, 'contradiction': 7, 'True': 3, 'entailment': 1}
+   PEFT Model Accuracy: 0.2143
+   🎯 Results - My Model: 0.5357, PEFT Model: 0.2143
+
+🎯 Config 17/36
+   LR: 0.001, Balance: False, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 17
+   LR: 0.001, Balance: False, Prompt: 'Classify the relationship:'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 2, 'contradiction': 46, 'entailment': 6, 'neutral': 2}
+   My Model Accuracy: 0.5893
+   Testing PEFT Model...
+Prediction counts: {'True': 7, 'neutral': 11, 'entailment': 12, 'not': 2, 'Fal': 1, '': 20, 'contradiction': 2, 'u': 1}
+   PEFT Model Accuracy: 0.2679
+   🎯 Results - My Model: 0.5893, PEFT Model: 0.2679
+
+🎯 Config 18/36
+   LR: 0.001, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 18
+   LR: 0.001, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 14, 'entailment': 21, 'contradiction': 20, 'neutral': 1}
+   My Model Accuracy: 0.6964
+   Testing PEFT Model...
+Prediction counts: {'neutral': 35, 'not': 1, '': 5, 'contradiction': 7, 'entailment': 8}
+   PEFT Model Accuracy: 0.3036
+   🎯 Results - My Model: 0.6964, PEFT Model: 0.3036
+   🏆 NEW BEST My Model! Accuracy: 0.6964
+
+🎯 Config 19/36
+   LR: 0.003, Balance: True, Prompt: ''
+
+🧪 Experiment 19
+   LR: 0.003, Balance: True, Prompt: ''
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 22, 'entailment': 22, 'contradiction': 12}
+   My Model Accuracy: 0.5893
+   Testing PEFT Model...
+Prediction counts: {'neutral': 25, 'entailment': 11, '': 15, 'contradiction': 4, 'not': 1}
+   PEFT Model Accuracy: 0.3214
+   🎯 Results - My Model: 0.5893, PEFT Model: 0.3214
+
+🎯 Config 20/36
+   LR: 0.003, Balance: True, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 20
+   LR: 0.003, Balance: True, Prompt: 'Classify the relationship:'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 48, 'entailment': 6, 'neutral': 2}
+   My Model Accuracy: 0.6071
+   Testing PEFT Model...
+Prediction counts: {'neutral': 26, 'contradiction': 24, 'not': 6}
+   PEFT Model Accuracy: 0.3214
+   🎯 Results - My Model: 0.6071, PEFT Model: 0.3214
+
+🎯 Config 21/36
+   LR: 0.003, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 21
+   LR: 0.003, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 49, 'entailment': 5, '': 2}
+   My Model Accuracy: 0.5893
+   Testing PEFT Model...
+Prediction counts: {'neutral': 32, 'not': 7, 'contradiction': 15, 'entailment': 2}
+   PEFT Model Accuracy: 0.3571
+   🎯 Results - My Model: 0.5893, PEFT Model: 0.3571
+   🏆 NEW BEST PEFT Model! Accuracy: 0.3571
+
+🎯 Config 22/36
+   LR: 0.003, Balance: False, Prompt: ''
+
+🧪 Experiment 22
+   LR: 0.003, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 19, 'entailment': 21, 'contradiction': 16}
+   My Model Accuracy: 0.6250
+   Testing PEFT Model...
+Prediction counts: {'neutral': 31, 'not': 2, 'contradiction': 16, '': 2, 'entailment': 5}
+   PEFT Model Accuracy: 0.4107
+   🎯 Results - My Model: 0.6250, PEFT Model: 0.4107
+   🏆 NEW BEST PEFT Model! Accuracy: 0.4107
+
+🎯 Config 23/36
+   LR: 0.003, Balance: False, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 23
+   LR: 0.003, Balance: False, Prompt: 'Classify the relationship:'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 11, 'entailment': 16, 'contradiction': 29}
+   My Model Accuracy: 0.6786
+   Testing PEFT Model...
+Prediction counts: {'': 9, 'neutral': 10, 'not': 1, 'contradiction': 26, 'entailment': 8, 'Fal': 1, 'True': 1}
+   PEFT Model Accuracy: 0.5000
+   🎯 Results - My Model: 0.6786, PEFT Model: 0.5000
+   🏆 NEW BEST PEFT Model! Accuracy: 0.5000
+
+🎯 Config 24/36
+   LR: 0.003, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 24
+   LR: 0.003, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 3, 'contradiction': 41, 'entailment': 12}
+   My Model Accuracy: 0.6786
+   Testing PEFT Model...
+Prediction counts: {'neutral': 46, '': 1, 'contradiction': 9}
+   PEFT Model Accuracy: 0.2321
+   🎯 Results - My Model: 0.6786, PEFT Model: 0.2321
+
+🎯 Config 25/36
+   LR: 0.01, Balance: True, Prompt: ''
+
+🧪 Experiment 25
+   LR: 0.01, Balance: True, Prompt: ''
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 37, '': 4, 'entailment': 8, 'neutral': 7}
+   My Model Accuracy: 0.6429
+   Testing PEFT Model...
+Prediction counts: {'': 5, 'neutral': 20, 'entailment': 9, 'not': 1, 'contradiction': 21}
+   PEFT Model Accuracy: 0.5357
+   🎯 Results - My Model: 0.6429, PEFT Model: 0.5357
+   🏆 NEW BEST PEFT Model! Accuracy: 0.5357
+
+🎯 Config 26/36
+   LR: 0.01, Balance: True, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 26
+   LR: 0.01, Balance: True, Prompt: 'Classify the relationship:'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 43, 'entailment': 5, '': 5, 'neutral': 3}
+   My Model Accuracy: 0.5536
+   Testing PEFT Model...
+Prediction counts: {'neutral': 32, 'contradiction': 21, '': 1, 'entailment': 1, 'not': 1}
+   PEFT Model Accuracy: 0.4107
+   🎯 Results - My Model: 0.5536, PEFT Model: 0.4107
+
+🎯 Config 27/36
+   LR: 0.01, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 27
+   LR: 0.01, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 7, 'contradiction': 39, 'entailment': 10}
+   My Model Accuracy: 0.6071
+   Testing PEFT Model...
+Prediction counts: {'neutral': 44, 'contradiction': 12}
+   PEFT Model Accuracy: 0.3036
+   🎯 Results - My Model: 0.6071, PEFT Model: 0.3036
+
+🎯 Config 28/36
+   LR: 0.01, Balance: False, Prompt: ''
+
+🧪 Experiment 28
+   LR: 0.01, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 49, '': 2, 'entailment': 5}
+   My Model Accuracy: 0.5714
+   Testing PEFT Model...
+Prediction counts: {'contradiction': 44, 'entailment': 9, '': 3}
+   PEFT Model Accuracy: 0.6607
+   🎯 Results - My Model: 0.5714, PEFT Model: 0.6607
+   🏆 NEW BEST PEFT Model! Accuracy: 0.6607
+
+🎯 Config 29/36
+   LR: 0.01, Balance: False, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 29
+   LR: 0.01, Balance: False, Prompt: 'Classify the relationship:'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 40, 'neutral': 9, 'entailment': 5, '': 2}
+   My Model Accuracy: 0.6250
+   Testing PEFT Model...
+Prediction counts: {'': 16, 'entailment': 16, 'contradiction': 19, 'neutral': 5}
+   PEFT Model Accuracy: 0.5714
+   🎯 Results - My Model: 0.6250, PEFT Model: 0.5714
+
+🎯 Config 30/36
+   LR: 0.01, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 30
+   LR: 0.01, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 7, 'contradiction': 37, 'entailment': 12}
+   My Model Accuracy: 0.6607
+   Testing PEFT Model...
+Prediction counts: {'neutral': 3, '': 16, 'entailment': 23, 'contradiction': 14}
+   PEFT Model Accuracy: 0.6607
+   🎯 Results - My Model: 0.6607, PEFT Model: 0.6607
+
+🎯 Config 31/36
+   LR: 0.03, Balance: True, Prompt: ''
+
+🧪 Experiment 31
+   LR: 0.03, Balance: True, Prompt: ''
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 2, 'contradiction': 45, 'entailment': 9}
+   My Model Accuracy: 0.6429
+   Testing PEFT Model...
+Prediction counts: {'contradiction': 39, '': 3, 'entailment': 7, 'neutral': 7}
+   PEFT Model Accuracy: 0.5714
+   🎯 Results - My Model: 0.6429, PEFT Model: 0.5714
+
+🎯 Config 32/36
+   LR: 0.03, Balance: True, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 32
+   LR: 0.03, Balance: True, Prompt: 'Classify the relationship:'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 8, 'entailment': 19, 'contradiction': 29}
+   My Model Accuracy: 0.7857
+   Testing PEFT Model...
+Prediction counts: {'': 5, 'entailment': 8, 'contradiction': 27, 'neutral': 16}
+   PEFT Model Accuracy: 0.5714
+   🎯 Results - My Model: 0.7857, PEFT Model: 0.5714
+   🏆 NEW BEST My Model! Accuracy: 0.7857
+
+🎯 Config 33/36
+   LR: 0.03, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 33
+   LR: 0.03, Balance: True, Prompt: 'entailment, contradiction, or neutral?'
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 10, 'entailment': 19, 'contradiction': 27}
+   My Model Accuracy: 0.7500
+   Testing PEFT Model...
+Prediction counts: {'contradiction': 40, '': 6, 'entailment': 10}
+   PEFT Model Accuracy: 0.6607
+   🎯 Results - My Model: 0.7500, PEFT Model: 0.6607
+
+🎯 Config 34/36
+   LR: 0.03, Balance: False, Prompt: ''
+
+🧪 Experiment 34
+   LR: 0.03, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'': 9, 'entailment': 19, 'contradiction': 28}
+   My Model Accuracy: 0.7679
+   Testing PEFT Model...
+Prediction counts: {'contradiction': 42, '': 4, 'entailment': 10}
+   PEFT Model Accuracy: 0.6607
+   🎯 Results - My Model: 0.7679, PEFT Model: 0.6607
+
+🎯 Config 35/36
+   LR: 0.03, Balance: False, Prompt: 'Classify the relationship:'
+
+🧪 Experiment 35
+   LR: 0.03, Balance: False, Prompt: 'Classify the relationship:'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 35, '': 7, 'entailment': 14}
+   My Model Accuracy: 0.7143
+   Testing PEFT Model...
+Prediction counts: {'contradiction': 37, 'neutral': 3, 'entailment': 11, '': 5}
+   PEFT Model Accuracy: 0.6786
+   🎯 Results - My Model: 0.7143, PEFT Model: 0.6786
+   🏆 NEW BEST PEFT Model! Accuracy: 0.6786
+
+🎯 Config 36/36
+   LR: 0.03, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+
+🧪 Experiment 36
+   LR: 0.03, Balance: False, Prompt: 'entailment, contradiction, or neutral?'
+Final label distribution TRAIN: Counter({1: 119, 0: 115, 2: 16})
+   Testing My Model...
+Prediction counts: {'contradiction': 49, 'entailment': 5, '': 2}
+   My Model Accuracy: 0.5893
+   Testing PEFT Model...
+Prediction counts: {'contradiction': 56}
+   PEFT Model Accuracy: 0.5000
+   🎯 Results - My Model: 0.5893, PEFT Model: 0.5000
+💾 Results saved to results/cb_smart_20251124_231551.json
+✅ cb - Best My Model: 0.7857, Best PEFT: 0.6786
+
+📋 Task: boolq
+🔧 Generated FULL grid: 48 configurations for boolq
+   (LRs: 6, Balance: 2, Prompts: 4)
+🔍 Testing 48 configurations for boolq (smart mode)
+
+🎯 Config 1/48
+   LR: 0.0001, Balance: True, Prompt: ''
+
+🧪 Experiment 1
+   LR: 0.0001, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'': 1734, 'property': 1, 'Phantom': 1, 'Harry': 4, 'zero': 1, 'Blood': 2, 'Fantastic': 3, 'The': 191, 'Russell': 2, 'Indianapolis': 1, 'Dead': 2, 'Ben': 4, 'Puerto': 4, 'Indiana': 2, 'Avengers': 4, 'Toyota': 1, 'carbon': 2, 'not': 29, 'Columbus': 1, 'New': 11, 'Met': 1, 'the': 137, 'FIFA': 33, 'Army': 1, 'Dam': 3, 'Sha': 1, 'E': 6, 'no.': 1, 'radio': 1, 'University': 3, 'India': 5, 'Panama': 4, 'Xbox': 13, 'Love': 1, 'King': 4, '99': 1, 'de': 1, 'German': 2, 'Bun': 1, 'White': 3, 'bullet': 1, 'Salt': 2, 'hyper': 2, 'Great': 2, 'Hurricane': 1, 'Star': 4, 'Scar': 3, 'Pete': 1, 'powder': 1, 'federal': 5, 'David': 1, 'Washington': 5, 'public': 1, 'Health': 1, 'Florida': 5, 'Man': 1, 'Battle': 1, 'A': 3, 'Go': 2, 'Here': 1, 'Marvel': 8, 'Euro': 1, 'Lux': 2, 'Dar': 5, 'I': 22, 'Thread': 2, 'Pit': 1, '5': 2, 'Who': 3, 'Brazil': 3, 'Australia': 3, 'Indian': 2, 'Bo': 1, 'Kelly': 2, 'Scotland': 3, 'pick': 1, 'Ram': 1, 'All': 3, 'South': 2, 'competitive': 1, 'Charlie': 1, 'National': 3, 'GMT': 1, 'Murphy': 1, 'maple': 2, 'alcohol': 3, 'Need': 1, 'Mark': 1, 'salt': 4, 'Better': 5, 'two': 1, 'Fear': 5, 'China': 1, 'Let': 1, 'Metal': 1, 'UK': 2, 'Chris': 1, 'Joe': 2, 'Henry': 1, 'cross': 1, 'United': 25, 'Water': 2, 'Michael': 3, 'tort': 1, 'iron': 1, 'Supreme': 4, 'Elena': 1, 'Lo': 2, 'Aus': 2, 'wire': 1, 'Amy': 1, 'Grey': 6, '29': 1, 'Cor': 2, 'post': 1, 'football': 1, 'Absolut': 1, 'City': 1, 'HBO': 1, 'Wheel': 2, 'W': 1, 'London': 3, 'Article': 4, 'Women': 1, 'Elizabeth': 3, 'Ma': 1, 'Father': 3, 'MLB': 5, 'Death': 1, 'no rule': 1, 'Las': 3, 'no government': 1, 'Boston': 1, 'William': 1, 'R': 1, 'density': 1, 'Crazy': 1, 'Jack': 2, 'Brown': 1, 'California': 5, 'Universal': 3, '3': 2, 'Cour': 1, 'Game': 2, 'Thunder': 1, 'red': 1, 'Lucas': 1, 'Race': 2, '50': 1, 'Lin': 1, 'Bur': 2, 'Global': 1, 'Spencer': 1, 'Broken': 1, 'Heart': 1, 'Milwaukee': 1, 'Lob': 1, 'Olive': 1, 'Bi': 1, 'Belgium': 1, 'in': 2, 'Houston': 1, 'In': 7, 'water': 1, 'to': 2, 'Consumer': 1, 'Ban': 1, 'Far': 3, 'fitness': 1, 'Halloween': 1, 'Bayern': 1, 'voting': 2, 'Com': 1, 'friction': 1, 'joint': 1, 'Amendment': 1, 'Stanley': 1, 'Microsoft': 3, 'no jurisdiction': 1, 'far': 1, 'Olivia': 1, 'Da': 2, 'Queen': 3, 'Canadian': 3, 'He': 3, 'Atlantic': 2, 'International': 1, 'Legal': 1, 'Than': 1, 'just': 1, 'mobile': 2, 'Deep': 2, 'Amazon': 2, 'Fa': 2, 'Tampa': 2, 'Croatia': 4, 'European': 3, 'Heat': 3, 'NBA': 6, 'Chase': 2, 'Genesis': 1, 'rugby': 1, 'goal': 2, 'Cop': 1, 'Cold': 3, 'Mo': 1, 'England': 1, 'Dy': 3, 'Texas': 4, 'Pakistan': 1, 'Thompson': 1, 'Blue': 5, 'Jeep': 2, 'How': 4, 'Mos': 1, 'Break': 1, 'K': 1, 'move': 1, 'ever': 1, 'Spirit': 1, 'Ka': 1, 'Yi': 1, 'Just': 2, 'Find': 1, 'Edinburgh': 1, 'Free': 1, 'Mol': 1, 'Google': 3, 'Al': 5, 'cell': 1, 'Kentucky': 3, 'Wayne': 1, 'Space': 3, 'no': 4, 'Guitar': 3, 'Sh': 1, 'Get': 3, 'Chicago': 2, 'Jo': 1, '10': 2, 'There': 1, 'Car': 2, 'Kenne': 1, 'sweat': 1, 'Independence': 1, 'Flint': 1, 'Billy': 1, 'World': 4, 'Sarah': 3, 'North': 3, 'Wisdom': 2, 'soccer': 1, 'Pay': 1, 'temperature': 1, 'District': 2, 'Variety': 1, 'BMW': 2, 'Sony': 1, 'Tunis': 1, 'Vel': 1, 'Area': 1, 'Je': 1, 'Mile': 1, 'Tra': 1, 'Sp': 1, 'spinal': 1, 'Marble': 1, 'O': 4, 'Pokémon': 6, 'West': 5, 'Tel': 1, 'God': 1, 'Phase': 1, 'Advanced': 1, 'U': 3, 'major': 1, 'San': 1, 'Fruit': 1, 'English': 4, 'Burn': 1, 'F': 6, 'Demo': 1, 'Thousand': 1, 'Samuel': 1, 'Taylor': 1, 'American': 6, 'Ontario': 1, 'Cre': 2, 'Stefan': 2, 'seat': 1, 'Sham': 2, 'Lamb': 1, 'Monster': 1, 'optic': 1, 'Windows': 2, 'Canada': 13, 'Ford': 7, 'Whole': 1, 'Stephen': 4, 'Radi': 1, 'Visa': 2, 'Fall': 3, '7': 1, 'Air': 3, 'Philip': 2, 'Country': 1, 'What': 1, 'Emma': 2, 'fi': 1, 'Bad': 1, 'Court': 1, 'Ro': 1, 'Guardian': 1, 'Seoul': 1, 'Friday': 1, 'April': 2, 'El': 3, 'Por': 1, 'Sorry': 1, 'Cristina': 1, 'social': 2, 'Nickel': 1, 'Wy': 1, 'V': 1, 'Bank': 1, 'Hi': 1, 'Range': 1, 'nuclear': 1, 'Pre': 1, 'Top': 2, 'Foot': 1, 'square': 2, 'ex': 1, 'Jamie': 1, 'Quartz': 1, 'Certified': 1, 'golf': 1, 'tea': 1, 'Chevrolet': 1, 'Bee': 1, 'Red': 3, 'James': 1, 'mercury': 1, 'Federal': 1, 'Turkey': 2, 'Fal': 2, 'Phoenix': 2, 'Roma': 1, 'House': 1, 'Buy': 1, 'Isle': 3, 'orange': 1, 'Vertical': 1, 'Quality': 1, 'Ho': 1, 'Ellis': 1, 'Royal': 1, 'Lock': 1, 'Fire': 1, '8': 1, 'Mary': 1, 'PlayStation': 3, 'Dodge': 1, 'NCAA': 2, 'harmonic': 1, 'Gateway': 1, 'Earl': 1, 'Pa': 1, 'coffee': 1, 'central': 1, 'Kuwait': 1, 'Se': 2, 'jet': 1, 'That': 1, 'Song': 1, 'Ann': 1, 'Green': 3, 'list': 1, 'tissue': 1, 'Tar': 3, 'Nelson': 1, '4': 1, 'Wi': 1, 'Lord': 1, 'Dawn': 1, 'TV': 1, 'Home': 2, 'ground': 1, 'Virtual': 1, 'Europe': 2, 'N': 2, 'Navi': 1, 'Tim': 1, 'Danny': 1, 'Wall': 1, 'Cabinet': 1, 'Fusion': 1, 'third': 1, 'here': 1, 'Jerry': 1, 'Nobel': 1, 'Sebastian': 1, 'Mount': 3, 'Bra': 1, 'Scandinavia': 1, 'Sweden': 2, 'transmission': 1, 'Jur': 2, 'Eight': 1, 'Interstate': 1, 'Montana': 1, 'Ur': 1, 'Ph': 1, 'Fred': 1, 'Left': 1, 'Lightning': 1, 'Guy': 1, 'Border': 1, 'Lake': 2, 'SIM': 1, 'Total': 2, 'Access': 1, 'Mexico': 3, 'British': 3, 'Multiple': 1, 'S': 1, 'white': 1, 'Fo': 1, 'Blade': 1, 'static': 1, 'no licence': 1, 'iPhone': 4, 'Dor': 1, 'Minute': 1, 'Fleet': 1, 'Hell': 3, 'No': 1, 'Bla': 1, 'George': 1, 'Missouri': 1, 'Made': 1, 'Second': 2, 'Public': 1, 'Que': 1, 'cats': 1, 'Tor': 1, 'Alex': 2, 'St': 1, 'va': 1, 'TO': 1, 'Mer': 1, 'Preston': 1, 'Charles': 3, 'Echo': 2, 'sea': 1, 'Vanilla': 1, 'Triple': 2, 'cow': 1, 'Kennedy': 1, 'Un': 1, 'nine': 1, 'Chelsea': 1, 'Fly': 1, 'Tower': 1, 'Black': 1, 'Meet': 1, '800': 1, 'This': 2, 'Princeton': 1, 'Highland': 1, 'Gram': 1, 'Malcolm': 1, 'Lex': 1, 'television': 1, 'Yellow': 1, 'Foreign': 1, 'Stop': 1, 'Tan': 1, 'no physical': 1, 'check': 2, 'alternative': 1, 'Lan': 1, 'Gar': 1, 'NFL': 1, 'Northern': 2, 'Rox': 1, 'Johnson': 1, 'Low': 2, 'Studio': 1, 'Jason': 1, 'Volkswagen': 2, 'body': 1, 'Snake': 1, 'Gulf': 1, 'Final': 1, 'Republic': 1, 'Ari': 1, 'Adrian': 1, 'Bosnia': 1, 'ABC': 3, 'Paris': 1, 'insulin': 1, 'Iceland': 1, 'Outside': 1, 'Crypto': 1, 'Color': 1, 'Andy': 1, 'D': 1, 'Sea': 2, 'hot': 1, 'Why': 1, 'Hart': 1, 'Income': 1, 'Emirates': 1, 'Rachel': 1, 'Senate': 1, 'or': 1, 'Han': 1, 'no private': 1, 'Grade': 1, 'Apple': 1, 'perfect': 1, 'Spain': 2, 'Dragon': 2, 'Con': 1, 'Sum': 1, 'Penn': 1, 'Nach': 1, 'Din': 2, 'national': 1, 'Defense': 1, 'Everything': 1, 'Russia': 1, 'Reid': 1, 'Los': 3, 'T': 4, 'Worcester': 1, 'no statute': 1, 'CBS': 2, 'Wild': 1, 'plaster': 1, 'Batman': 2, 'Serbia': 1, 'Key': 1, 'cannabis': 1, 'Companies': 1, 'Cedar': 1, 'Pixel': 1, 'terminal': 1, 'WWE': 2, 'Ell': 1, 'Jon': 1, 'Word': 1, 'Nissan': 2, 'Harmon': 1, 'Rit': 2, 'artificial': 1, 'Contemporary': 1, 'Clar': 2, 'three': 1, 'Fox': 2, 'death': 1, 'Tu': 1, 'G': 3, 'Angel': 2, 'Ly': 1, 'Well': 1, 'Channel': 1, 'snow': 1, 'Territory': 1, 'Shell': 1, 'Jamaica': 2, 'will': 1, 'no-': 1, 'no triangle': 1, 'Hal': 1, 'Israel': 1, 'Gall': 1, 'Dance': 1, 'Ronald': 1, 'fluid': 1, 'Jenny': 1, 'Web': 1, 'five': 1, 'Prince': 1, 'Bull': 1, 'natural': 3, 'Mau': 1, 'Beck': 2, 'Marion': 1, 'Geneva': 1, 'Pride': 1, 'Open': 1, 'Cat': 1, 'Co': 1, 'Cur': 1, 'Mercury': 1, 'War': 1, 'Justice': 2, 'lymph': 1, 'Milan': 1, 'Bachelor': 1, 'Abu': 1, 'Mother': 1, 'Cav': 1, 'Steven': 1, 'M': 2, 'no license': 3, 'Wikipedia': 1, 'River': 1, 'Sy': 1, 'Douglas': 1, 'Verizon': 1, 'Wolf': 1, 'Six': 1, 'Derek': 1, 'Frank': 1, 'La': 1, 'Par': 1, 'Coca': 1, 'Die': 1, 'Norway': 1, 'Turner': 1, 'Re': 1, 'Arm': 1, 'Leather': 1, 'Lego': 1, 'Instruction': 1, 'no team': 1, 'Jackson': 1, 'Rem': 1, 'Colorado': 1, 'En': 1, 'Spanish': 1, 'C': 1, 'Hot': 1, 'Ch': 1, 'Bay': 1, 'Travis': 1, 'Clark': 1, 'Eastern': 1, 'PDF': 1, 'steel': 1, 'AC': 1, 'Western': 1, 'She': 1, 'Anne': 1, 'Mc': 1, 'Wade': 1, 'no permit': 1, 'Nu': 1, 'Cont': 1, 'Dorothy': 1, 'Mercedes': 1, 'Randy': 1, 'Alaska': 1, 'Su': 1, 'thread': 1, 'Kansas': 1, 'Marshall': 1, 'Theory': 1, 'Ga': 1, 'Four': 1, 'selection': 1, 'Wa': 1, 'Virginia': 1, 'remote': 1, 'Mickey': 1, 'Cru': 1, 'Destin': 1, 'Human': 1, 'pet': 1, 'Denver': 1, 'NASA': 1, 'Ar': 1, 'be': 1, 'Scotia': 1, 'Johnny': 1, 'Pul': 1, 'Intel': 1, 'Shadow': 1, 'iPad': 1, 'Justin': 1, 'Ross': 1, 'Walt': 1, 'neutral': 1, 'Oslo': 1, 'Hawaii': 1, 'Central': 1, 'Inter': 1, 'Full': 1, 'gear': 1, 'chicken': 1, 'Pop': 1, 'Oakland': 1, 'Netflix': 1, 'Seattle': 1, 'film': 1, 'Ed': 1, 'Georgia': 1, 'Germany': 1, 'Spider': 1, 'B': 1, 'Data': 1, 'corn': 1, 'Thailand': 1, 'Austria': 1, 'Ker': 1, 'Tat': 1, 'Time': 1}
+   PEFT Model Accuracy: 0.0003
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.0003
+   🏆 NEW BEST My Model! Accuracy: 0.6217
+   🏆 NEW BEST PEFT Model! Accuracy: 0.0003
+
+🎯 Config 2/48
+   LR: 0.0001, Balance: True, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 2
+   LR: 0.0001, Balance: True, Prompt: 'Based on the text, yes or no?'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3268, 'zero': 1, 'no': 1}
+   My Model Accuracy: 0.6211
+   Testing PEFT Model...
+Prediction counts: {'': 877, 'property': 2, 'Phantom': 1, 'Harry': 4, 'Bar': 1, 'not': 224, 'the': 319, 'Blood': 2, 'shower': 1, 'liver': 1, 'Fantastic': 3, 'The': 157, 'Russell': 2, 'spark': 2, 'alcohol': 9, 'feather': 1, 'En': 2, 'Indianapolis': 1, 'Dead': 3, 'Ben': 3, 'Indiana': 4, 'Avengers': 12, 'Toyota': 1, 'carbon': 2, 'Columbus': 1, 'New': 21, 'U': 11, 'tomato': 1, 'only': 1, 'turkey': 1, 'Met': 1, 'FIFA': 19, 'Dam': 3, 'Sha': 1, 'E': 6, 'no.': 1, 'radio': 1, 'India': 4, 'to': 5, 'Xbox': 12, 'no bra': 1, 'Love': 4, 'De': 2, 'German': 3, 'matter': 1, 'Jaguar': 1, 'Bun': 1, 'White': 3, 'bullet': 1, 'Salt': 2, 'Great': 5, 'letter': 1, 'Star': 8, 'Scar': 3, 'Pete': 1, 'powder': 2, 'federal': 4, 'David': 1, 'Washington': 6, 'St': 7, 'Sam': 3, 'public': 6, 'health': 1, 'Florida': 2, 'Man': 1, 'Battle': 3, 'A': 3, 'de': 4, 'O': 6, 'Isle': 4, 'Na': 1, 'Go': 2, 'Here': 1, 'Major': 3, 'Marvel': 6, 'Euro': 1, 'Lux': 2, 'Dar': 5, 'I': 23, 'thread': 3, 'pit': 1, '5': 2, 'Who': 4, 'game': 1, 'Indian': 3, 'Bo': 1, 'Kelly': 2, 'Scotland': 3, 'Naval': 1, '1966': 2, 'be': 8, 'pick': 2, 'Ram': 1, 'All': 3, 'South': 2, 'competitive': 1, 'Charlie': 1, 'National': 4, 'Amazon': 3, 'GMT': 1, 'Murphy': 1, 'maple': 2, 'Lan': 3, 'Need': 2, 'Brook': 1, 'Mark': 1, 'basketball': 1, 'salt': 5, 'Navy': 1, 'Vo': 1, 'Better': 6, 'turn': 1, 'no': 11, 'Fear': 5, 'big': 1, 'China': 1, 'Bad': 2, 'Let': 1, 'queen': 1, 'Father': 6, 'Metal': 1, 'United': 15, 'Christopher': 1, 'Sp': 3, 'Joe': 2, 'Henry': 1, 'cross': 1, 'Water': 4, 'Michael': 2, 'Blue': 7, 'relationship': 1, 'tort': 1, 'iron': 2, 'Donna': 1, 'fair': 1, 'nomination': 3, 'Elena': 1, 'Lo': 2, 'Aus': 2, 'Hunter': 1, 'wire': 1, 'Amy': 1, 'Grey': 6, '29': 1, 'Cor': 2, 'post': 1, 'Saint': 2, 'football': 1, 'Absolut': 1, 'No': 2, 'City': 1, 'Song': 2, 'HBO': 1, 'yard': 2, 'Wheel': 3, 'Never': 1, 'W': 4, 'Mu': 2, 'can': 1, 'London': 3, 'speed': 1, 'Article': 4, 'Women': 1, 'Cold': 4, 'Elizabeth': 3, 'Anna': 2, 'Ma': 1, 'Season': 2, 'Son': 1, 'MLB': 3, 'Death': 1, 'no rule': 1, 'Devil': 1, 'fossil': 1, 'Las': 4, 'NC': 1, 'San': 5, 'Boston': 1, 'William': 1, 'R': 1, 'Rocky': 2, 'density': 1, 'fluid': 3, 'Crazy': 1, 'Jack': 2, 'make': 1, 'income': 1, 'brown': 4, 'Puerto': 2, 'Belgium': 1, 'California': 4, 'Stat': 1, 'Rev': 1, 'Dolphin': 1, 'Cour': 1, 'Game': 3, 'Thunder': 1, 'red': 3, 'Lucas': 1, 'Race': 2, '50': 1, 'goal': 6, 'Lin': 1, 'Central': 1, 'Spencer': 2, 'Broken': 2, 'Heart': 1, 'Milwaukee': 1, 'Lob': 1, 'Olive': 1, 'Bi': 1, 'Panama': 3, 'Jefferson': 1, 'blood': 1, 'in': 3, 'per': 3, 'tea': 2, 'Arm': 2, 'mixed': 1, 'Alexander': 2, 'In': 7, 'water': 5, 'one': 1, 'Mini': 2, 'Ban': 1, 'Far': 3, 'Ta': 1, 'fitness': 1, 'Halloween': 1, 'FC': 1, 'Com': 1, 'Kings': 1, 'friction': 1, 'joint': 2, 'Brain': 1, 'Col': 1, 'Republic': 3, 'Stanley': 2, 'Microsoft': 1, 'no jurisdiction': 1, 'sheep': 1, 'Olivia': 1, 'Hor': 2, 'Da': 2, 'Queen': 6, 'Canadian': 4, 'He': 3, 'Atlantic': 2, 'Legal': 1, 'Dragon': 3, 'Than': 1, 'Captain': 1, 'Mel': 1, 'Trinity': 1, 'Just': 3, 'Brooklyn': 1, 'bowl': 1, 'parallel': 1, 'artificial': 2, 'postal': 2, 'Deep': 2, 'Doctor': 2, 'Fa': 1, 'Croatia': 5, 'Heat': 3, 'NBA': 5, 'cord': 1, 'legislator': 1, 'Marian': 3, 'Chase': 2, 'Genesis': 1, 'male': 2, 'pe': 1, 'rugby': 2, 'Berlin': 1, 'Cop': 1, 'Visual': 1, 'vice': 1, 'George': 3, 'End': 1, 'B': 3, 'prison': 2, 'Mo': 1, 'popcorn': 2, 'Supreme': 7, 'England': 2, 'Dy': 3, 'Texas': 2, 'Thompson': 1, 'How': 5, 'end': 1, 'Sir': 1, 'Jeep': 2, 'un': 1, 'Mos': 1, 'Break': 1, 'K': 2, 'move': 1, 'multi': 1, 'ever': 1, 'Spirit': 2, 'short': 1, 'Ka': 1, 'yield': 1, 'Red': 6, 'find': 2, 'Stephen': 3, 'Daniel': 1, 'blue': 2, 'Financial': 1, 'Castle': 1, 'Mol': 1, 'Google': 3, 'Al': 2, 'Kentucky': 3, 'Wayne': 1, 'Space': 1, 'year': 1, 'Guitar': 3, 'Sh': 1, 'Get': 4, 'Chicago': 1, 'Jo': 1, 'Rome': 1, '10': 2, 'Car': 2, 'Pay': 2, 'Egg': 1, 'Well': 2, 'Kenne': 1, 'or': 3, 'sweat': 1, 'Independence': 1, 'Flint': 1, 'Billy': 1, 'World': 3, 'Sarah': 2, 'sal': 1, 'Wisdom': 2, 'soccer': 1, 'Che': 1, 'breakfast': 2, 'pizza': 1, 'sheet': 1, 'temperature': 1, 'District': 2, 'Honda': 1, 'veteran': 1, 'BMW': 2, 'great': 1, 'most': 2, 'Tunis': 1, 'Vel': 1, 'Area': 1, 'Je': 1, 'Mile': 1, 'Tra': 1, 'season': 7, 'twin': 3, 'air': 3, 'spinal': 1, 'neutral': 2, 'Marble': 1, 'Pokémon': 6, 'West': 5, 'universal': 3, 'Bell': 1, 'God': 1, 'Gold': 1, 'African': 1, 'check': 3, 'Ohio': 1, 'Fruit': 1, 'English': 5, 'burn': 1, 'no prison': 1, 'F': 9, 'Black': 4, 'Demo': 1, 'Thousand': 1, 'Samuel': 1, 'Lagos': 1, 'Permanent': 1, 'Cow': 1, 'Hal': 3, 'Taylor': 1, 'American': 8, 'signature': 2, 'hot': 3, 'sacrifice': 3, 'crema': 1, 'Stefan': 3, 'Greek': 1, 'seat': 1, 'Celebr': 1, 'Sham': 2, 'Lamb': 1, 'Monster': 1, 'my': 2, 'meat': 2, 'optic': 1, 'Surface': 1, 'away': 2, 'tornado': 1, 'Ford': 5, 'Whole': 1, 'Curry': 1, 'Im': 2, 'Hard': 1, 'long': 2, 'Radi': 1, 'Fall': 3, 'law': 1, 'Ci': 1, 'she': 3, 'Enterprise': 1, 'Loan': 1, 'What': 2, 'April': 2, 'Emma': 2, 'sugar': 1, 'fi': 1, 'Lee': 1, 'Bee': 1, 'Ro': 1, 'Full': 1, 'executive': 1, 'Seoul': 1, 'Friday': 1, 'Andy': 2, 'El': 3, 'por': 1, 'Sorry': 1, 'NHL': 1, 'Cristina': 1, 'internal': 1, 'Little': 2, 'social': 2, 'Big': 1, 'Whale': 1, 'right': 4, 'Wy': 1, 'V': 1, 'Bank': 2, 'Brazil': 2, 'Moon': 1, 'Hi': 1, 'Range': 1, 'Pre': 1, 'gray': 1, 'League': 1, 'Foot': 1, 'square': 2, 'ex': 1, 'S': 5, 'Jamie': 1, 'Rose': 1, 'Certified': 1, 'no-': 2, 'Dan': 1, 'War': 3, 'Roller': 1, 'golf': 1, 'Chevrolet': 2, 'crossover': 1, 'high': 2, 'James': 1, 'Les': 1, 'declaration': 1, 'Gu': 1, 'Turkey': 2, 'Fal': 3, 'mich': 1, 'muscular': 1, 'Company': 1, 'Phoenix': 2, 'Roma': 1, 'Old': 1, 'Leonard': 1, 'House': 2, 'Buy': 1, 'engine': 1, 'discretion': 1, 'Jewish': 1, 'fil': 1, 'orange': 1, 'Vertical': 1, 'positive': 1, 'Canada': 6, 'European': 5, 'Quality': 1, 'online': 1, 'Ho': 3, 'Ellis': 1, 'Prison': 1, 'return': 3, 'Royal': 2, 'lock': 1, 'fire': 2, '8': 2, 'Mary': 2, 'jungle': 1, 'net': 1, 'Dodge': 1, 'NCAA': 2, 'Kick': 1, 'Solo': 1, 'Mun': 1, 'harmonic': 1, 'relative': 1, 'Gateway': 1, 'Earl': 2, 'Pa': 1, 'coffee': 1, 'central': 1, 'oil': 1, 'Se': 2, 'as': 2, 'jet': 1, 'Ra': 1, 'that': 1, 'Tak': 1, 'Quarter': 1, 'Ann': 1, 'Green': 3, 'list': 1, 'tissue': 1, 'Tar': 3, 'potato': 1, 'Sweet': 1, 'Ende': 1, 'Nelson': 1, 'cable': 1, '4': 1, 'root': 1, 'Take': 1, 'Wi': 1, 'Lord': 1, 'Dawn': 2, 'Timothy': 1, 'virtual': 1, 'fra': 1, 'Civil': 1, 'Navi': 1, 'sweet': 1, 'Tim': 2, 'Danny': 1, 'Wall': 1, 'Cabinet': 1, 'Fusion': 1, 'honey': 1, 'Yard': 1, 'here': 1, 'Jerry': 1, 'Nobel': 2, 'Dominic': 1, 'Sebastian': 1, 'Mount': 2, 'Roman': 1, 'Bra': 1, 'railroad': 1, 'Scandinavia': 1, 'Worcester': 2, 'transmission': 1, 'Child': 1, 'summer': 1, 'Jur': 2, 'Eight': 2, 'One': 1, 'Tri': 1, 'Interstate': 1, 'Montana': 1, 'Spark': 1, 'Reflect': 1, 'natural': 4, 'North': 2, 'Ur': 1, 'Ph': 2, 'Fred': 1, 'Left': 1, 'Uncle': 1, 'Border': 3, 'Lake': 4, 'SIM': 1, 'from': 1, 'Total': 3, 'Access': 1, 'reverse': 1, 'Mar': 3, 'Mexico': 2, 'British': 1, 'Multiple': 1, 'soft': 1, 'Gram': 2, 'white': 1, 'Fo': 1, 'Blade': 1, 'Ar': 2, 'static': 1, 'no licence': 1, 'iPhone': 4, 'Dor': 1, 'Minute': 1, 'honor': 1, 'Fleet': 1, 'Hell': 3, 'Bla': 1, 'Good': 3, 'Flag': 1, 'Tom': 2, 'Second': 2, 'full': 2, 'P': 1, 'Orlando': 1, 'Que': 1, 'cats': 1, 'Tor': 1, 'Alex': 1, 'Belgia': 1, '3': 2, 'va': 1, 'TO': 1, 'Mer': 1, 'Gast': 1, 'Charles': 3, 'me': 1, 'chic': 2, 'Echo': 1, 'fighting': 1, 'Venus': 1, 'Universal': 1, 'sea': 1, 'Ellen': 1, 'Air': 1, 'University': 2, 'Vanilla': 1, 'news': 1, 'Triple': 2, 'playoff': 1, 'maxim': 1, 'cow': 1, 'Kennedy': 1, 'Un': 1, 'nine': 1, 'Chelsea': 1, 'Sa': 2, 'ba': 1, 'Fly': 1, 'Back': 1, 'Tower': 1, 'Meet': 1, 'H': 1, 'Czech': 1, 'Princeton': 1, 'Highland': 1, 'Malcolm': 1, 'Lex': 1, 'television': 1, 'Arrow': 1, 'Yellow': 1, 'Philip': 1, 'Equal': 1, 'Snow': 1, 'Stop': 1, 'Tan': 1, 'war': 1, 'no stores': 1, 'alternative': 1, 'pi': 1, 'empty': 2, 'Gar': 1, 'management': 1, 'will': 2, 'NFL': 1, 'Northern': 2, 'Rox': 1, 'Johnson': 1, 'Pu': 2, 'Low': 2, 'Los': 3, 'Jason': 1, 'Gla': 1, 'Volkswagen': 2, 'Pass': 1, 'body': 1, 'This': 1, 'Bur': 1, 'Regina': 1, 'PlayStation': 2, 'Snake': 1, 'Gulf': 2, 'Final': 1, 'Australia': 1, 'Sea': 4, 'Ari': 1, 'Adrian': 1, 'AC': 2, 'Bosnia': 1, 'Station': 1, 'change': 1, 'fashion': 1, 'insulin': 1, 'Iceland': 1, 'Outside': 1, 'Per': 1, 'It': 1, 'Diamond': 1, 'milk': 2, 'hamburger': 1, 'Riviera': 2, 'L': 1, 'Color': 1, 'D': 1, 'al': 1, 'Oscar': 1, 'Table': 1, 'Why': 1, 'Hart': 1, 'organ': 1, 'Bou': 1, 'Cross': 1, 'Income': 1, 'Emirates': 1, 'Fan': 1, 'J': 1, 'heat': 1, 'Rachel': 1, 'probability': 1, 'los': 1, 'Senate': 1, 'Han': 1, 'Destin': 2, 'Grade': 2, 'Apple': 1, 'super': 1, 'Sieg': 1, 'home': 3, 'Call': 1, 'Spain': 2, 'Con': 2, 'Sum': 1, 'France': 1, 'Windows': 2, 'Nach': 1, 'Din': 2, 'Baker': 1, 'Defense': 1, 'Spider': 3, 'Everything': 1, 'Russia': 1, 'Reid': 1, '2001': 1, 'Orange': 2, 'La': 2, 'T': 4, 'Am': 2, 'no statute': 1, 'Wild': 1, 'plaster': 1, 'female': 1, 'Fresh': 1, 'Port': 1, 'Serbia': 1, 'hair': 1, 'hue': 1, 'Key': 1, 'Covenant': 1, 'cannabis': 1, 'Companies': 1, 'Cedar': 1, 'Pixel': 1, 'terminal': 1, 'America': 1, 'WWE': 1, 'palm': 2, 'Word': 1, 'moment': 1, 'Nissan': 2, 'Harmon': 1, 'Rit': 2, 'Contemporary': 1, 'Hat': 1, 'Valentine': 1, 'C': 2, 'lead': 1, 'Ser': 1, 'option': 1, 'Fox': 2, 'Evil': 1, 'death': 1, 'Tu': 1, 'Ly': 2, 'G': 2, 'Angel': 2, 'Cooper': 1, 'Channel': 3, 'snow': 1, 'Long': 1, 'hydrogen': 1, 'Shell': 1, 'Family': 1, 'flag': 1, 'se': 1, 'mobile': 1, 'termination': 1, 'data': 1, 'Train': 1, 'yellow': 1, 'ABC': 1, 'Inter': 2, 'Israel': 1, 'Dance': 1, 'no no': 1, 'Ronald': 1, 'Clo': 1, 'infinite': 1, 'Day': 1, 'Jenny': 1, 'five': 1, 'chef': 1, 'Prince': 1, 'Bull': 2, 'Mill': 1, 'Beck': 2, 'Marion': 1, 'Pride': 1, 'Open': 1, 'eye': 1, 'every': 3, 'Fi': 1, 'Cat': 2, 'dairy': 1, 'Craft': 2, 'Co': 1, 'Zürich': 1, 'Cur': 1, 'Mercury': 1, 'Super': 2, 'lymph': 1, 'Milan': 1, 'Del': 1, 'Cape': 1, 'Bachelor': 2, 'King': 2, 'kick': 1, 'hydraulic': 1, 'Abu': 1, 'arm': 1, 'Mother': 1, 'Things': 1, 'admission': 2, 'Cav': 1, 'Soul': 1, 'Steven': 1, 'Wikipedia': 1, 'River': 1, 'Got': 1, 'Douglas': 1, 'Troy': 1, 'Verizon': 1, 'Wolf': 1, 'Cast': 1, 'Jessica': 1, 'Six': 1, 'Patrick': 1, 'Derek': 1, 'Select': 1, 'Frank': 1, 'Coca': 1, 'page': 1, 'Die': 1, 'Norway': 1, 'N': 1, 'Turner': 1, 'Re': 3, 'Leather': 1, 'Lego': 1, 'Instruction': 1, 'Justice': 1, 'no team': 1, 'Rag': 1, 'range': 1, 'Jackson': 1, 'Rem': 1, 'Ce': 1, 'Colorado': 1, 'Spanish': 1, 'Plaza': 1, 'Our': 1, 'Ch': 1, 'Travis': 1, 'flat': 1, 'PDF': 1, 'Ju': 1, 'gun': 1, 'Knight': 1, 'steel': 1, 'Western': 1, 'Su': 2, 'echo': 1, 'Peter': 1, 'Sweden': 1, 'Anne': 1, 'Mc': 1, 'Pe': 1, 'Lock': 1, 'Wade': 1, 'Once': 1, 'Make': 1, 'McC': 1, 'no permit': 1, 'cod': 1, 'List': 1, 'nu': 1, 'Japanese': 1, 'her': 2, 'scr': 1, 'Cont': 1, 'Dorothy': 1, 'Sean': 1, 'Mercedes': 1, 'Tampa': 1, 'Randy': 1, 'Le': 1, 'development': 1, 'Alaska': 1, 'uniform': 1, 'Palace': 1, 'Oakland': 2, 'Kansas': 1, 'Every': 1, 'Spring': 1, 'Remember': 1, 'pet': 3, 'corporate': 1, '24-': 1, 'Top': 1, 'Money': 1, 'beef': 1, 'Theory': 1, 'Ga': 1, 'drag': 1, 'no license': 1, 'Four': 1, 'no sequel': 1, 'selection': 1, 'Mickey': 1, 'Cru': 1, 'Five': 1, 'Brexit': 1, 'rod': 1, 'Will': 1, 'Drink': 1, 'Ross': 2, 'NASA': 1, 'Cy': 1, 'Scotia': 1, 'Criminal': 1, 'Johnny': 1, 'Pul': 1, 'Core': 1, 'Shadow': 2, 'iPad': 1, 'Justin': 1, 'bell': 1, 'ver': 1, 'circum': 1, 'Oslo': 1, 'Hawaii': 1, 'gold': 1, 'Jamaica': 1, 'Golden': 1, 'gear': 1, 'chicken': 1, 'Private': 1, 'Ted': 1, 'film': 1, 'Clar': 1, 'Ed': 1, 'Batman': 1, 'ma': 1, 'Georgia': 1, 'corn': 2, 'Germany': 1, 'Lady': 1, 'Data': 1, 'may': 1, 'Thailand': 1, 'Austria': 1, 'fixed': 1, 'twenty': 1, 'Ker': 1, 'Tat': 1, 'Time': 1, 'Plant': 1}
+   PEFT Model Accuracy: 0.0003
+   🎯 Results - My Model: 0.6211, PEFT Model: 0.0003
+
+🎯 Config 3/48
+   LR: 0.0001, Balance: True, Prompt: 'Question answering:'
+
+🧪 Experiment 3
+   LR: 0.0001, Balance: True, Prompt: 'Question answering:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3241, 'Who': 1, 'no': 25, 'no bodies': 1, 'the': 1, 'no permit': 1}
+   My Model Accuracy: 0.6168
+   Testing PEFT Model...
+Prediction counts: {'': 1002, 'property': 2, 'Phantom': 1, 'Harry': 4, 'Bar': 1, 'zero': 1, 'must': 2, 'the': 317, 'Blood': 2, 'shower': 1, 'liver': 1, 'Fantastic': 3, 'The': 125, 'Russell': 2, 'spark': 2, 'feather': 1, 'not': 63, 'Indianapolis': 1, 'Dead': 3, 'Ben': 3, 'federal': 8, 'Indiana': 3, 'Avengers': 13, 'Toyota': 1, 'copy': 1, 'carbon': 2, 'Columbus': 1, 'New': 23, 'U': 5, 'tomato': 1, 'only': 1, 'Met': 1, 'FIFA': 26, 'Dam': 3, 'Sha': 1, 'E': 4, 'No': 3, 'radio': 2, 'University': 5, 'India': 6, 'to': 3, 'female': 2, 'Xbox': 12, 'no': 5, 'Love': 3, '99': 1, 'De': 3, 'German': 3, 'matter': 1, 'Jaguar': 1, 'Bun': 1, 'White': 2, 'bullet': 1, 'Salt': 1, 'hyper': 2, 'Great': 5, 'Hurricane': 1, 'letter': 1, 'Star': 8, 'Scar': 3, 'Pete': 1, 'powder': 2, 'parent': 1, 'David': 2, 'Washington': 5, 'relations': 3, 'St': 7, 'public': 6, 'health': 1, 'Florida': 2, 'Man': 1, 'I': 22, 'Battle': 2, 'A': 3, 'de': 4, 'O': 6, 'nave': 1, 'Go': 2, 'numbers': 1, 'Marvel': 6, 'Euro': 1, 'Indian': 3, 'Lux': 2, 'Dar': 5, 'fraction': 1, 'thread': 3, '5': 2, 'Who': 4, 'Czech': 3, 'courts': 1, 'Kelly': 2, 'Scotland': 3, 'Naval': 1, '1966': 2, 'most': 6, 'be': 7, 'pick': 2, 'Ram': 1, 'all': 2, 'no license': 4, 'South': 3, 'competitive': 1, 'Victoria': 1, 'Charlie': 1, 'National': 3, 'Amazon': 1, 'GMT': 1, 'Murphy': 1, 'maple': 2, 'alcohol': 7, 'Need': 2, 'mark': 1, 'basketball': 1, 'salt': 6, 'Navy': 1, 'Better': 6, 'age': 1, 'turn': 1, 'two': 1, 'Fear': 4, 'male': 4, 'China': 1, 'Let': 1, 'queen': 3, 'Father': 5, 'Metal': 1, 'vice': 3, 'United': 27, 'Christopher': 1, 'Sp': 1, 'Joe': 1, 'Henry': 1, 'cross': 2, 'water': 3, 'Vegas': 1, 'Michael': 1, 'Blue': 7, 'relationship': 1, 'tort': 2, 'iron': 2, 'administrative': 2, 'fair': 1, 'nomination': 3, 'Elena': 1, 'Lo': 2, 'Aus': 2, 'Hunter': 1, 'wire': 1, 'Amy': 1, 'An': 1, 'Grey': 6, '29': 1, 'Cor': 2, 'post': 1, 'Saint': 2, 'football': 1, 'internal': 3, 'Absolut': 1, 'City': 1, 'Song': 2, 'HBO': 1, 'yard': 2, 'W': 2, 'Mu': 2, 'London': 2, 'constant': 1, 'Article': 4, 'Auto': 1, 'Women': 2, 'cold': 1, 'Elizabeth': 3, 'Robert': 1, 'Anna': 1, 'Ma': 1, 'Season': 2, 'Son': 1, 'MLB': 3, 'Death': 1, 'Devil': 1, 'fossil': 1, 'Las': 3, 'national': 2, 'Ott': 1, 'San': 4, 'Boston': 1, 'William': 1, 'grey': 1, 'R': 1, 'density': 1, 'fluid': 3, 'Jack': 2, 'make': 2, 'income': 3, 'brown': 3, 'Puerto': 3, 'Belgium': 3, 'California': 3, 'Rev': 1, 'Dolphin': 1, 'Cour': 1, 'Game': 2, 'Thunder': 1, 'red': 3, 'Lucas': 1, 'Race': 2, '50': 1, 'goal': 5, 'per': 4, 'Lin': 1, 'Central': 2, 'Global': 1, 'Spencer': 2, 'broken': 2, 'summer': 2, 'Heart': 1, 'Milwaukee': 1, 'lead': 2, 'Spanish': 3, 'membership': 1, 'Panama': 3, 'blood': 1, 'in': 2, 'tea': 2, 'Arm': 2, 'mixed': 1, 'Alexander': 2, 'In': 8, 'Tommy': 1, 'one': 2, 'Australia': 3, 'Ban': 1, 'common': 2, 'Far': 3, 'fitness': 1, 'Halloween': 1, 'FC': 1, 'each': 2, 'Com': 1, 'Universal': 3, 'friction': 1, 'joint': 2, 'Brain': 1, 'Republic': 3, 'Stanley': 1, 'Microsoft': 2, 'no jurisdiction': 1, 'domestic': 1, 'Olivia': 1, 'Justice': 2, '2010': 1, 'Da': 2, 'Queen': 2, 'Canadian': 4, 'He': 4, 'Atlantic': 3, 'Legal': 1, 'Dragon': 3, 'brain': 1, 'Than': 1, 'Captain': 1, 'Mel': 1, 'Trinity': 1, 'just': 1, 'mobile': 2, 'parallel': 1, 'postal': 1, 'Deep': 2, 'Doctor': 1, 'Fa': 2, 'Croatia': 5, 'European': 5, 'Heat': 2, 'NBA': 5, 'cord': 1, 'legislator': 1, 'Chase': 2, 'Genesis': 1, 'sea': 4, 'pe': 1, 'rugby': 2, 'compulsory': 1, 'Cop': 1, '2017': 1, 'Visual': 1, 'Comp': 1, 'George': 3, 'End': 1, 'B': 2, 'Cold': 3, 'Mo': 1, 'Supreme': 9, 'England': 2, 'Dy': 3, 'Texas': 2, 'Pakistan': 1, 'Thompson': 1, 'How': 5, 'end': 1, 'Jeep': 1, 'un': 1, 'Mos': 1, 'K': 1, 'move': 1, 'multi': 1, 'nation': 1, 'ever': 1, 'Spirit': 2, 'square': 4, 'short': 1, 'Ka': 1, 'yield': 1, 'Just': 2, 'Red': 5, 'Daniel': 1, 'Financial': 1, 'Castle': 1, 'Gui': 1, 'free': 1, 'Mol': 1, 'Google': 2, 'Al': 3, 'cell': 1, 'Kentucky': 3, 'Wayne': 1, 'Space': 2, 'year': 1, 'Guitar': 3, 'blue': 1, 'Sh': 1, 'russe': 1, 'Chicago': 2, 'Jo': 1, 'state': 3, 'Rome': 1, '10': 2, 'There': 1, 'Anthony': 1, 'English': 8, 'Egg': 1, 'Well': 2, 'secondary': 1, 'Kenne': 1, 'or': 3, 'sweat': 1, 'Independence': 1, 'Flint': 1, 'return': 4, 'sensory': 1, 'Billy': 1, 'Sarah': 2, 'North': 7, 'adjusted': 2, 'standard': 2, 'Wisdom': 2, 'soccer': 1, 'glucose': 1, 'pay': 1, 'Che': 1, 'Second': 3, 'breakfast': 1, 'sheet': 1, 'temperature': 1, 'District': 2, 'Honda': 1, 'veteran': 1, 'BMW': 2, 'great': 1, 'Tunis': 1, 'velocity': 1, 'Area': 1, 'Je': 1, 'Car': 1, 'Mile': 1, 'season': 4, 'twin': 5, 'air': 2, 'spinal': 1, 'All': 3, 'neutral': 2, 'Marble': 1, 'Water': 2, 'Pokémon': 6, 'West': 5, 'universal': 3, 'Tel': 1, 'breaking': 1, 'God': 1, 'List': 3, 'chain': 1, 'Phase': 1, 'African': 1, 'Nine': 1, 'major': 1, 'Fruit': 1, 'burn': 1, 'no prison': 1, 'F': 8, 'Demo': 1, 'Thousand': 1, 'dairy': 4, 'teams': 1, 'Samuel': 1, 'Lagos': 1, 'Permanent': 1, 'Destin': 3, 'cow': 3, 'Taylor': 1, 'American': 7, 'signature': 2, 'Internet': 1, 'television': 2, 'whale': 1, 'hot': 3, 'sacrifice': 3, 'Cre': 1, 'Stefan': 3, 'Greek': 1, 'Celebr': 1, 'Sham': 2, 'Lamb': 1, 'Monster': 1, 'my': 1, 'optic': 1, 'Windows': 2, 'Ontario': 2, 'Ford': 4, 'Whole': 1, 'Stephen': 4, 'Im': 2, 'is': 1, 'Hard': 1, 'Radi': 1, 'visa': 1, 'Fall': 3, 'noble': 1, 'law': 3, 'Air': 2, 'Get': 2, 'she': 3, 'Enterprise': 1, 'Loan': 1, 'What': 1, 'April': 3, 'Emma': 2, 'fi': 1, 'Bad': 1, 'Court': 1, 'bride': 2, 'Lee': 1, 'Bee': 2, 'Ro': 1, 'Full': 1, 'executive': 1, 'Seoul': 1, 'wheel': 1, 'Friday': 1, 'El': 3, 'por': 1, 'Sorry': 1, 'Cristina': 1, 'social': 2, 'Nickel': 2, 'Wy': 1, 'V': 1, 'Bank': 3, 'Brazil': 2, 'Moon': 1, 'Range': 1, 'Hawaiian': 1, 'nuclear': 4, 'Pre': 1, 'gray': 1, 'League': 1, 'World': 3, 'Foot': 1, 'ex': 1, 'S': 3, 'Jamie': 2, 'quantum': 2, 'War': 2, 'golf': 1, 'Chevrolet': 1, 'crossover': 1, 'Nintendo': 2, 'James': 1, 'Les': 1, 'Federal': 1, 'declaration': 1, 'Turkey': 1, 'Fal': 1, 'prison': 1, 'mich': 1, 'muscular': 1, 'Company': 1, 'Phoenix': 2, 'Roma': 1, 'Old': 1, 'Leonard': 1, 'House': 2, 'Parliament': 1, 'engine': 1, 'Jewish': 1, 'Dach': 1, 'Isle': 3, 'large': 1, 'orange': 1, 'birth': 1, 'citizens': 1, 'positive': 1, 'Canada': 7, 'Quality': 1, 'online': 1, 'Ho': 3, 'Ellis': 1, 'Prison': 1, 'Royal': 2, 'lock': 1, 'Jane': 1, 'fire': 2, '8': 1, 'Mary': 2, 'PlayStation': 2, 'net': 1, 'Dodge': 1, 'NCAA': 2, 'Kick': 1, 'Han': 2, 'Mun': 1, 'harmonic': 1, 'President': 1, 'Gateway': 1, 'illegal': 2, 'Earl': 2, 'Speaker': 1, 'Pa': 1, 'coffee': 1, 'central': 2, 'oil': 1, 'poly': 3, 'Se': 2, 'electric': 1, 'as': 1, 'Lake': 4, 'jet': 1, 'Spain': 2, 'Ra': 1, 'den': 1, 'that': 1, 'Tak': 1, 'Ann': 1, 'Green': 3, 'list': 1, 'tissue': 1, 'Tar': 2, 'potato': 1, 'appointed': 1, 'Ende': 1, 'cable': 1, '4': 1, '2018': 1, 'root': 1, 'Wi': 1, 'Lord': 1, 'Dawn': 2, 'TV': 1, 'Timothy': 1, 'Home': 1, 'Associate': 1, 'virtual': 1, 'Europe': 2, 'N': 2, 'abdomen': 1, 'Civil': 1, 'get': 1, 'single': 1, 'Navi': 1, 'sweet': 1, 'Tim': 2, 'Danny': 1, 'high': 4, 'Cabinet': 1, 'vitamin': 1, 'third': 1, 'USB': 3, 'Jerry': 1, 'Nobel': 2, 'Dominic': 1, 'Sebastian': 1, 'Mount': 3, 'Tom': 1, 'Roman': 1, 'heat': 3, 'Bra': 1, 'railroad': 1, 'Scandinavia': 1, 'Worcester': 2, 'transmission': 1, 'Jur': 2, 'Eight': 2, 'lunar': 1, 'three': 1, 'ratio': 1, 'Tri': 1, 'Interstate': 1, 'Steve': 1, 'Reflect': 1, 'natural': 4, 'Fred': 1, 'Left': 1, 'Uncle': 1, 'Mazda': 1, 'Cub': 1, 'Border': 3, 'SIM': 1, 'Total': 3, 'Access': 1, 'royal': 1, 'Mar': 3, 'Mexico': 2, 'British': 1, 'Multiple': 1, 'soft': 1, 'motherboard': 1, 'white': 2, 'black': 2, 'foam': 1, 'Blade': 1, 'Ar': 2, 'climate': 1, 'corporations': 1, 'static': 1, 'no licence': 1, 'discourage': 1, 'iPhone': 4, 'Na': 1, 'Dor': 1, 'Clark': 2, 'Minute': 1, 'honor': 1, 'Bob': 1, 'Hell': 3, '1963': 1, 'Bla': 1, 'flag': 3, 'permit': 1, 'Hannah': 1, 'Orlando': 1, 'Sam': 1, 'Que': 1, 'cats': 1, 'Six': 2, 'Alex': 2, '3-': 1, 'va': 1, 'TO': 1, 'Mer': 1, 'Duke': 1, 'Charles': 3, 'Bruce': 1, 'me': 1, 'chic': 2, 'Dis': 1, 'Venus': 1, 'Ellen': 1, 'Vanilla': 1, 'news': 1, 'Triple': 2, 'playoff': 1, 'maxim': 1, 'Kennedy': 1, 'Un': 1, 'nine': 2, 'Chelsea': 1, 'ba': 1, 'Common': 1, 'Fly': 1, 'Black': 2, 'Life': 1, 'Meet': 1, 'H': 1, 'This': 2, 'Princeton': 1, 'Major': 1, 'Highland': 1, 'Malcolm': 1, 'Lex': 1, 'Arrow': 1, 'Wild': 2, 'Yellow': 1, 'Philip': 1, 'Pinot': 1, 'Equal': 1, 'firearm': 2, 'foreign': 1, 'school': 1, 'Stop': 1, 'war': 1, 'no physical': 1, 'check': 2, 'Rise': 1, 'alternative': 1, 'Lan': 2, 'empty': 2, 'Gar': 1, 'management': 1, 'testament': 1, 'NFL': 1, 'Northern': 3, 'Rox': 1, 'Johnson': 1, 'Criminal': 2, 'Low': 2, 'studio': 1, 'Jason': 1, 'there': 1, 'Volkswagen': 2, 'body': 1, 'Caribbean': 1, 'Bur': 1, 'Regina': 1, 'Snake': 1, 'Gulf': 1, 'Final': 1, 'Sea': 3, 'Ari': 1, 'Adrian': 1, 'AC': 2, 'Bosnia': 1, 'calcium': 1, 'change': 1, 'fashion': 1, 'insulin': 1, 'Iceland': 1, 'Outside': 1, 'It': 1, 'diamond': 1, 'FA': 1, 'hamburger': 1, 'L': 1, 'Color': 1, 'Andy': 1, 'D': 1, 'al': 1, 'Table': 1, 'Why': 1, 'Hart': 1, 'organ': 1, 'Income': 1, 'Emirates': 1, 'fan': 1, 'Rachel': 1, 'probability': 1, 'solar': 2, 'Cab': 1, 'Senate': 1, 'Grade': 2, 'Apple': 1, 'home': 3, 'Con': 1, 'Sum': 1, 'Nach': 1, 'Din': 2, 'Baker': 1, 'Defense': 1, 'Spider': 2, 'Everything': 1, 'Russia': 1, 'Reid': 1, '2001': 1, 'La': 2, 'T': 5, 'Am': 1, 'no statute': 1, 'Good': 2, 'plaster': 1, 'Lieutenant': 1, 'Fresh': 1, 'Ghost': 1, 'Batman': 2, 'port': 1, 'Serbia': 1, 'hair': 1, 'electron': 3, '34': 1, 'color': 1, 'Key': 1, 'Pro': 1, 'Chrysler': 1, 'Riviera': 1, 'speed': 1, 'Companies': 1, 'Cedar': 1, 'WWE': 1, 'Si': 1, 'every': 5, 'Ell': 1, 'Jon': 1, 'Word': 1, 'moment': 1, 'relative': 1, 'Nissan': 2, 'Harmon': 1, 'Rit': 2, 'artificial': 1, 'Contemporary': 1, 'Hat': 1, 'Valentine': 1, 'C': 2, 'option': 1, 'Fox': 2, 'Evil': 1, 'Di': 1, 'death': 1, 'Tu': 1, 'G': 2, 'timing': 1, 'Angel': 2, 'Ly': 1, 'Cooper': 1, 'Mercy': 1, 'Channel': 3, 'snow': 1, 'Territory': 1, 'hydrogen': 1, 'Shell': 1, 'Le': 1, 'Will': 1, 'no-': 1, 'termination': 1, 'power': 1, 'data': 1, 'train': 1, 'yellow': 1, 'ABC': 1, 'Israel': 1, 'Dance': 1, 'no no': 1, 'Cristian': 1, 'RBI': 1, 'Clo': 1, 'Day': 1, 'voting': 1, 'infinite': 1, 'Jenny': 1, 'antagonist': 1, 'web': 1, 'five': 1, 'chef': 1, 'Prince': 1, 'Bull': 2, 'Beck': 2, 'Marion': 1, 'Pride': 1, 'Open': 1, 'eye': 1, 'Cat': 1, 'Ian': 1, 'Mort': 1, 'Co': 1, 'Zürich': 1, 'Cur': 1, 'Mercury': 1, 'Super': 1, 'lymph': 1, 'Milan': 1, 'Del': 1, 'Bachelor': 2, 'King': 2, 'kick': 1, 'Los': 2, 'hydraulic': 1, 'elder': 1, 'Abu': 1, 'arm': 1, 'Mother': 1, 'Things': 1, 'admission': 2, 'Cav': 1, '7.': 1, 'tart': 1, 'dishwasher': 1, 'tongue': 1, 'Steven': 1, 'Hyper': 1, 'River': 1, 'Sy': 1, 'Got': 1, 'Douglas': 1, 'Verizon': 1, 'Wolf': 1, 'Cast': 1, 'Australian': 1, 'Patrick': 1, 'Derek': 1, 'Frank': 1, 'right': 1, 'Coca': 1, 'bone': 1, '2007': 1, 'Die': 1, 'Norway': 1, 'Turner': 1, 'Re': 2, 'leather': 1, 'Lego': 1, 'Instruction': 1, 'Su': 3, 'no team': 1, 'Rag': 1, 'Jackson': 1, 'Rem': 1, 'Ce': 1, 'Colorado': 1, 'En': 1, 'Our': 1, '3': 1, 'hydro': 1, 'Ch': 1, 'Travis': 1, 'Eastern': 1, 'flat': 1, 'PDF': 1, 'Knight': 1, 'steel': 1, 'Cou': 1, 'Illinois': 1, 'Western': 1, 'echo': 1, 'Peter': 1, 'Sweden': 1, 'Anne': 1, '51': 1, 'Mc': 1, 'Pe': 1, 'Lock': 1, 'Wade': 1, 'McC': 1, 'no permit': 1, 'cod': 1, 'nu': 1, 'Iranian': 1, 'medical': 1, 'Cont': 1, 'Dorothy': 1, 'Orange': 1, 'Mercedes': 1, 'Tampa': 1, 'protein': 1, 'Randy': 1, 'development': 1, 'Alaska': 1, 'uniform': 1, 'Palace': 1, 'Oakland': 2, 'Kansas': 1, 'spring': 1, 'Marshall': 1, 'pet': 3, 'corporate': 1, '24-': 1, 'Trinidad': 1, 'Money': 1, 'beef': 1, 'Theory': 1, 'Ga': 1, 'drag': 1, 'Four': 1, 'Per': 1, 'selection': 1, 'Wa': 1, 'remote': 1, 'Mickey': 1, 'Each': 1, '17': 1, 'Milk': 1, 'Cru': 1, 'Five': 1, 'Ireland': 2, 'Brexit': 1, 'rod': 1, 'Edinburgh': 1, 'robot': 1, 'palm': 1, 'Ross': 2, 'human': 1, 'NASA': 1, 'Cy': 1, 'Scotia': 1, 'Johnny': 2, 'Pul': 1, 'Core': 1, 'Shadow': 1, 'Cost': 1, 'last': 1, 'variance': 1, 'iPad': 1, 'Justin': 1, 'bell': 1, 'Shakespeare': 1, 'no chocolate': 1, 'circum': 1, 'Oslo': 1, 'Hawaii': 1, 'gold': 1, 'Jamaica': 1, 'Inter': 1, 'full': 1, 'economic': 1, 'gear': 1, 'chicken': 1, 'Pop': 1, 'private': 1, 'film': 1, 'Clar': 1, 'Ed': 1, 'corn': 2, 'Germany': 1, 'Lady': 1, 'physical': 1, 'Data': 1, 'total': 1, 'Thailand': 1, 'Austria': 1, 'will': 1, 'time': 1, 'cat': 1, 'fixed': 1, 'twenty': 1, 'characteristic': 1, 'Ker': 1, 'muscle': 1, 'Tat': 1, 'Time': 1, 'Disney': 1, 'Plant': 1}
+   PEFT Model Accuracy: 0.0003
+   🎯 Results - My Model: 0.6168, PEFT Model: 0.0003
+
+🎯 Config 4/48
+   LR: 0.0001, Balance: True, Prompt: 'yes no:'
+
+🧪 Experiment 4
+   LR: 0.0001, Balance: True, Prompt: 'yes no:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 2922, 'zero': 1, 'no': 342, 'Who': 1, 'yes officially': 2, 'no bodies': 1, 'no permit': 1}
+   My Model Accuracy: 0.5966
+   Testing PEFT Model...
+Prediction counts: {'': 774, 'property': 3, 'Phantom': 1, 'Harry': 5, 'Bar': 2, 'zero': 1, 'American': 11, 'the': 71, 'New': 24, 'Blood': 2, 'shower': 1, 'liver': 1, 'Fantastic': 3, 'The': 182, 'Russell': 2, 'Magn': 1, 'Post': 2, 'spark': 2, 'Wisconsin': 2, 'En': 2, 'Indianapolis': 1, 'Dead': 3, 'Ben': 3, 'Puerto': 6, 'Indiana': 6, 'Avengers': 11, 'Toyota': 1, 'carbon': 2, 'Columbus': 1, 'U': 5, 'tomato': 2, 'English': 6, 'Tipp': 1, 'turkey': 2, 'Met': 1, 'FIFA': 35, 'Army': 1, 'Dam': 3, 'Sha': 1, 'Mount': 4, 'E': 5, 'no.': 1, 'radio': 3, 'Miracle': 1, 'A': 14, 'Bay': 3, 'Tyr': 1, 'Panama': 4, 'To': 5, 'floating': 1, 'Xbox': 14, 'Bra': 2, 'Love': 3, '11.': 2, '99': 1, 'World': 5, 'De': 8, 'German': 2, 'particle': 1, 'Jaguar': 1, 'Bun': 1, 'White': 3, 'Dor': 3, 'Anne': 2, 'bullet': 1, 'Salt': 2, 'hyper': 1, 'Great': 10, 'Hurricane': 1, 'Con': 4, 'Letter': 3, 'Gamb': 1, 'Star': 7, 'Scar': 3, 'Pete': 1, 'Journey': 1, 'Time': 4, 'powder': 2, 'federal': 4, 'parent': 1, 'David': 1, 'Washington': 6, 'relations': 3, 'Vehicle': 1, 'St': 8, 'public': 6, 'health': 1, 'Pompe': 1, 'Florida': 4, 'Man': 1, 'temperature': 3, 'I': 24, 'Power': 1, 'Battle': 1, 'FA': 2, 'de': 2, 'O': 7, 'Na': 2, 'Go': 2, 'Here': 1, 'Major': 5, 'Marvel': 8, 'Euro': 1, 'Lux': 2, 'Dar': 4, 'Tree': 1, 'Thread': 2, 'Pit': 1, '5': 4, 'Who': 4, 'Brazil': 3, 'Australia': 5, 'Indian': 4, 'courts': 1, 'Bo': 1, 'Lisa': 1, 'Scotland': 4, 'Naval': 1, '1966': 2, 'honey': 1, 'Tom': 2, 'pick': 2, 'Ram': 1, 'All': 6, 'South': 5, 'competitive': 2, 'Victoria': 1, 'Charlie': 1, 'National': 5, 'Amazon': 3, 'GMT': 1, 'Murphy': 1, 'maple': 2, 'cell': 1, 'alcohol': 9, 'one': 2, 'Need': 2, 'Mark': 1, 'basketball': 1, 'salt': 5, 'Navy': 1, 'Vo': 2, 'Better': 6, 'turn': 4, '2': 1, 'Fear': 5, 'Big': 2, 'China': 1, 'Bad': 2, 'Pi': 1, 'Let': 1, 'Father': 5, 'Metal': 1, 'UK': 1, 'Chris': 1, 'Sp': 3, 'Joe': 1, 'Virtual': 2, 'List': 5, 'Henry': 1, 'cross': 1, 'VR': 1, 'United': 27, 'dependent': 1, 'Ta': 1, 'George': 4, 'water': 4, 'Houston': 2, 'NHL': 2, 'Michael': 1, 'Blue': 8, 'relationship': 1, 'Interstate': 3, 'tort': 1, 'iron': 2, 'Donna': 1, 'administrative': 2, 'fair': 1, 'Supreme': 8, 'Elena': 1, 'Lo': 2, 'Aus': 2, 'Col': 2, 'Hunter': 1, 'wire': 1, 'Amy': 1, 'Berlin': 2, 'An': 1, 'language': 1, 'Grey': 7, '29': 1, 'Minor': 1, 'Cor': 2, 'Dach': 2, 'post': 2, 'Saint': 2, 'Cheap': 1, 'football': 2, 'internal': 2, 'Absolut': 1, 'Grand': 2, 'nomination': 2, 'City': 1, 'Song': 2, 'Pirate': 2, 'HBO': 1, 'yard': 2, 'Bri': 1, 'Wheel': 3, 'Never': 1, 'W': 4, 'Z': 1, 'Mu': 2, 'Western': 2, 'London': 3, 'speed': 2, 'Article': 5, 'Women': 1, 'Elizabeth': 2, 'Robert': 1, 'Anna': 2, 'Ma': 2, 'ABC': 2, 'Son': 1, 'MLB': 4, 'Death': 2, 'Eisen': 1, 'Wick': 1, 'Devil': 1, 'fossil': 1, 'Las': 4, 'Ott': 1, 'Metro': 1, 'Boston': 1, 'William': 1, 'R': 2, 'Rocky': 2, 'Now': 1, 'Red': 8, 'density': 1, 'fluid': 2, 'Jack': 2, 'Make': 2, 'brown': 3, 'be': 2, 'California': 4, 'Stat': 1, 'As': 3, '3': 3, 'Dolphin': 1, 'Cour': 1, 'Game': 2, 'Home': 4, 'Thunder': 1, 'red': 1, 'Ha': 1, 'Race': 2, '50': 1, 'goal': 3, 'per': 1, 'Lin': 1, 'Ban': 2, 'Central': 3, 'Private': 2, 'Broken': 2, 'summer': 2, 'Heart': 1, 'Milwaukee': 2, 'Lob': 1, 'Lead': 2, 'Olive': 1, 'Bi': 1, 'Jefferson': 1, 'Every': 2, 'blood': 1, 'in': 3, 'Bubble': 1, 'Arm': 2, 'mixed': 1, 'Coast': 2, 'Alexander': 2, 'In': 11, 'My': 4, 'Air': 4, 'Modern': 2, 'Mini': 2, 'six': 1, 'Bee': 4, 'dairy': 8, 'Common': 1, 'Far': 5, 'Georgia': 2, 'Sal': 1, 'fitness': 1, 'Halloween': 1, 'Bayern': 1, 'Kings': 1, 'friction': 1, 'joint': 2, 'Brain': 1, 'Amendment': 1, 'Republic': 2, 'Stanley': 3, 'Microsoft': 1, 'Olivia': 1, 'L': 3, 'Hor': 2, 'Da': 2, 'Queen': 6, 'Canadian': 3, 'He': 4, 'Atlantic': 3, 'International': 1, 'Legal': 1, 'Dragon': 3, 'brain': 1, 'Tin': 2, 'Capital': 1, 'Than': 1, 'America': 2, 'Captain': 1, 'Mel': 1, 'Trinity': 1, 'Just': 3, 'Brooklyn': 1, 'bowl': 1, 'mobile': 2, 'parallel': 1, 'postal': 2, 'Deep': 2, 'Doctor': 3, 'Fa': 2, 'Tampa': 2, 'Croatia': 5, 'Romania': 1, 'Heat': 3, 'NBA': 7, 'Cord': 1, 'Marian': 3, 'Chase': 2, 'Genesis': 1, 'Sea': 7, 'blue': 2, 'rugby': 2, 'Cedar': 3, 'Goal': 1, 'Cop': 1, 'Melissa': 1, 'C': 3, 'vice': 1, 'Comp': 1, 'End': 2, 'Ze': 1, 'B': 4, 'prison': 2, 'Cool': 1, 'Mo': 1, 'high': 6, 'popcorn': 2, 'Cell': 1, 'bi': 1, 'England': 2, 'Dy': 3, 'Texas': 3, 'Pakistan': 1, 'Thompson': 1, 'How': 5, 'end': 1, 'Aqua': 1, 'Thir': 1, 'discharge': 1, 'Jeep': 2, 'un': 1, 'Mos': 1, 'Break': 1, 'K': 2, 'Move': 1, 'multi': 1, 'ever': 1, 'Mann': 1, 'Spirit': 2, 'Square': 1, 'Family': 3, 'short': 1, 'Ka': 1, 'yield': 1, 'Kansas': 3, 'Find': 2, 'Wash': 1, 'Trade': 1, 'Financial': 1, 'Edinburgh': 2, 'Free': 1, 'Hydro': 2, 'Mol': 2, 'seat': 3, 'Google': 3, 'Al': 6, 'plasma': 1, 'Kentucky': 3, 'Pe': 2, 'Wayne': 1, 'Space': 3, 'square': 3, 'year': 1, 'Guitar': 3, 'Sh': 1, 'Get': 4, 'Chicago': 2, 'For': 1, 'state': 2, '10': 2, 'Along': 1, 'No': 4, 'Pay': 2, 'Egg': 1, 'Well': 2, 'secondary': 1, 'corn': 3, 'Kenne': 1, 'Or': 2, 'Sw': 1, 'Independence': 1, 'Flint': 1, 'neuro': 2, 'Poly': 3, 'Mercy': 2, 'Billy': 1, 'Sarah': 2, 'North': 6, 'adjusted': 2, 'is': 2, 'sal': 1, 'Wisdom': 2, 'dollar': 1, 'soccer': 1, 'glucose': 1, 'Roulette': 1, 'Che': 1, 'Second': 3, 'breakfast': 1, 'sheet': 1, 'Spider': 4, 'District': 2, 'Honda': 1, 'veteran': 1, 'Oz': 2, 'BMW': 2, 'Digital': 1, 'act': 1, 'driving': 1, 'Tunis': 1, 'Vel': 1, 'Area': 1, 'Je': 1, 'Car': 1, 'Mile': 1, 'Tra': 1, 'Once': 5, 'twin': 4, 'air': 2, 'spinal': 1, 'neutral': 2, 'Marble': 1, 'mono': 1, 'Pokémon': 6, 'West': 5, 'universal': 2, 'Bro': 1, 'season': 1, 'D': 3, 'Tel': 1, 'referendum': 1, 'God': 2, 'transfer': 1, 'chain': 1, 'Phase': 2, 'Gold': 1, 'African': 1, 'Advanced': 1, 'Nine': 1, 'check': 3, 'Ohio': 1, 'San': 4, 'Fruit': 1, 'burn': 1, 'F': 8, 'Black': 4, 'Demo': 1, 'Thousand': 1, 'visa': 1, 'Samuel': 1, 'Breakfast': 1, 'Lagos': 1, 'Ultimate': 1, 'Permanent': 2, 'Destin': 3, 'Cow': 2, 'Taylor': 1, 'signature': 2, 'Ontario': 3, 'Internet': 1, 'Whale': 2, 'Off': 2, '500': 1, 'sacrifice': 2, 'Cre': 2, 'foreign': 1, '800': 3, 'Stefan': 2, 'Greek': 1, 'Celebr': 1, 'Sham': 2, 'Poland': 1, 'Lamb': 1, 'Monster': 1, 'optic': 1, 'Surface': 1, 'Ford': 4, 'whole': 1, 'Curry': 1, 'Im': 2, 'Hard': 2, 'Long': 3, 'Grade': 3, 'Radi': 1, 'Visa': 2, 'Fall': 3, 'Bhutan': 1, 'sine': 1, 'Ci': 1, 'Jon': 1, 'Enterprise': 1, 'Loan': 1, 'Country': 1, 'What': 3, 'April': 3, 'Emma': 2, 'Jaw': 1, 'Sugar': 1, 'fi': 1, 'Court': 1, 'Lee': 1, 'Ro': 1, 'Take': 2, 'Full': 3, 'executive': 1, 'stand': 1, 'Dust': 1, 'Seoul': 1, 'Friday': 1, 'El': 4, 'Por': 1, 'Sorry': 1, 'Little': 2, 'social': 2, 'Pre': 2, 'Rescue': 2, 'Canada': 10, 'Wy': 1, 'Per': 2, 'V': 1, 'Bank': 2, 'Moon': 1, 'Hi': 1, 'Range': 1, 'Hawaiian': 1, 'nuclear': 4, 'gray': 1, 'League': 1, 'degree': 2, 'Top': 3, 'Foot': 1, 'ex': 1, 'S': 6, 'Jamie': 1, 'Quartz': 1, 'Certified': 1, 'respir': 1, 'quantum': 1, 'Dan': 1, 'Fixed': 1, 'War': 2, 'Roller': 1, 'Golf': 1, 'Iraq': 1, 'tea': 1, 'Chevrolet': 2, 'crossover': 1, 'Bill': 2, 'Nintendo': 2, 'James': 1, 'Les': 1, 'mercury': 1, 'Federal': 1, 'declaration': 1, 'Gu': 2, 'Turkey': 2, 'Fal': 1, 'mich': 2, 'muscular': 1, 'Company': 1, 'Phoenix': 2, 'Universal': 3, 'Roma': 1, 'Old': 1, 'anti': 1, 'Leonard': 1, 'House': 1, 'Buy': 1, 'Sam': 2, 'Hong': 1, 'engine': 1, 'Dis': 2, 'Jewish': 1, 'Boat': 1, 'Fil': 1, 'Isle': 3, 'right': 1, '1': 1, 'large': 1, 'Orange': 3, 'Jay': 1, 'Kur': 1, 'Brisbane': 1, 'Vertical': 1, 'Continuous': 1, 'Equi': 1, 'Anti': 1, 'Se': 4, 'Kelly': 1, 'Nu': 1, 'Cha': 1, 'Quality': 1, 'online': 1, 'Ho': 3, 'Ellis': 1, 'Missouri': 3, 'Prison': 1, 'return': 5, 'Cal': 1, 'Royal': 1, 'Lock': 2, '8': 1, 'Nova': 1, 'Mary': 2, 'PlayStation': 3, 'jungle': 1, 'net': 1, 'Dodge': 1, 'NCAA': 3, 'Kick': 1, 'Solo': 2, 'Mun': 1, 'harmonic': 1, 'President': 1, 'relative': 1, 'limit': 1, 'Gateway': 1, 'Ni': 3, 'Vatican': 1, 'Earl': 2, 'Pa': 1, 'coffee': 1, 'central': 1, 'oil': 2, 'non': 1, 'electric': 2, 'assist': 1, 'Lake': 4, 'Brown': 1, 'Multi': 1, 'jet': 1, 'Spain': 2, 'European': 2, 'Energy': 1, 'Ra': 1, 'den': 1, 'That': 1, 'Tal': 1, 'blocking': 1, 'Set': 1, 'Quarter': 1, 'Ann': 1, 'Louisiana': 1, 'no license': 2, 'Green': 3, 'list': 1, 'Massachusetts': 1, 'Past': 1, 'tissue': 1, 'Tar': 3, 'potato': 1, 'or': 1, 'Sweet': 2, 'Ende': 1, '12': 1, 'cable': 1, '4': 1, 'root': 1, 'Wi': 2, 'Lord': 1, 'Dawn': 3, 'TV': 1, 'Timothy': 1, 'Cape': 3, 'Associate': 1, 'Fra': 1, 'Europe': 2, 'N': 2, 'faster': 1, 'Ab': 1, 'Civil': 1, 'single': 1, 'Navi': 1, 'Tim': 2, 'Wall': 2, 'Cabinet': 1, 'Fusion': 1, 'vitamin': 1, 'Yard': 1, 'third': 1, 'USB': 3, 'here': 1, 'Jerry': 1, 'Greece': 1, 'Nobel': 2, 'Dominic': 1, 'Sebastian': 1, 'University': 3, 'Tour': 2, 'Roman': 2, 'heat': 2, 'Railroad': 1, 'Scandinavia': 1, 'Sweden': 2, 'Worcester': 2, 'Transmission': 1, 'Child': 3, 'Water': 1, 'Jur': 2, 'Un': 3, 'Eight': 3, 'July': 1, 'One': 1, 'three': 1, 'Tri': 4, 'Montana': 1, 'Spark': 1, 'double': 1, 'Steve': 1, 'Ly': 3, 'Reflect': 1, 'Ur': 1, 'Ph': 2, 'Fred': 1, 'Left': 1, 'Uncle': 1, 'Lightning': 1, 'Guy': 1, 'Mazda': 1, 'Cub': 1, '300': 1, 'Border': 3, 'SIM': 1, 'Total': 3, 'Access': 1, 'Blackjack': 1, 'Mar': 3, 'Mexico': 3, 'British': 1, 'steam': 1, 'Multiple': 1, 'motherboard': 1, 'playoff': 2, 'Gram': 2, 'white': 1, 'black': 1, 'foam': 1, 'Quant': 1, 'Blade': 1, 'Ace': 1, 'Ar': 4, 'static': 1, 'no licence': 1, 'So': 1, 'iPhone': 4, 'Meta': 1, 'Minute': 1, 'Hon': 1, 'Fleet': 1, 'Hell': 3, 'Display': 2, 'upper': 1, '1963': 1, 'Bla': 1, 'Good': 3, 'Flag': 1, 'Made': 1, 'P': 1, 'Orlando': 1, 'Le': 3, 'Cold': 3, 'Que': 1, 'cats': 1, 'Alex': 2, 'Belgia': 1, '3-': 1, 'va': 1, 'TO': 1, 'Mer': 1, 'Preston': 1, 'Gast': 1, 'Duke': 1, 'Charles': 4, 'chic': 2, 'impaired': 1, 'Delhi': 1, 'Fighting': 1, 'Venus': 1, 'Cau': 1, 'Seven': 1, 'sea': 1, 'Ellen': 1, 'Vanilla': 1, 'news': 1, 'Triple': 2, 'India': 4, 'maxim': 1, 'Kennedy': 1, 'rent': 1, 'nine': 2, 'Chelsea': 1, 'ba': 1, 'Fly': 1, 'Back': 1, 'Tower': 2, 'Life': 1, 'Meet': 1, 'H': 1, 'Em': 1, 'Czech': 3, 'This': 2, 'Princeton': 1, 'Remote': 1, 'Highland': 1, 'euro': 1, 'Lex': 1, 'barn': 1, 'television': 1, 'Taiwan': 1, 'Six': 2, 'Yellow': 1, 'Philip': 1, 'Pinot': 1, 'Equal': 1, 'Foreign': 1, 'Snow': 1, 'school': 1, 'Stop': 1, 'Tan': 1, 'Montgomery': 1, 'admission': 3, 'Rise': 1, 'alternative': 1, 'Lan': 2, 'pi': 1, 'empty': 2, 'Gar': 2, 'management': 1, 'You': 1, 'testament': 1, 'NFL': 1, 'Northern': 2, 'Rox': 1, 'Johnson': 1, 'Pu': 2, 'Ap': 1, 'Low': 2, 'Studio': 1, 'Jason': 1, 'glaci': 1, 'Volkswagen': 2, 'Pass': 1, 'Body': 1, 'Caribbean': 1, 'Bur': 1, 'Regina': 1, 'Snake': 2, 'smoking': 1, 'Gulf': 2, 'Final': 1, 'Congo': 1, 'Ari': 1, 'not': 4, 'AC': 2, 'Turtle': 1, 'Bosnia': 1, 'Station': 1, 'calcium': 1, 'Change': 1, 'Paris': 1, 'Hughes': 1, 'Insul': 1, 'Iceland': 1, 'Outside': 1, 'It': 1, 'Diamond': 1, 'hamburger': 1, 'Par': 3, 'Riviera': 2, 'Crypto': 1, 'Color': 1, 'Illinois': 1, 'al': 1, 'John': 1, 'Hot': 1, 'Table': 1, 'HD': 1, 'left': 1, 'to': 1, 'Why': 1, 'Architectural': 1, 'Hart': 1, 'organ': 1, 'up': 1, 'Bou': 1, 'Cross': 1, 'Pennsylvania': 3, 'Income': 1, 'Emirates': 1, 'Fan': 1, 'J': 1, 'Rachel': 1, 'probability': 1, 'solar': 2, 'Cab': 1, 'Senate': 1, 'Mod': 1, 'Han': 1, 'flat': 3, 'Whi': 1, 'Apple': 1, 'perfect': 1, 'Sum': 1, 'Ever': 1, 'Windows': 2, 'Di': 2, 'Penn': 1, 'Nach': 1, 'Din': 2, 'Baker': 1, 'Italy': 1, 'Estonia': 1, 'Everything': 1, '1991': 1, 'Russia': 1, 'Reid': 1, 'Lemon': 1, '2001': 1, 'Cincinnati': 2, 'two': 2, 'flash': 1, 'Los': 3, 'Pen': 1, 'no statute': 1, 'Wild': 1, 'plaster': 1, 'Lieutenant': 1, 'Fresh': 1, 'Ghost': 1, 'Batman': 2, 'Port': 1, 'no': 2, 'Serbia': 1, 'hair': 1, 'Savannah': 1, 'four': 1, 'Pyramid': 1, 'Dry': 1, '34': 1, 'Tur': 1, 'Key': 1, 'Covenant': 1, 'Chrysler': 1, 'cannabis': 1, 'Companies': 1, 'Nashville': 1, 'Pixel': 1, 'motor': 1, 'terminal': 1, 'WWE': 1, 'Si': 1, 'Ell': 1, 'Word': 1, 'Moment': 1, 'Nissan': 2, 'Harmon': 1, 'Rit': 2, 'artificial': 1, 'Hat': 1, 'Valentine': 1, 'Stephen': 1, 'Three': 1, 'Bot': 1, 'Ser': 1, 'option': 1, 'Rh': 1, 'life': 1, 'Windsor': 1, 'Tu': 1, 'G': 3, 'Cup': 1, 'Angel': 2, 'Channel': 3, 'Shoot': 1, 'Virginia': 2, 'snow': 1, 'Territory': 1, 'hydrogen': 1, 'Shell': 1, 'Double': 3, 'T': 4, 'Jamaica': 2, 'flag': 1, 'Hyper': 1, 'Will': 1, 'no-': 1, 'sleep': 1, 'termination': 1, 'power': 1, 'split': 1, 'data': 1, 'Train': 1, 'inter': 1, 'Israel': 1, 'Gall': 2, 'Dance': 1, 'Ronald': 1, 'Spanish': 2, 'Day': 2, 'Hus': 1, 'Fluid': 1, 'infinite': 1, 'Jenny': 1, 'antagonist': 1, 'Web': 1, 'Five': 2, 'chef': 1, 'Prince': 1, 'Bull': 2, 'natural': 3, 'Mau': 1, 'Beck': 2, 'Marion': 1, 'October': 1, 'Pride': 2, 'Open': 1, 'King': 3, 'Fi': 1, 'Cat': 2, 'Mort': 1, 'Craft': 2, 'Co': 2, 'Bahnhof': 1, 'Cu': 2, 'Cur': 1, 'Mercury': 1, 'buc': 1, 'We': 2, 'Larry': 1, 'Super': 4, 'lymph': 1, 'she': 1, 'Milan': 1, 'Del': 1, 'common': 1, 'Bachelor': 2, 'garlic': 1, 'diversity': 1, 'hydraulic': 1, 'elder': 1, 'Abu': 1, 'arm': 1, 'Mother': 1, 'Things': 1, 'Cav': 1, 'Soul': 1, '7.': 1, 'dishwasher': 1, 'Ton': 1, 'Steven': 1, 'M': 3, 'Media': 1, 'Wikipedia': 1, 'River': 1, 'Got': 1, 'egg': 1, 'Douglas': 1, 'Troy': 1, 'Verizon': 1, 'Wolf': 1, 'Cast': 1, 'Australian': 1, 'Ca': 1, 'Bal': 1, 'Derek': 1, 'Select': 1, 'Pearl': 1, 'Frank': 1, 'La': 1, 'Coca': 1, 'bone': 1, '2007': 1, 'Die': 1, 'Norway': 1, 'Turner': 1, 'Re': 2, 'Blu': 1, 'Leather': 1, 'Lego': 1, 'Instruction': 1, 'longest': 1, 'Constitution': 2, 'no team': 1, 'Rag': 1, 'Executive': 1, 'Jackson': 1, 'Rem': 1, 'Ce': 1, 'Colorado': 1, 'Plaza': 1, 'Our': 1, 'hot': 1, 'hydro': 1, 'Ch': 1, 'Travis': 1, 'Eastern': 1, 'PDF': 1, 'Gun': 1, 'Knight': 1, 'steel': 1, 'Cou': 1, 'rotation': 1, 'Echo': 1, 'Peter': 1, 'She': 1, '51': 1, 'Mc': 1, 'Wade': 1, 'Korean': 1, 'as': 1, 'McC': 1, 'basis': 1, 'Cod': 1, 'nu': 1, 'Pittsburgh': 1, 'County': 1, 'Japanese': 1, 'Cannabis': 1, 'scr': 1, 'Ga': 2, 'Cont': 1, 'Over': 2, 'Nickel': 1, 'Mercedes': 1, 'protein': 1, 'Randy': 1, 'developmental': 1, 'Alaska': 1, 'Su': 1, 'uniform': 1, 'teeth': 1, 'Palace': 1, 'Oakland': 2, 'thread': 1, 'activate': 1, 'Spring': 1, 'Remember': 1, 'Stra': 1, 'Marshall': 1, 'Goose': 1, 'pet': 2, 'sun': 1, 'Last': 1, 'corporate': 1, '24-': 1, 'tri': 1, 'beef': 1, 'Theory': 1, 'production': 1, 'drag': 1, 'Four': 1, 'electron': 1, 'Shadow': 3, 'selection': 1, 'day': 1, 'remote': 1, 'Mickey': 1, 'Each': 1, 'Cru': 1, 'Brexit': 1, 'rod': 1, 'Hydr': 1, 'Robot': 1, 'palm': 1, 'Ross': 2, 'eye': 1, 'Trans': 1, 'Pet': 1, 'NASA': 1, 'Cy': 1, 'Scotia': 1, 'Am': 1, 'CBS': 1, 'Johnny': 1, 'Pul': 1, 'Core': 1, 'iPad': 1, 'Justin': 1, 'pepper': 1, 'Season': 2, 'Walt': 1, 'ver': 1, 'Oslo': 1, 'Hawaii': 1, 'Cher': 1, 'State': 1, 'gold': 1, 'border': 1, 'Inter': 1, 'Ac': 1, 'Economic': 1, 'Golden': 1, 'gear': 1, 'chicken': 1, 'Your': 1, 'film': 1, 'Clar': 1, 'Ed': 1, 'Me': 1, 'Germany': 1, 'bio': 1, 'Lady': 1, 'Data': 1, 'Bailey': 1, 'hit': 1, 'Bahamas': 1, 'unit': 1, 'Thailand': 1, 'Run': 1, 'Austria': 1, 'spa': 1, 'fixed': 1, 'twenty': 1, 'Ker': 1, 'muscle': 1, 'Don': 1, 'Tat': 1, 'Plant': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.5966, PEFT Model: 0.0000
+
+🎯 Config 5/48
+   LR: 0.0001, Balance: False, Prompt: ''
+
+🧪 Experiment 5
+   LR: 0.0001, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3233, 'no': 37}
+   My Model Accuracy: 0.6153
+   Testing PEFT Model...
+Prediction counts: {'': 977, 'property': 3, 'Phantom': 1, 'Harry': 4, 'zero': 1, 'can': 10, 'play': 1, 'drinking': 2, 'Blood': 2, 'shower': 1, 'liver': 1, 'Fantastic': 3, 'season': 17, 'The': 132, 'Russell': 2, 'spark': 2, 'feather': 1, 'not': 28, 'the': 171, 'Indianapolis': 1, 'Dead': 3, 'Ben': 3, 'Puerto': 4, 'Indiana': 2, 'Avengers': 12, 'Toyota': 1, 'copy': 1, 'carbon': 2, 'no sequel': 2, 'Columbus': 1, 'New': 19, 'U': 6, 'tomato': 1, 'only': 2, 'turkey': 2, 'Met': 1, 'FIFA': 18, 'list': 12, 'Dam': 3, 'Sha': 1, 'Mount': 4, 'E': 4, 'no 1': 1, 'radio': 1, 'A': 9, 'University': 5, 'India': 6, 'To': 1, 'female': 2, 'Xbox': 11, 'no bra': 1, 'Love': 4, '11.': 1, '99': 1, 'De': 5, 'German': 3, 'matter': 1, 'Jaguar': 1, 'Bun': 1, 'White': 3, 'bullet': 1, 'Salt': 1, 'hyper': 2, 'Great': 6, 'Hurricane': 1, 'draft': 2, 'letter': 1, 'Star': 8, 'Scar': 3, 'Pete': 1, 'Journey': 1, 'Time': 2, 'powder': 2, 'federal': 4, 'parent': 1, 'David': 2, 'Washington': 4, 'relations': 3, 'St': 7, 'public': 4, 'health': 1, 'Florida': 2, 'Man': 1, 'multiplayer': 1, 'FA': 2, 'de': 4, 'do': 1, 'O': 6, 'nave': 1, 'Go': 2, 'Here': 1, 'Major': 2, 'numbers': 1, 'Marvel': 4, 'Euro': 1, 'Lux': 2, 'Dar': 3, 'I': 19, 'Thread': 2, 'pit': 1, '5': 3, 'Who': 4, 'theme': 1, 'Indian': 2, 'courts': 1, 'Bo': 1, 'Kelly': 2, 'Scotland': 3, 'Naval': 1, '1966': 2, 'most': 3, 'pick': 2, 'Word': 2, 'Ram': 1, 'All': 5, 'South': 3, 'competitive': 2, 'Amanda': 1, 'Charlie': 1, 'National': 3, 'more': 1, 'GMT': 1, 'Murphy': 1, 'maple': 2, 'alcohol': 9, 'one': 3, 'Need': 2, 'Mark': 1, 'basketball': 1, 'salt': 6, 'Navy': 1, 'Un': 3, 'age': 2, 'turn': 3, 'two': 3, 'Fear': 5, 'male': 2, 'China': 1, 'Let': 1, 'queen': 1, 'Father': 6, 'Metal': 1, 'Vice': 1, 'Christopher': 1, 'Sp': 1, 'Joe': 1, 'List': 2, 'Henry': 1, 'cross': 1, 'VR': 1, 'United': 15, 'depend': 1, 'trucks': 1, 'water': 3, 'Michael': 3, 'Blue': 6, 'relationship': 1, 'tort': 2, 'iron': 2, 'Donna': 1, 'administrative': 2, 'fair': 1, 'nomination': 3, 'Elena': 1, 'Lo': 2, 'Aus': 2, 'Hunter': 1, 'wire': 1, 'Amy': 1, 'An': 1, 'language': 1, 'Grey': 6, '29': 1, 'minor': 2, 'Cor': 2, 'post': 1, 'Saint': 2, 'Cheap': 1, 'football': 1, 'internal': 3, 'Absolut': 1, 'City': 1, 'Song': 2, 'HBO': 1, 'yard': 2, 'Wheel': 3, 'W': 3, 'Mu': 2, 'London': 3, 'speed': 2, 'Article': 5, 'Auto': 1, 'Women': 1, 'Cold': 4, 'Elizabeth': 3, 'in': 3, 'Anna': 1, 'Ma': 1, 'Son': 1, 'baseball': 1, 'Death': 1, 'silver': 1, 'Devil': 1, 'fossil': 1, 'Las': 3, 'national': 2, 'Ott': 1, 'San': 4, 'Boston': 1, 'William': 1, 'R': 1, 'Rocky': 1, 'no': 6, 'density': 1, 'fluid': 3, 'Jack': 2, 'make': 1, 'income': 3, 'brown': 3, 'Stat': 1, 'Rev': 1, '3': 2, 'Cour': 1, 'Game': 2, 'Thunder': 1, 'red': 3, 'Lucas': 1, 'Race': 2, '50': 1, 'goal': 6, 'per': 2, 'Lin': 1, 'Canada': 8, 'Central': 2, 'Spencer': 2, 'broken': 1, 'summer': 2, 'Milwaukee': 1, 'Lob': 1, 'olive': 1, 'membership': 1, 'Panama': 3, 'Jefferson': 1, 'blood': 1, 'be': 3, 'marriage': 1, 'Houston': 1, 'tea': 2, 'Arm': 2, 'mixed': 1, 'Coast': 2, 'Alexander': 2, 'certification': 1, 'In': 9, 'to': 3, 'Tommy': 1, 'Australia': 2, 'Air': 3, 'Ban': 1, 'common': 2, 'Far': 4, 'tac': 1, 'Belgium': 1, 'fitness': 1, 'Halloween': 1, 'FC': 1, 'voting': 2, 'Com': 1, 'friction': 1, 'joint': 2, 'brain': 2, 'no person': 1, 'Col': 1, 'Republic': 3, 'Stanley': 1, 'Microsoft': 2, 'no jurisdiction': 1, 'domestic': 1, 'Olivia': 1, 'Da': 3, 'Queen': 4, 'Canadian': 2, 'Atlantic': 3, 'Legal': 1, 'Dragon': 3, 'Than': 1, 'Captain': 1, 'Trinity': 1, 'just': 2, 'Brooklyn': 1, 'bowl': 1, 'mobile': 2, 'parallel': 1, 'selective': 1, 'Deep': 2, 'Doctor': 3, 'Fa': 3, 'Croatia': 5, 'Romania': 1, 'Heat': 3, 'NBA': 5, 'cord': 1, 'legislator': 1, 'Chase': 2, 'sea': 3, 'pe': 1, 'rugby': 1, 'compulsory': 1, 'Cop': 1, '2017': 1, 'Visual': 1, 'vice': 1, 'Comp': 1, 'George': 2, 'End': 1, 'Ze': 1, 'Brig': 1, 'Mo': 1, 'popcorn': 2, 'England': 1, 'Dy': 3, 'Texas': 2, 'Pakistan': 1, 'Thompson': 1, 'How': 5, 'Sir': 1, 'Thir': 1, 'discharge': 1, 'Post': 1, 'Jeep': 1, 'California': 3, 'un': 1, 'Mos': 1, 'Break': 1, 'K': 1, 'move': 1, 'multi': 1, 'ever': 1, 'Spirit': 2, 'square': 4, 'Family': 2, 'short': 1, 'Ka': 1, 'yield': 1, 'Just': 1, 'Red': 5, 'capital': 1, 'Saudi': 1, 'wash': 1, 'Financial': 1, 'Edinburgh': 1, 'free': 1, 'Hydro': 2, 'Mol': 2, 'seat': 2, 'Google': 2, 'Al': 5, 'cell': 1, 'Kentucky': 3, 'Wayne': 1, 'Space': 2, 'year': 1, 'Guitar': 3, 'blue': 2, 'Sh': 1, 'Get': 3, 'Chicago': 2, 'Jo': 1, 'state': 1, 'Rome': 1, '10': 2, 'There': 2, 'Car': 2, 'Pay': 2, 'Egg': 1, 'Well': 2, 'secondary': 1, 'corn': 3, 'Kenne': 1, 'or': 3, 'sweat': 1, 'Independence': 1, 'Flint': 1, 'return': 6, 'neuro': 2, 'Billy': 1, 'Sarah': 2, 'North': 5, 'adjusted': 2, 'standard': 2, 'sal': 1, 'Wisdom': 2, 'soccer': 1, 'glucose': 1, 'Second': 3, 'breakfast': 2, 'pizza': 1, 'sheet': 2, 'temperature': 1, 'District': 2, 'Honda': 1, 'veteran': 1, 'BMW': 2, 'great': 1, 'act': 1, 'Tunis': 1, 'velocity': 1, 'Area': 1, 'Je': 1, 'Mile': 1, 'Tra': 1, 'twin': 7, 'air': 2, 'spinal': 1, 'neutral': 2, 'Marble': 1, 'Water': 3, 'Battle': 2, 'Pokémon': 6, 'West': 5, 'universal': 3, 'Bro': 1, 'D': 3, 'Bell': 1, 'breaking': 1, 'referendum': 1, 'God': 1, 'transfer': 1, 'chain': 1, 'Advanced': 1, 'Fruit': 1, 'English': 6, 'burn': 1, 'no prison': 1, 'F': 8, 'Black': 3, 'Demo': 1, 'Thousand': 1, 'team': 1, 'visa': 1, 'Samuel': 1, 'Lagos': 1, 'permanent': 2, 'Destin': 3, 'cow': 2, 'Taylor': 1, 'American': 7, 'signature': 2, 'Internet': 1, 'Whale': 2, '500': 1, 'sacrifice': 3, 'Cre': 2, 'foreign': 2, '800': 3, 'Stefan': 3, 'Greek': 1, 'Celebr': 1, 'Sham': 2, 'Lamb': 1, 'Monster': 1, 'my': 2, 'allergic': 1, 'optic': 1, 'Daisy': 1, 'Surface': 1, 'tornado': 1, 'Ford': 5, 'whole': 1, 'Curry': 2, 'Im': 2, 'is': 2, 'Hard': 1, 'Radi': 2, 'Visa': 2, 'Fall': 2, 'australia': 2, 'law': 2, 'she': 3, 'Enterprise': 1, 'Loan': 1, 'Philip': 3, 'What': 2, 'April': 3, 'Emma': 2, 'Jaw': 1, 'sugar': 1, 'fi': 1, 'Bad': 1, 'bride': 2, 'Lee': 1, 'Ro': 1, 'Full': 1, 'executive': 2, 'Dust': 1, 'Seoul': 1, 'Bar': 1, 'kidney': 1, 'Friday': 1, 'El': 3, 'por': 1, 'Sorry': 1, 'Cristina': 1, 'Little': 2, 'social': 2, 'Pre': 2, 'Big': 1, 'Rescue': 1, 'right': 5, 'Wy': 1, 'Per': 3, 'V': 1, 'Bank': 3, 'Brazil': 2, 'Moon': 1, 'Hi': 1, 'Range': 1, 'Hawaiian': 1, 'nuclear': 3, 'gray': 1, 'League': 1, 'undergraduate': 2, 'World': 2, 'Foot': 1, 'ex': 1, 'S': 4, 'Jamie': 1, 'rose': 1, 'certified': 1, 'respir': 1, 'tax': 1, 'quantum': 1, 'fixed': 2, 'War': 2, 'Roller': 1, 'golf': 1, 'Chevrolet': 1, 'Bee': 1, 'crossover': 1, 'high': 4, 'Bill': 2, 'James': 1, 'Les': 1, 'Kath': 1, 'mercury': 1, 'Federal': 1, 'declaration': 1, 'Turkey': 2, 'Fal': 1, 'prison': 1, 'mich': 2, 'campaign': 1, 'MLB': 2, 'Phoenix': 2, 'Citizens': 1, 'Roma': 1, 'Old': 1, 'Leonard': 1, 'House': 1, 'Buy': 1, 'Sam': 2, 'it': 1, 'engine': 1, 'Dis': 2, 'Jewish': 1, 'Dach': 1, 'Boat': 1, 'Isle': 3, '1': 1, 'orange': 2, 'Vertical': 1, 'continuous': 1, 'Equi': 1, 'main': 1, 'Albania': 1, 'Se': 3, 'nu': 2, 'Quality': 1, 'online': 1, 'Ho': 3, 'Better': 5, 'Ellis': 1, 'Missouri': 1, 'Prison': 1, 'Royal': 1, 'Lock': 1, 'certificate': 1, 'fire': 2, '8': 1, 'Mary': 2, 'net': 1, 'Dodge': 1, 'Off': 1, 'NCAA': 2, 'Kick': 1, 'Solo': 1, 'Mun': 1, 'harmonic': 1, 'President': 1, 'relative': 1, 'there': 1, 'Gateway': 1, 'Earl': 2, 'Speaker': 1, 'Pa': 1, 'coffee': 1, 'central': 2, 'oil': 2, 'non': 2, 'electric': 1, 'As': 1, 'assist': 1, 'Lake': 5, 'Brown': 1, 'Multi': 1, 'jet': 1, 'Spain': 4, 'Ra': 1, 'den': 1, 'That': 1, 'blocking': 1, 'Tak': 1, 'playoff': 2, 'Quarter': 1, 'Ann': 1, 'no license': 4, 'Green': 3, 'may': 2, 'Past': 1, 'tissue': 1, 'Tar': 3, 'potato': 1, 'appointed': 1, 'Sweet': 2, 'Nelson': 1, 'cable': 1, '4': 1, '2018': 1, 'root': 1, 'Take': 1, 'Wi': 1, 'Lord': 1, 'Dawn': 2, 'Timothy': 1, 'Home': 3, 'Associate': 1, 'virtual': 1, 'Europe': 2, 'N': 2, 'abdomen': 1, 'Civil': 1, 'get': 1, 'single': 1, 'Navi': 1, 'Tim': 1, 'Danny': 1, 'Wall': 1, 'Cabinet': 1, 'Fusion': 1, 'vitamin': 1, 'third': 1, 'flash': 2, 'Jerry': 1, 'Fox': 3, 'Nobel': 2, 'find': 1, 'four': 2, 'Dominic': 2, 'Sebastian': 1, 'Tom': 1, 'Roman': 1, 'heat': 2, 'Israel': 2, 'Bra': 1, 'railroad': 1, 'Scandinavia': 1, 'Worcester': 2, 'transmission': 1, 'Jur': 3, 'Eight': 3, 'July': 1, 'three': 2, 'ratio': 1, 'Interstate': 1, 'Montana': 1, 'Spark': 1, 'double': 1, 'Steve': 1, 'chronic': 1, 'Reflect': 1, 'log': 1, 'Ur': 1, 'Ph': 1, 'Fred': 1, 'Left': 1, 'Uncle': 1, 'Guy': 1, 'Cub': 1, '300': 1, 'Border': 2, 'SIM': 1, 'from': 1, 'Total': 2, 'Access': 1, 'royal': 1, 'Mar': 3, 'Mexico': 2, 'British': 1, 'Multiple': 1, 'soft': 1, 'motherboard': 1, 'Gram': 2, 'white': 1, 'black': 1, 'foam': 1, 'Quant': 1, 'Blade': 1, 'corporations': 1, 'static': 1, 'no licence': 1, 'discourage': 1, 'Broken': 1, 'iPhone': 4, 'Dor': 1, 'Clark': 2, 'Minute': 1, 'Fleet': 1, 'Hell': 3, 'Le': 6, 'No': 1, 'Bla': 1, 'warrant': 1, 'Flag': 1, 'at': 2, 'permit': 1, 'Hannah': 1, 'full': 2, '11': 1, 'P': 3, 'Orlando': 1, 'Que': 1, 'cats': 1, 'Alex': 2, 'Belgia': 1, '3-': 1, 'va': 1, 'TO': 1, 'Mer': 1, 'Preston': 1, 'Gast': 1, 'Duke': 1, 'Charles': 3, 'market': 1, 'me': 1, 'chic': 2, 'impaired': 1, 'Fighting': 1, 'Venus': 1, 'Universal': 1, 'Seven': 1, 'Ellen': 1, 'Vanilla': 1, 'news': 1, 'Triple': 2, 'maxim': 1, 'Kennedy': 1, 'rent': 1, 'nine': 2, 'Chelsea': 1, 'Common': 1, 'Fly': 1, 'Back': 1, 'Tower': 1, 'Supreme': 1, 'Life': 1, 'Meet': 1, 'H': 1, 'Czech': 2, 'This': 2, 'Princeton': 1, 'cholesterol': 1, 'Highland': 1, 'Malcolm': 1, 'Lex': 1, 'barn': 1, 'television': 1, 'Mini': 1, 'Yellow': 1, 'Equal': 1, 'Hand': 1, 'little': 1, 'Snow': 1, 'Stop': 1, 'no physical': 1, 'check': 2, 'Rise': 1, 'Persian': 1, 'alternative': 1, 'Lan': 1, 'empty': 2, 'Gar': 2, 'management': 1, 'You': 1, 'al': 3, 'testament': 1, 'NFL': 1, 'Northern': 2, 'Rox': 1, 'Johnson': 1, 'Victor': 1, 'Low': 2, 'Amazon': 1, 'percent': 1, 'Studio': 1, 'Jason': 1, 'Volkswagen': 2, 'Pass': 1, 'body': 2, 'Caribbean': 1, 'Bur': 1, 'Regina': 1, 'Snake': 1, 'smoking': 1, 'Gulf': 2, 'Final': 1, 'Sea': 4, 'Ari': 1, 'what': 1, 'AC': 2, 'Bosnia': 1, 'Station': 1, 'calcium': 1, 'change': 1, 'fashion': 1, 'insulin': 1, 'Iceland': 1, 'six': 1, 'Outside': 1, 'It': 1, 'milk': 1, 'hamburger': 1, 'par': 1, 'Crypto': 1, 'L': 1, 'Color': 1, 'Andy': 1, 'Teddy': 1, 'hot': 2, 'Table': 1, 'twenty': 2, 'Why': 1, 'Hart': 1, 'up': 1, 'Cross': 1, 'Income': 1, 'Emirates': 1, 'Fan': 1, 'Rachel': 1, 'probability': 1, 'solar': 2, 'Ni': 1, 'Senate': 1, 'Mod': 1, 'Han': 1, 'flat': 3, 'Grade': 2, 'Apple': 1, 'PlayStation': 1, 'perfect': 1, 'Call': 1, 'Con': 2, 'Sum': 1, 'France': 1, 'Windows': 1, 'Penn': 1, 'Nach': 1, 'Din': 2, '2': 1, 'border': 1, 'Spider': 3, 'Sa': 1, 'Everything': 1, 'Russia': 1, 'Reid': 1, '2001': 1, 'La': 2, 'T': 2, 'Am': 2, 'no statute': 1, 'Good': 2, 'Wild': 1, 'plaster': 1, 'Lieutenant': 1, 'Fresh': 1, 'Ghost': 1, 'Batman': 2, 'Port': 1, 'Serbia': 1, 'hair': 1, '34': 1, 'passive': 1, 'color': 1, 'Key': 1, 'Kathy': 1, 'Covenant': 1, 'dis': 1, 'Riviera': 1, 'cannabis': 1, 'Companies': 1, 'Cedar': 1, 'Pixel': 1, 'terminal': 1, 'Si': 1, 'every': 3, 'Ell': 1, 'Jon': 1, 'Moment': 1, 'Nissan': 2, 'Harmon': 1, 'Rit': 2, 'artificial': 1, 'Sto': 1, 'Contemporary': 1, 'Hat': 1, 'Clar': 2, 'Stephen': 1, 'Su': 4, 'C': 2, 'lead': 1, 'option': 1, 'Male': 2, 'death': 1, 'home': 1, 'Tu': 1, 'G': 2, 'Cup': 1, 'Angel': 2, 'Ly': 1, 'Cooper': 1, 'Mercy': 1, 'Channel': 2, 'head': 1, 'snow': 1, 'Nintendo': 1, 'Territory': 1, 'hydrogen': 1, 'Shell': 1, 'flag': 1, 'se': 1, 'will': 2, 'no-': 1, 'sleep': 1, 'termination': 1, 'power': 1, 'split': 1, 'data': 1, 'Train': 1, 'Hal': 1, 'yellow': 1, 'ABC': 1, 'inter': 1, 'gall': 1, 'Dance': 1, 'no no': 1, 'Cristian': 1, 'Spanish': 2, 'closing': 1, 'baked': 1, 'Day': 1, 'Jenny': 1, 'antagonist': 1, 'Web': 1, 'five': 1, 'chef': 1, 'Prince': 1, 'Bull': 2, 'Mill': 1, 'citizenship': 2, 'Beck': 2, 'Marion': 1, 'October': 1, 'Pride': 2, 'Open': 1, 'eye': 2, 'King': 3, 'Fi': 1, 'Cat': 2, 'dairy': 1, 'Craft': 2, 'Co': 1, 'Zürich': 1, 'Cur': 1, 'Mercury': 1, 'natural': 2, 'Super': 2, 'lymph': 1, 'Milan': 1, 'Del': 1, 'Cape': 1, 'Bachelor': 2, 'Mason': 1, 'Jersey': 1, 'kick': 1, 'Los': 2, 'diversity': 1, 'hydraulic': 1, 'elder': 1, 'Abu': 1, 'arm': 1, 'Dan': 1, 'scratch': 1, 'Mother': 1, 'Things': 1, 'admission': 2, 'Harrison': 1, 'differences': 1, 'Cav': 1, 'Soul': 1, '7.': 1, 'dishwasher': 1, 'tongue': 1, 'Steven': 1, 'M': 3, 'Media': 1, 'Wikipedia': 1, 'River': 1, 'Sy': 1, 'Got': 1, 'egg': 1, 'Douglas': 1, 'Troy': 1, 'Verizon': 1, 'Wolf': 1, 'Cast': 1, 'Australian': 1, 'Jessica': 1, 'Six': 1, 'Patrick': 1, 'Derek': 1, 'Par': 1, 'Coca': 1, 'Page': 1, '2007': 1, 'Die': 1, 'He': 2, 'Norway': 1, 'Turner': 1, 'each': 1, 'Re': 2, 'electron': 2, 'Season': 1, 'leather': 1, 'Lego': 1, 'Instruction': 1, 'Justice': 1, 'no team': 1, 'Rag': 1, 'Jackson': 1, 'Do': 1, 'Rem': 1, 'Ce': 1, 'Colorado': 1, 'En': 1, 'Plaza': 1, 'Our': 1, 'hydro': 1, 'Ch': 1, 'Bay': 1, 'Travis': 1, 'Eastern': 1, 'PDF': 1, 'gun': 1, 'Knight': 1, 'steel': 1, 'Cou': 1, 'Illinois': 1, 'Western': 1, 'echo': 1, 'Peter': 1, 'Sweden': 1, 'Anne': 1, '51': 1, 'Mc': 1, 'Ontario': 1, 'Pe': 1, 'Wade': 1, 'Make': 1, 'McC': 1, 'no permit': 1, 'basis': 1, 'cod': 1, 'Japanese': 1, 'Cannabis': 1, 'Cont': 1, 'Dorothy': 1, 'Orange': 1, 'Mercedes': 1, 'Tampa': 1, 'protein': 1, 'Randy': 1, 'development': 1, 'Alaska': 1, 'uniform': 1, 'Palace': 1, 'Oakland': 2, 'thread': 1, 'pepper': 1, 'Kansas': 1, 'Every': 1, 'Spring': 1, 'Stra': 1, 'Marshall': 1, 'Goose': 1, 'pet': 3, 'sun': 1, '24-': 1, 'Trinidad': 1, 'Money': 1, 'ground': 1, 'Theory': 1, 'Ga': 1, 'production': 1, 'drag': 1, 'Four': 1, 'Shadow': 2, 'selection': 1, 'Wa': 1, 'day': 1, 'remote': 1, 'Mickey': 1, 'Each': 1, 'Gal': 1, 'Cru': 1, 'Five': 1, 'Brexit': 1, 'rod': 1, 'Poly': 1, 'moving': 1, 'Drink': 1, 'palm': 1, 'Ross': 2, 'Denver': 1, 'NASA': 1, 'Johnny': 1, 'Pul': 1, 'Core': 1, 'Cost': 1, 'iPad': 1, 'Justin': 1, 'USB': 2, 'bell': 1, 'East': 1, 'Land': 1, 'no chocolate': 1, 'circum': 1, 'Oslo': 1, 'Hawaii': 1, 'gold': 1, 'Jamaica': 1, 'Inter': 1, 'economic': 1, 'gear': 1, 'chicken': 1, 'Private': 1, 'film': 1, 'Ed': 1, 'Mah': 1, 'Germany': 1, 'reading': 1, 'Lady': 1, 'physical': 1, 'B': 1, 'Data': 1, 'Bailey': 1, 'total': 1, 'Thailand': 1, 'Austria': 1, 'Ar': 1, 'characteristic': 1, 'Ker': 1, 'Tat': 1, 'Disney': 1, 'Plant': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.6153, PEFT Model: 0.0000
+
+🎯 Config 6/48
+   LR: 0.0001, Balance: False, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 6
+   LR: 0.0001, Balance: False, Prompt: 'Based on the text, yes or no?'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'': 1371, 'property': 3, 'Phantom': 1, 'Harry': 4, 'zero': 1, 'can': 16, 'Blood': 2, 'shower': 1, 'the': 175, 'Fantastic': 3, 'season': 5, 'The': 145, 'Russell': 2, 'spark': 2, 'not': 52, 'Indianapolis': 1, 'Dead': 2, 'Ben': 2, 'Puerto': 3, 'Indiana': 2, 'Avengers': 13, 'Toyota': 1, 'copy': 2, 'carbon': 2, 'no sequel': 2, 'Columbus': 1, 'New': 20, 'U': 3, 'tomato': 1, 'only': 2, 'turkey': 2, 'Met': 1, 'FIFA': 19, 'Dam': 2, 'Sha': 1, 'Mount': 3, 'no 1': 1, 'radio': 1, 'A': 4, 'India': 6, 'Xbox': 10, 'no': 5, 'Love': 3, '99': 1, 'De': 2, 'German': 3, 'Jaguar': 1, 'Bun': 1, 'White': 3, 'bullet': 1, 'Salt': 1, 'hyper': 1, 'Great': 4, 'Hurricane': 1, 'Con': 3, 'Star': 7, 'Scar': 3, 'Pete': 1, 'powder': 2, 'federal': 6, 'David': 1, 'Washington': 4, 'relations': 3, 'public': 5, 'health': 1, 'Florida': 3, 'Man': 1, 'I': 21, 'multiplayer': 1, 'O': 4, 'nave': 1, 'Go': 2, 'Here': 1, 'Marvel': 5, 'Euro': 1, 'Lux': 1, 'Dar': 4, 'thread': 3, 'pit': 1, '5': 5, 'Who': 4, 'Indian': 2, 'courts': 1, 'Kelly': 2, 'Scotland': 4, 'Naval': 1, '1966': 2, 'most': 3, 'pick': 2, 'Word': 2, 'Ram': 1, 'all': 1, 'South': 3, 'competitive': 1, 'National': 2, 'Murphy': 1, 'maple': 2, 'alcohol': 8, 'one': 3, 'Need': 2, 'Mark': 1, 'basketball': 1, 'salt': 6, 'Un': 2, 'Better': 6, 'turn': 1, '2': 2, 'Fear': 4, 'male': 4, 'China': 1, 'Let': 1, 'Father': 6, 'Metal': 1, 'vice': 2, 'UK': 1, 'Christopher': 1, 'Joe': 1, 'List': 1, 'St': 5, 'Henry': 1, 'cross': 2, 'United': 15, 'trucks': 1, 'water': 3, 'Michael': 1, 'Blue': 4, 'relationship': 1, 'tort': 2, 'iron': 2, 'Donna': 1, 'fair': 1, 'Elena': 1, 'Lo': 3, 'Aus': 2, 'Hunter': 1, 'wire': 1, 'Amy': 1, 'An': 1, '29': 1, 'Cor': 2, 'pre': 1, 'Saint': 2, 'football': 1, 'internal': 4, 'Absolut': 1, 'No': 2, 'nomination': 1, 'City': 1, 'Song': 2, 'HBO': 1, 'yard': 2, 'W': 1, 'London': 3, 'constant': 1, 'Article': 4, 'Auto': 1, 'Women': 1, 'Elizabeth': 3, 'in': 3, 'Anna': 1, 'Ma': 1, 'Son': 1, 'MLB': 2, 'Devil': 1, 'fossil': 1, 'Las': 3, 'national': 1, 'San': 4, 'Boston': 1, 'William': 1, 'Rocky': 2, 'density': 1, 'Jack': 1, 'make': 1, 'income': 3, 'brown': 2, 'statue': 1, 'Rev': 1, '3': 2, 'Miami': 1, 'Cour': 1, 'Thunder': 1, 'red': 2, 'Lucas': 1, 'Race': 2, '50': 1, 'Sw': 1, 'per': 3, 'Lin': 1, 'Canada': 7, 'Central': 2, 'Spencer': 2, 'Broken': 2, '2016': 1, 'Milwaukee': 1, 'lobster': 1, 'Spanish': 2, 'membership': 1, 'Panama': 3, 'every': 4, 'be': 3, 'marriage': 1, 'Houston': 1, 'tea': 2, 'Arm': 2, 'mixed': 1, 'Coast': 1, 'Alexander': 2, 'In': 9, 'My': 1, 'Australia': 2, 'Air': 3, 'Ban': 1, 'common': 2, 'Far': 3, 'tac': 1, 'Belgium': 1, 'fitness': 1, 'Halloween': 1, 'FC': 1, 'Com': 1, 'Universal': 2, 'friction': 1, 'joint': 2, 'Brain': 1, 'Republic': 3, 'Stanley': 1, 'Microsoft': 1, 'no jurisdiction': 1, 'domestic': 1, 'Olivia': 1, 'Da': 2, 'Queen': 2, 'Canadian': 3, 'Atlantic': 3, 'legal': 1, 'Dragon': 3, 'brain': 1, 'Than': 1, 'Trinity': 1, 'Just': 3, 'Deep': 2, 'Fa': 1, 'Croatia': 6, 'Heat': 3, 'NBA': 5, 'legislator': 1, 'Chase': 2, 'rugby': 1, 'compulsory': 1, 'goal': 2, 'Cop': 1, '2017': 1, 'Visual': 1, 'Comp': 1, 'End': 1, 'Cold': 3, 'will': 3, 'popcorn': 2, 'England': 1, 'Dy': 3, 'Texas': 2, 'Pakistan': 1, 'Thompson': 1, 'How': 5, 'Thir': 1, 'Jeep': 1, 'California': 2, 'un': 1, 'Mos': 1, 'K': 1, 'move': 1, 'multi': 1, 'ever': 1, 'Spirit': 2, 'Family': 1, 'short': 1, 'Ka': 1, 'yield': 1, 'Pearl': 1, 'Daniel': 1, 'Edinburgh': 2, 'free': 2, 'Mol': 2, 'Al': 4, 'cell': 1, 'Kentucky': 3, 'Wayne': 1, 'Space': 2, 'square': 2, 'year': 1, 'Guitar': 3, 'blue': 1, 'Sh': 1, 'Get': 3, 'Chicago': 2, 'Jo': 1, 'Rome': 1, '10': 2, 'There': 1, 'Car': 2, 'Pay': 1, 'egg': 2, 'Kenne': 1, 'sweat': 1, 'Independence': 1, 'Flint': 1, 'return': 6, 'sensory': 1, 'Billy': 1, 'Sarah': 2, 'North': 6, 'adjusted': 2, 'standard': 2, 'Wisdom': 2, 'soccer': 1, 'C': 3, 'pay': 1, 'Second': 3, 'breakfast': 2, 'pizza': 1, 'sheet': 1, 'temperature': 1, 'District': 2, 'veteran': 1, 'BMW': 2, 'great': 1, 'E': 2, 'Tunis': 1, 'velocity': 1, 'area': 1, 'Je': 1, 'Mile': 1, 'Tra': 1, 'twin': 7, 'air': 2, 'spinal': 1, 'All': 3, 'Marble': 1, 'Battle': 2, 'Pokémon': 6, 'West': 4, 'universal': 3, 'Tel': 1, 'God': 1, 'list': 4, 'chain': 1, 'African': 1, 'major': 1, 'Ohio': 1, 'Fruit': 1, 'English': 6, 'no prison': 1, 'F': 8, 'Black': 3, 'Demo': 1, 'Thousand': 1, 'Samuel': 1, 'Lagos': 1, 'Can': 1, 'Taylor': 1, 'American': 7, 'signature': 2, 'Mu': 1, 'Whale': 2, 'sacrifice': 2, 'Cre': 1, 'foreign': 2, 'Stefan': 2, 'Greek': 1, 'seat': 1, 'Celebr': 1, 'Sham': 2, 'Lamb': 1, 'Monster': 1, 'my': 1, 'optic': 1, 'comic': 1, 'Windows': 3, 'tornado': 1, 'Ford': 5, 'Whole': 1, 'Curry': 2, 'Im': 2, 'is': 2, 'Hard': 1, 'Radi': 1, 'Visa': 2, 'Fall': 3, 'noble': 1, 'law': 2, 'she': 3, 'Enterprise': 1, 'Loan': 1, 'queen': 1, 'What': 1, 'April': 3, 'Emma': 2, 'fi': 1, 'Lee': 1, 'Ro': 1, 'executive': 1, 'Seoul': 1, 'wheel': 1, 'Friday': 1, 'El': 3, 'por': 1, 'Sorry': 1, 'Little': 1, 'social': 2, 'Big': 1, 'right': 2, 'Wy': 1, 'Game': 1, 'V': 1, 'Bank': 1, 'Brazil': 2, 'Moon': 1, 'Hi': 1, 'Range': 1, 'Hawaiian': 1, 'nuclear': 2, 'Pre': 1, 'gray': 1, 'League': 1, 'World': 3, 'Foot': 1, 'ex': 1, 'S': 2, 'Jamie': 1, 'certified': 1, 'golf': 1, 'Chevrolet': 1, 'urine': 1, 'crossover': 1, 'high': 3, 'Red': 3, 'James': 1, 'Les': 1, 'Federal': 1, 'declaration': 1, 'Turkey': 2, 'Fal': 1, 'prison': 1, 'mich': 1, 'Company': 1, 'Phoenix': 2, 'Roma': 1, 'Old': 1, 'Leonard': 1, 'House': 3, 'Buy': 1, 'there': 3, 'it': 1, 'Dis': 2, 'Jewish': 1, 'Isle': 3, 'orange': 1, 'nu': 2, 'Quality': 1, 'lou': 1, 'online': 1, 'bride': 1, 'Ho': 2, 'Ellis': 1, 'Prison': 1, 'Royal': 1, 'Lock': 1, 'fire': 2, '8': 2, 'Mary': 1, 'PlayStation': 2, 'jungle': 1, 'Dodge': 1, 'NCAA': 2, 'Kick': 1, 'Solo': 1, 'Mun': 1, 'harmonic': 1, 'Gateway': 1, 'illegal': 1, 'Pa': 1, 'coffee': 1, 'central': 2, 'oil': 2, 'non': 2, 'Google': 1, 'Se': 2, 'electric': 2, 'as': 1, 'Lake': 4, 'rice': 1, 'jet': 1, 'Ra': 1, 'den': 1, 'That': 1, 'Ann': 1, 'Green': 3, 'tissue': 1, 'Tar': 2, 'potato': 1, 'or': 2, 'appointed': 1, 'Nelson': 1, 'cable': 1, '4': 1, '2018': 2, 'Take': 1, 'Wi': 1, 'Dawn': 2, 'Home': 2, 'Virtual': 1, 'Europe': 2, 'N': 2, 'Civil': 1, 'Navi': 1, 'Tim': 1, 'cabinet': 1, 'vitamin': 1, 'third': 1, 'USB': 2, 'Jerry': 1, 'de': 1, 'Nobel': 2, 'Dominic': 1, 'Sebastian': 1, 'University': 4, 'Tom': 1, 'Roman': 1, 'heat': 2, 'Israel': 2, 'Bra': 1, 'railroad': 1, 'Scandinavia': 1, 'Worcester': 2, 'transmission': 1, 'Eight': 1, 'July': 1, 'three': 2, 'Interstate': 1, 'Montana': 1, 'Steve': 1, 'Reflect': 1, 'Fred': 1, 'Left': 1, 'Uncle': 1, 'Guy': 1, 'Cub': 1, '300': 1, 'Border': 2, 'SIM': 1, 'from': 1, 'Total': 1, 'access': 1, 'Mar': 3, 'Mexico': 3, 'British': 1, 'Multiple': 1, 'soft': 1, 'motherboard': 1, 'white': 1, 'foam': 1, 'quantum': 1, 'Blade': 1, 'corporations': 1, 'Since': 1, 'static': 1, 'no licence': 1, 'discourage': 1, 'iPhone': 4, 'Dor': 1, 'Minute': 1, 'Hon': 1, 'Fleet': 1, '2014': 1, 'Hell': 3, '1963': 1, 'Bla': 1, 'George': 1, 'warrant': 1, 'flag': 2, 'permit': 1, 'Hannah': 1, '11': 1, 'Orlando': 1, 'Le': 3, 'Sam': 1, 'Que': 1, 'cats': 1, 'Six': 2, '3-': 1, 'va': 1, 'TO': 1, 'Mer': 1, 'Preston': 1, 'Duke': 1, 'Charles': 3, 'chic': 2, 'impaired': 1, 'Fighting': 1, 'Venus': 1, 'sea': 3, 'Ellen': 1, 'vanilla': 1, 'news': 1, 'Triple': 2, 'maxim': 1, 'cow': 1, 'Kennedy': 1, 'nine': 2, 'Chelsea': 1, 'Fly': 1, 'Supreme': 1, 'Meet': 1, 'H': 1, 'Czech': 1, 'This': 2, 'Princeton': 1, 'Highland': 1, 'Malcolm': 1, 'Lex': 1, 'television': 1, 'Philip': 1, 'Pinot': 1, 'Stop': 1, 'war': 1, 'no physical': 1, 'check': 2, 'Rise': 1, 'alternative': 1, 'empty': 2, 'Gar': 1, 'management': 1, 'testament': 1, 'NFL': 1, 'Northern': 2, 'Johnson': 1, 'Low': 2, 'Amazon': 1, 'Los': 3, 'Jason': 1, 'Volkswagen': 2, 'Pass': 1, 'body': 1, 'Caribbean': 1, 'Bur': 1, 'Regina': 1, 'Snake': 1, 'Gulf': 1, 'Final': 1, 'Ari': 1, 'Adrian': 1, 'Bosnia': 1, 'Station': 1, 'calcium': 1, 'change': 1, 'fashion': 1, 'insulin': 1, 'Iceland': 1, 'Outside': 1, 'relative': 2, 'It': 1, 'hamburger': 1, 'L': 1, 'Color': 1, 'Illinois': 2, 'Andy': 1, 'D': 1, 'Sea': 1, 'al': 1, 'hot': 2, 'to': 2, 'twenty': 2, 'Why': 1, 'Hart': 1, 'Income': 1, 'Emirates': 1, 'Rachel': 1, 'probability': 1, 'solar': 2, 'Right': 1, 'los': 1, 'Ni': 1, 'Senate': 1, 'Han': 1, 'Destin': 2, 'Grade': 2, 'Apple': 1, 'home': 1, 'Spain': 2, 'Sum': 1, 'Nach': 1, 'Din': 2, 'Italy': 1, 'Defense': 1, 'Estonia': 1, 'Everything': 1, 'Russia': 1, 'Reid': 1, '2001': 1, 'La': 2, 'Am': 1, 'no statute': 1, 'Good': 2, 'Wild': 1, 'plaster': 1, 'female': 1, 'Fresh': 1, 'Batman': 2, 'Port': 1, 'Serbia': 1, 'hair': 1, 'Key': 1, 'Riviera': 1, 'cannabis': 1, 'Companies': 1, 'Cedar': 1, 'Si': 1, 'Ell': 1, 'Jon': 1, 'Nissan': 2, 'Harmon': 1, 'Rit': 2, 'artificial': 1, 'Lan': 1, 'Contemporary': 1, 'Clar': 2, 'lead': 1, 'option': 1, 'life': 1, 'On': 1, 'Male': 1, 'death': 1, 'Water': 1, 'Windsor': 1, 'Tu': 1, 'G': 2, 'Angel': 2, 'Ly': 1, 'Well': 1, 'Cooper': 1, 'Mercy': 1, 'Channel': 1, 'Grey': 4, 'snow': 1, 'Territory': 1, 'Shell': 1, 'mobile': 1, 'no-': 1, 'sleep': 1, 'termination': 1, 'data': 1, 'train': 1, 'no triangle': 1, 'Hal': 1, 'ABC': 1, 'Dance': 1, 'no no': 1, 'Cristian': 1, 'Clo': 1, 'Day': 1, 'fluid': 1, 'Jenny': 1, 'Web': 1, 'five': 1, 'chef': 1, 'Prince': 1, 'Bull': 2, 'natural': 3, 'citizenship': 1, 'Beck': 2, 'Marion': 1, 'Pride': 1, 'Open': 1, 'eye': 1, 'dairy': 1, 'two': 1, 'Co': 1, 'Zürich': 1, 'Cur': 1, 'Mercury': 1, 'War': 1, 'Justice': 1, 'lymph': 1, 'Milan': 1, 'Del': 1, 'Bachelor': 1, 'Jersey': 1, 'hydraulic': 1, 'Abu': 1, 'arm': 1, 'scratch': 1, 'Mother': 1, 'Things': 1, 'admission': 2, 'Cav': 1, '7.': 1, 'tart': 1, 'River': 1, 'Got': 1, 'Douglas': 1, 'Verizon': 1, 'Wolf': 1, 'Cast': 1, 'Patrick': 1, 'Derek': 1, 'Wheel': 1, 'Par': 1, 'King': 1, 'Coca': 1, 'bone': 1, 'Die': 1, 'Norway': 1, 'Turner': 1, 'Re': 1, 'leather': 1, 'Instruction': 1, 'no team': 1, 'Rag': 1, 'Rem': 1, 'Colorado': 1, 'En': 1, 'Our': 1, 'hydro': 1, 'Ch': 1, 'Bay': 1, 'flat': 1, 'PDF': 1, 'Knight': 1, 'steel': 1, 'AC': 1, 'Cou': 1, 'Western': 1, 'Su': 2, 'Echo': 1, 'Anne': 1, '51': 1, 'Mc': 1, 'Wade': 1, 'Make': 1, 'no permit': 1, 'cod': 1, 'Iranian': 1, 'Constitution': 1, 'Cannabis': 1, 'Cont': 1, 'Over': 1, 'Orange': 1, 'Spider': 2, 'Alex': 1, 'Mercedes': 1, 'Tampa': 1, 'Randy': 1, 'Alaska': 1, 'uniform': 1, 'Kansas': 1, 'Every': 1, 'Jur': 1, 'Spring': 1, 'Marshall': 1, 'corporate': 1, '24-': 1, 'Trinidad': 1, 'Money': 1, 'ground': 1, 'Theory': 1, 'Ga': 1, 'drag': 1, 'no license': 1, 'four': 1, 'electron': 1, 'Per': 1, 'Shadow': 2, 'selection': 1, 'Wa': 1, 'remote': 1, 'Mickey': 1, 'Each': 1, '17': 1, 'Gal': 1, 'Cru': 1, 'Five': 1, 'Brexit': 1, 'rod': 1, 'no insurance': 1, 'palm': 1, 'Ross': 2, 'human': 1, 'pet': 1, 'NASA': 1, 'Pul': 1, 'Core': 1, 'iOS': 1, 'Justin': 1, 'bell': 1, 'East': 1, 'neutral': 1, 'Shakespeare': 1, '26': 1, 'no chocolate': 1, 'circum': 1, 'Oslo': 1, 'Hawaii': 1, 'gold': 1, 'Jamaica': 1, 'Ireland': 1, 'full': 1, 'economic': 1, 'gear': 1, 'chicken': 1, 'private': 1, 'Oakland': 1, 'film': 1, 'Ed': 1, 'Georgia': 1, 'tortilla': 1, 'Germany': 1, 'Lady': 1, 'physical': 1, 'B': 1, 'Data': 1, 'may': 1, 'corn': 1, 'total': 1, 'Thailand': 1, 'Austria': 1, 'cat': 1, 'fixed': 1, 'Ar': 1, 'Ker': 1, 'muscle': 1, 'Tat': 1, 'Time': 1, 'Disney': 1, 'Plant': 1}
+   PEFT Model Accuracy: 0.0003
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.0003
+
+🎯 Config 7/48
+   LR: 0.0001, Balance: False, Prompt: 'Question answering:'
+
+🧪 Experiment 7
+   LR: 0.0001, Balance: False, Prompt: 'Question answering:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3263, 'Who': 1, 'no': 5, 'no bodies': 1}
+   My Model Accuracy: 0.6211
+   Testing PEFT Model...
+Prediction counts: {'': 1645, 'property': 1, 'Phantom': 1, 'Harry': 4, 'Blood': 2, 'Fantastic': 3, 'The': 245, 'Russell': 2, 'Indianapolis': 1, 'Dead': 3, 'Ben': 2, 'Puerto': 3, 'Indiana': 4, 'Avengers': 11, 'Toyota': 1, 'Columbus': 1, 'New': 20, 'U': 4, 'Met': 1, 'the': 28, 'FIFA': 26, 'Dam': 3, 'Sha': 1, 'Him': 1, 'E': 4, 'No': 5, 'radio': 1, 'A': 4, 'University': 4, 'Panama': 4, 'Xbox': 10, 'Love': 3, 'de': 1, 'German': 2, 'Matter': 1, 'Jaguar': 1, 'Bun': 1, 'White': 4, 'Salt': 5, 'Great': 7, 'Con': 4, 'not': 20, 'Star': 8, 'Scar': 3, 'Time': 2, 'Federal': 2, 'David': 1, 'Washington': 5, 'St': 10, 'public': 5, 'Florida': 3, 'Man': 1, 'Battle': 2, 'O': 5, 'Go': 2, 'Here': 1, 'Major': 3, 'Marvel': 6, 'Euro': 1, 'Lux': 2, 'Dar': 3, 'Tree': 1, 'I': 20, 'Thread': 2, '5': 1, 'Who': 3, 'Australian': 3, 'Indian': 2, 'Bo': 1, 'Kelly': 2, 'Scotland': 3, 'pick': 2, 'Ram': 1, 'All': 4, 'competitive': 2, 'Charlie': 1, 'National': 5, 'Amazon': 3, 'Murphy': 1, 'maple': 2, 'Need': 2, 'Vo': 1, 'Better': 6, '2': 1, 'Fear': 5, 'Big': 1, 'China': 1, 'Bad': 2, 'Let': 1, 'Queen': 5, 'Metal': 1, 'UK': 1, 'Chris': 1, 'Sp': 2, 'Joe': 1, 'Henry': 1, 'cross': 1, 'United': 23, 'Water': 3, 'Michael': 1, 'Blue': 7, 'tort': 1, 'iron': 1, 'fair': 1, 'nomination': 3, 'Elena': 1, 'Lo': 2, 'Aus': 2, 'Hunter': 1, 'An': 1, 'Grey': 7, '29': 1, 'Cor': 2, 'post': 1, 'Saint': 2, 'Cheap': 1, 'football': 1, 'Absolut': 1, 'City': 1, 'Song': 2, 'Never': 1, 'W': 3, 'Z': 1, 'Mu': 2, 'London': 3, 'speed': 1, 'Article': 4, 'List': 5, 'Women': 1, 'Elizabeth': 3, 'Anna': 1, 'Ma': 1, 'Father': 4, 'Son': 1, 'MLB': 3, 'Death': 2, 'Devil': 1, 'Las': 3, 'Metro': 1, 'Boston': 1, 'William': 1, 'Rocky': 1, 'Jack': 2, 'make': 1, 'Brown': 3, 'California': 4, 'Stat': 1, 'Rev': 1, '3': 2, 'Miami': 1, 'Cour': 1, 'Thunder': 1, 'Red': 8, 'Race': 2, '50': 1, 'Lin': 1, 'Ban': 2, 'Central': 2, 'Private': 2, 'Spencer': 3, 'Broken': 2, 'Heart': 1, 'Lob': 1, 'Olive': 1, 'Bi': 1, 'Jefferson': 1, 'be': 3, 'mixed': 1, 'Alexander': 1, 'In': 8, 'My': 2, 'Multi': 1, 'Air': 3, 'Common': 1, 'Far': 3, 'Halloween': 1, 'Bayern': 1, 'voting': 2, 'Com': 1, 'friction': 1, 'joint': 1, 'Brain': 1, 'Amendment': 1, 'Republic': 2, 'Stanley': 1, 'Microsoft': 2, 'Olivia': 1, 'Justice': 3, 'Hor': 2, 'Da': 2, 'Canadian': 3, 'He': 3, 'Atlantic': 3, 'Legal': 1, 'Dragon': 3, 'Captain': 1, 'Trinity': 1, 'Just': 3, 'Mo': 2, 'Parallel': 1, 'Deep': 2, 'Fa': 1, 'Croatia': 4, 'European': 3, 'Heat': 2, 'NBA': 7, 'Marian': 1, 'Chase': 2, 'Cop': 1, 'C': 2, 'vice': 1, 'George': 2, 'B': 5, 'Cold': 4, 'England': 2, 'Dy': 3, 'Texas': 2, 'Pakistan': 1, 'Thompson': 1, 'How': 5, 'Sir': 1, 'Jeep': 1, 'un': 1, 'Mos': 1, 'Break': 1, 'K': 1, 'Move': 1, 'multi': 1, 'national': 2, 'ever': 1, 'Spirit': 2, 'short': 1, 'Ka': 1, 'Financial': 1, 'Edinburgh': 1, 'Free': 1, 'Mol': 1, 'Al': 5, 'Kentucky': 3, 'Wayne': 1, 'Space': 1, 'Guitar': 3, 'Sh': 1, 'Get': 4, 'Chicago': 2, '10': 2, 'Along': 1, 'Pay': 2, 'Well': 2, 'Kenne': 1, 'Sw': 1, 'Independence': 1, 'Flint': 1, 'Mercy': 1, 'Billy': 1, 'Sarah': 2, 'adjusted': 2, 'Wisdom': 2, 'soccer': 1, 'Roulette': 1, 'Second': 3, 'pizza': 1, 'District': 2, 'BMW': 2, 'Tunis': 1, 'Vel': 1, 'Area': 1, 'Je': 1, 'Car': 1, 'Mile': 1, 'Tra': 1, 'spinal': 1, 'neutral': 2, 'Marble': 1, 'Pokémon': 6, 'West': 5, 'Universal': 5, 'Season': 1, 'Tel': 1, 'God': 1, 'Phase': 1, 'Gold': 1, 'African': 1, 'Advanced': 1, 'San': 4, 'Fruit': 1, 'English': 5, 'no prison': 1, 'F': 7, 'Black': 5, 'federal': 2, 'Demo': 1, 'Thousand': 1, 'Samuel': 1, 'Breakfast': 1, 'Permanent': 1, 'American': 8, 'Hal': 1, 'signature': 2, 'Ontario': 1, 'Cre': 1, 'promotion': 1, 'Stefan': 2, 'Greek': 1, 'Celebr': 1, 'Sham': 2, 'Lamb': 1, 'Monster': 1, 'Op': 1, 'Daisy': 1, 'Surface': 1, 'Ford': 5, 'Whole': 1, 'Stephen': 2, 'Im': 2, 'Hard': 1, 'Long': 2, 'Radi': 1, 'Visa': 2, 'Fall': 3, 'Australia': 2, 'law': 1, 'Country': 1, 'What': 1, 'April': 2, 'Emma': 2, 'fi': 1, 'Lee': 1, 'Ro': 1, 'Full': 2, 'executive': 1, 'Dust': 1, 'Seoul': 1, 'Friday': 1, 'El': 3, 'por': 1, 'Sorry': 1, 'Cristina': 1, 'social': 2, 'Pre': 2, 'Wy': 1, 'Game': 1, 'Per': 2, 'V': 1, 'Bank': 1, 'Brazil': 2, 'Moon': 1, 'Hi': 1, 'Range': 1, 'Hawaiian': 1, 'League': 1, 'Top': 2, 'World': 2, 'Cat': 4, 'Foot': 1, 'ex': 1, 'Jamie': 1, 'Quartz': 1, 'Certified': 1, 'Roller': 1, 'Golf': 1, 'Tea': 1, 'Chevrolet': 1, 'Bee': 1, 'crossover': 1, 'Bill': 2, 'James': 1, 'Les': 1, 'declaration': 1, 'Gu': 1, 'Turkey': 2, 'Fal': 2, 'Company': 1, 'Phoenix': 2, 'universal': 1, 'Roma': 1, 'House': 1, 'Buy': 1, 'Sam': 1, 'discretion': 1, 'Jewish': 1, 'Isle': 3, 'right': 1, 'Orange': 2, 'Vertical': 1, 'Canada': 7, 'Cha': 1, 'South': 2, 'Quality': 1, 'Ho': 3, 'Ellis': 1, 'Prison': 1, 'Royal': 3, 'Lock': 2, '8': 1, 'Mary': 2, 'PlayStation': 2, 'Dodge': 1, 'NCAA': 3, 'Solo': 2, 'harmonic': 1, 'relative': 1, 'Gateway': 1, 'Pa': 1, 'central': 1, 'non': 1, 'Google': 1, 'Se': 2, 'That': 1, 'Ann': 1, 'Green': 3, 'list': 1, 'Past': 1, 'Tar': 3, 'potato': 1, '12': 1, '4': 1, 'Wi': 1, 'Lord': 1, 'Timothy': 1, 'Home': 2, 'Virtual': 1, 'Europe': 2, 'N': 2, 'Civil': 1, 'Navi': 1, 'Tim': 1, 'high': 2, 'Wall': 1, 'Cabinet': 1, 'vitamin': 1, 'Jerry': 1, 'Nobel': 2, 'Dominic': 1, 'Sebastian': 1, 'Mount': 3, 'Roman': 2, 'Railroad': 1, 'Scandinavia': 1, 'Transmission': 1, 'Eight': 3, 'One': 1, 'Montana': 1, 'Reflect': 1, 'North': 3, 'Ur': 1, 'Ph': 2, 'Fred': 1, 'Left': 1, 'Uncle': 1, 'Guy': 1, 'mich': 1, '300': 1, 'Border': 2, 'Lake': 3, 'Total': 2, 'Access': 1, 'Mar': 3, 'Mexico': 2, 'British': 1, 'Multiple': 1, 'S': 2, 'De': 1, 'foam': 1, 'Quant': 1, 'Blade': 1, 'return': 1, 'no licence': 1, 'Dor': 1, 'Minute': 1, 'Hon': 1, 'Fleet': 1, 'Hell': 3, 'Bla': 1, 'Flag': 1, 'Made': 1, 'Orlando': 1, 'Que': 1, 'Six': 2, 'Alex': 2, 'va': 1, 'TO': 1, 'Mer': 1, 'Preston': 1, 'Gast': 1, 'Charles': 3, 'Dis': 1, 'Fighting': 1, 'sea': 1, 'Vanilla': 1, 'Triple': 2, 'India': 4, 'maxim': 1, 'Cow': 1, 'Kennedy': 1, 'Un': 2, 'nine': 1, 'Chelsea': 1, 'Fly': 1, 'Tower': 2, 'no': 3, 'Supreme': 1, 'Meet': 1, 'H': 1, 'Em': 1, '800': 1, 'This': 2, 'Princeton': 1, 'Highland': 1, 'Malcolm': 1, 'Lex': 1, 'Mini': 1, 'Arrow': 1, 'Yellow': 1, 'Philip': 1, 'Equal': 1, 'Stop': 1, 'alternative': 1, 'Lan': 1, 'Gar': 1, 'management': 1, 'You': 1, 'will': 2, 'NFL': 1, 'Northern': 2, 'Rox': 1, 'Johnson': 1, 'P': 2, 'Low': 2, 'Studio': 1, 'Jason': 1, 'Volkswagen': 2, 'Pass': 1, 'body': 1, 'Caribbean': 1, 'Bur': 1, 'Snake': 1, 'Gulf': 1, 'Final': 1, 'Consumer': 1, 'Ari': 1, 'ABC': 2, 'Change': 1, 'fashion': 1, 'Iceland': 1, 'Outside': 1, 'It': 1, 'Par': 2, 'Riviera': 2, 'Crypto': 1, 'L': 1, 'Color': 1, 'D': 1, 'Sea': 1, 'Academy': 1, 'Hot': 2, 'Table': 1, 'Why': 1, 'Architectural': 1, 'Hart': 1, 'Cross': 1, 'Income': 1, 'Emirates': 1, 'Rachel': 1, 'Right': 1, 'Cab': 1, 'Coast': 1, 'or': 1, 'Han': 1, 'Destin': 2, 'Apple': 1, 'Sieg': 1, 'Spain': 1, 'Sum': 1, 'Windows': 1, 'Sco': 1, 'Din': 2, 'Everything': 1, 'Russia': 1, '2001': 1, 'La': 2, 'no statute': 1, 'Good': 2, 'Wild': 1, 'Fresh': 1, 'Ghost': 1, 'Port': 1, 'Serbia': 1, 'Hair': 1, 'Key': 1, 'Covenant': 1, 'Companies': 1, 'Cedar': 1, 'terminal': 1, 'America': 1, 'WWE': 2, 'Ell': 1, 'Word': 1, 'Moment': 1, 'Nissan': 2, 'Harmon': 1, 'Rit': 2, 'artificial': 1, 'Sto': 1, 'Contemporary': 1, 'Hat': 1, 'Clar': 2, 'Fox': 1, 'Windsor': 1, 'Tu': 1, 'Ly': 2, 'G': 3, 'Angel': 2, 'Channel': 1, 'Shell': 1, 'Family': 1, 'flag': 1, 'no-': 1, 'Data': 2, 'Train': 1, 'Inter': 2, 'Israel': 1, 'Dance': 1, 'Ronald': 1, 'is': 1, 'Day': 1, 'infinite': 1, 'Jenny': 1, 'Five': 2, 'Prince': 1, 'Bull': 2, 'Beck': 2, 'Marion': 1, 'Pride': 2, 'Open': 1, 'Co': 1, 'Cur': 1, 'Mercury': 1, 'War': 1, 'We': 2, 'natural': 2, 'Milan': 1, 'Del': 1, 'King': 2, 'Los': 2, 'Diversity': 1, 'Abu': 1, 'Mother': 1, 'Things': 1, 'Cav': 1, 'Soul': 1, 'Steven': 1, 'Wikipedia': 1, 'River': 1, 'Sy': 1, 'Got': 1, 'Douglas': 1, 'Verizon': 1, 'Cast': 1, 'Derek': 1, 'Select': 1, 'Frank': 1, 'Wheel': 1, 'Coca': 1, 'Die': 1, 'Turner': 1, 'every': 1, 'Re': 1, 'Arm': 1, 'Leather': 1, 'Lego': 1, 'Instruction': 1, 'no team': 1, 'Rag': 1, 'Rem': 1, 'Colorado': 1, 'En': 1, 'T': 1, 'Spanish': 2, 'Plaza': 1, 'Our': 1, 'Dry': 1, 'alcohol': 1, 'Ch': 1, 'Bay': 1, 'Travis': 1, 'Super': 3, 'Eastern': 1, 'flat': 1, 'PDF': 1, 'Knight': 1, 'Steel': 1, 'yard': 1, 'AC': 1, 'Western': 1, 'Peter': 1, 'She': 1, 'Sweden': 1, 'Anne': 1, '51': 1, 'Mc': 1, 'Once': 1, 'Korean': 1, 'Make': 1, 'McC': 1, 'Cod': 1, 'nu': 1, 'Japanese': 1, 'Ga': 2, 'Cont': 1, 'Dorothy': 1, 'Tampa': 1, 'Randy': 1, 'development': 1, 'Su': 1, 'uniform': 1, 'Oakland': 2, 'Kansas': 1, 'Every': 1, 'Jur': 1, 'Spring': 1, 'Remember': 1, 'Marshall': 1, 'Pet': 1, '24-': 1, 'Money': 1, 'Theory': 1, 'check': 1, 'drag': 1, 'Four': 1, 'Shadow': 2, 'Selection': 1, 'Tour': 1, 'Wa': 1, 'key': 1, 'Mickey': 1, 'Each': 1, 'Cru': 1, 'Brexit': 1, 'Rod': 1, 'Will': 1, 'Poly': 1, 'NASA': 1, 'Ar': 2, 'Am': 1, 'Johnny': 1, 'Pul': 1, 'Core': 1, 'Justin': 1, 'Ross': 1, 'bell': 1, 'iPhone': 2, 'ver': 1, 'circum': 1, 'Oslo': 1, 'Hawaii': 1, 'Jamaica': 1, 'gear': 1, 'Pop': 1, 'Ed': 1, 'Batman': 1, 'Mah': 1, 'Georgia': 1, 'corn': 2, 'Germany': 1, 'Lady': 1, 'Spider': 1, 'Thailand': 1, 'Ker': 1, 'Tat': 1, 'Disney': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.6211, PEFT Model: 0.0000
+
+🎯 Config 8/48
+   LR: 0.0001, Balance: False, Prompt: 'yes no:'
+
+🧪 Experiment 8
+   LR: 0.0001, Balance: False, Prompt: 'yes no:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3195, 'zero': 1, 'no': 70, 'Who': 1, 'yes officially': 1, 'no bodies': 1, 'no permit': 1}
+   My Model Accuracy: 0.6153
+   Testing PEFT Model...
+Prediction counts: {'': 1532, 'property': 1, 'Phantom': 1, 'Harry': 4, 'Bar': 2, 'zero': 1, 'not': 205, 'Blood': 2, 'the': 95, 'Fantastic': 3, 'The': 129, 'Russell': 2, 'spark': 2, 'feather': 1, 'Indianapolis': 1, 'Dead': 3, 'Ben': 2, 'Indiana': 2, 'Avengers': 11, 'Toyota': 1, 'carbon': 2, 'Columbus': 1, 'New': 19, 'U': 5, 'Met': 1, 'FIFA': 17, 'Fox': 3, 'Army': 1, 'Dam': 3, 'Sha': 1, 'Him': 1, 'E': 8, 'no.': 1, 'radio': 2, 'Tyr': 1, 'De': 2, 'German': 2, 'Bun': 1, 'White': 4, 'Salt': 6, 'Cha': 1, 'hyper': 1, 'Great': 6, 'Hurricane': 1, 'Con': 4, 'Star': 5, 'Scar': 3, 'Pete': 1, 'powder': 1, 'federal': 5, 'David': 1, 'Washington': 5, 'St': 5, 'public': 2, 'health': 1, 'Pompe': 1, 'Man': 1, 'I': 24, 'Battle': 1, 'A': 3, 'O': 6, 'Go': 2, 'Here': 1, 'Major': 2, 'Marvel': 6, 'Euro': 1, 'no': 6, 'Lux': 2, 'Dar': 4, 'Thread': 2, '5': 1, 'Who': 3, 'Australia': 3, 'Indian': 4, 'Bo': 1, 'Kelly': 2, 'Scotland': 3, 'be': 2, 'pick': 2, 'Ram': 1, 'All': 6, 'South': 2, 'competitive': 2, 'Charlie': 1, 'National': 2, 'European': 3, 'Murphy': 1, 'maple': 2, 'Need': 2, 'Mark': 1, 'basketball': 1, 'Fear': 5, 'Big': 2, 'China': 1, 'Let': 1, 'Father': 6, 'Metal': 1, 'UK': 1, 'Christopher': 1, 'Joe': 2, 'True': 6, 'Henry': 1, 'cross': 1, 'Vegas': 1, 'Michael': 2, 'Blue': 5, 'tort': 1, 'iron': 1, 'fair': 1, 'nomination': 3, 'Elena': 1, 'Aus': 2, 'Hunter': 1, 'Amy': 1, 'Grey': 7, '29': 1, 'minor': 1, 'Cor': 2, 'Saint': 2, 'football': 1, 'Absolut': 1, 'No': 3, 'City': 1, 'Song': 2, 'Pirate': 1, 'Fal': 4, 'W': 2, 'Z': 1, 'Mu': 1, 'speed': 1, 'Article': 4, 'Women': 1, 'Elizabeth': 2, 'Anna': 1, 'Ma': 2, 'Pretty': 2, 'Son': 1, 'MLB': 3, 'Death': 1, 'fossil': 1, 'Boston': 1, 'William': 1, 'R': 1, 'Rocky': 2, 'Crazy': 1, 'Jack': 2, 'Puerto': 2, 'California': 4, 'Xbox': 6, 'Rev': 1, 'Game': 2, 'Lucas': 1, 'Race': 2, '50': 1, 'Lin': 1, 'Broken': 2, 'Milwaukee': 1, 'Olive': 1, 'Bi': 1, 'Panama': 2, 'blood': 1, 'in': 1, 'Houston': 1, 'mixed': 1, 'United': 23, 'Alexander': 1, 'In': 7, 'dairy': 7, 'Ban': 1, 'Far': 4, 'Belgium': 1, 'Love': 3, 'fitness': 1, 'Halloween': 1, 'FC': 1, 'Com': 1, 'friction': 1, 'joint': 1, 'Brain': 1, 'Stanley': 1, 'Microsoft': 3, 'no jurisdiction': 1, 'domestic': 1, 'Olivia': 1, 'Hor': 2, 'Da': 2, 'Queen': 2, 'Canadian': 2, 'He': 3, 'Atlantic': 1, 'Legal': 1, 'Dragon': 3, 'Than': 1, 'Captain': 1, 'Mel': 1, 'Trinity': 1, 'Just': 3, 'Deep': 2, 'Amazon': 2, 'Fa': 2, 'Croatia': 4, 'Heat': 2, 'NBA': 5, 'Marian': 2, 'Chase': 2, 'Genesis': 1, 'Black': 6, 'rugby': 2, 'goal': 1, 'Cop': 1, 'vice': 1, 'George': 2, 'End': 2, 'B': 2, 'Cold': 3, 'Mo': 1, 'England': 1, 'Dy': 3, 'Texas': 2, 'Thompson': 1, 'end': 1, 'Sir': 1, 'Jeep': 1, 'How': 4, 'un': 1, 'Mos': 1, 'Break': 1, 'K': 1, 'move': 1, 'multi': 1, 'ever': 1, 'Spirit': 2, 'short': 1, 'hi': 1, 'Ka': 1, 'Yi': 1, 'Red': 6, 'Stephen': 5, 'Financial': 1, 'Edinburgh': 1, 'Hydro': 1, 'Mol': 2, 'seat': 3, 'Al': 3, 'membrane': 1, 'Kentucky': 3, 'Wayne': 1, 'Space': 2, 'year': 1, 'Guitar': 3, 'Sh': 1, 'Get': 4, 'Chicago': 2, 'Jo': 1, 'World': 4, 'Kenne': 1, 'sweat': 1, 'Independence': 1, 'Flint': 1, 'Billy': 1, 'Sarah': 2, 'Wisdom': 2, 'soccer': 1, 'Pay': 1, 'temperature': 1, 'District': 2, 'veterans': 1, 'Oz': 1, 'Tunis': 1, 'Vel': 1, 'Je': 1, 'Car': 1, 'Mile': 1, 'Tra': 1, 'twin': 7, 'Sp': 1, 'spinal': 1, 'neutral': 2, 'Marble': 1, 'Pokémon': 6, 'West': 4, 'universal': 2, 'breaking': 1, 'God': 4, 'chain': 1, 'Phase': 1, 'African': 1, 'major': 1, 'Ohio': 1, 'San': 3, 'Fruit': 1, 'English': 4, 'Burn': 1, 'no prison': 1, 'F': 6, 'Demo': 1, 'Thousand': 1, 'Samuel': 1, 'Lagos': 1, 'Permanent': 1, 'Cow': 1, 'Hal': 1, 'Taylor': 1, 'American': 9, 'signature': 1, 'Ontario': 1, 'Internet': 1, '500': 1, 'promotion': 1, 'Stefan': 3, 'Greek': 1, 'Sham': 2, 'Lamb': 1, 'Monster': 1, 'my': 2, 'optic': 1, 'Surface': 1, 'Ford': 5, 'Whole': 1, 'Im': 2, 'Hard': 1, 'Radi': 1, 'Fall': 2, 'Brown': 2, 'Jon': 1, 'she': 1, 'What': 2, 'April': 2, 'Emma': 2, 'Jaw': 1, 'fi': 1, 'Bad': 1, 'Lee': 1, 'Ro': 1, 'executive': 1, 'Dust': 1, 'Seoul': 1, 'Friday': 1, 'El': 2, 'por': 1, 'Sorry': 1, 'NHL': 1, 'Cristina': 1, 'Little': 2, 'social': 2, 'Rescue': 1, 'Wy': 1, 'V': 1, 'Bank': 2, 'Brazil': 2, 'Hi': 1, 'Range': 1, 'Hawaiian': 1, 'nuclear': 1, 'Pre': 1, 'Gray': 1, 'League': 1, 'Cat': 3, 'Foot': 1, 'S': 2, 'Jamie': 1, 'Roller': 1, 'Golf': 1, 'tea': 1, 'Chevrolet': 1, 'Bee': 1, 'crossover': 1, 'Les': 1, 'Gu': 1, 'Phoenix': 2, 'Roma': 1, 'alcohol': 4, 'anti': 1, 'Leonard': 1, 'House': 1, 'Buy': 1, 'Fil': 1, 'Isle': 3, 'large': 1, 'Jay': 1, 'Vertical': 1, 'positive': 1, 'Canada': 7, 'Se': 3, 'nu': 2, 'Quality': 1, 'Ho': 2, 'Better': 5, 'Ellis': 1, 'Missouri': 2, 'Prison': 1, 'Calvin': 1, 'Royal': 1, '8': 1, 'Mary': 1, 'Dodge': 1, 'NCAA': 1, 'Han': 2, 'harmonic': 1, 'Ni': 1, 'Lo': 1, 'Pa': 1, 'coffee': 1, 'central': 1, 'oil': 1, 'Google': 1, 'As': 1, 'Ra': 1, 'That': 1, 'Ann': 1, 'no license': 2, 'Green': 3, 'Tar': 2, 'potato': 1, 'Sweet': 1, 'Nelson': 1, 'Wi': 1, 'Lord': 1, 'Virtual': 1, 'fra': 1, 'Europe': 2, 'N': 1, 'neuro': 1, 'Navi': 1, 'Tim': 2, 'Danny': 1, 'Wall': 1, 'Cabinet': 1, 'Fusion': 1, 'vitamin': 1, 'here': 1, 'Jerry': 1, 'de': 1, 'Nobel': 2, 'Sebastian': 1, 'Mount': 3, 'Roman': 2, 'Bra': 1, 'Scandinavia': 1, 'Sweden': 1, 'Water': 1, 'Jur': 2, 'Eight': 2, 'One': 1, 'Tri': 1, 'Interstate': 1, 'Montana': 1, 'Reflect': 1, 'North': 2, 'Ur': 1, 'Ph': 2, 'Fred': 1, 'Left': 1, 'Uncle': 1, 'Guy': 1, 'Cub': 1, 'Border': 1, 'Lake': 2, 'Total': 2, 'Access': 1, 'Blackjack': 1, 'Mar': 3, 'Mexico': 2, 'British': 1, 'Multiple': 1, 'soft': 1, 'Florida': 1, 'Gram': 2, 'Pr': 1, 'Blade': 1, 'static': 1, 'Cross': 1, 'iPhone': 2, 'Dor': 1, 'Minute': 1, 'Hon': 1, 'Hell': 3, 'Bla': 1, 'warrant': 1, 'flag': 1, 'Display': 1, 'Made': 1, 'Second': 1, 'P': 3, 'Sam': 1, 'Que': 1, 'cats': 1, 'Six': 2, 'Alex': 2, 'va': 1, 'TO': 1, 'Mer': 1, 'Preston': 1, 'Bay': 1, 'Gast': 1, 'Charles': 3, 'Bruce': 1, 'chic': 2, 'Dis': 1, 'University': 2, 'Universal': 1, 'Cau': 1, 'Ly': 2, 'sea': 1, 'Ellen': 1, 'Vanilla': 1, 'Triple': 2, 'Turkey': 1, 'India': 3, 'cow': 1, 'Kennedy': 1, 'nine': 2, 'Chelsea': 1, 'Sa': 2, 'Fly': 1, 'Tower': 1, 'Supreme': 3, 'two': 2, 'Meet': 1, 'H': 1, 'Em': 1, 'This': 2, 'Princeton': 1, 'Highland': 1, 'Malcolm': 1, 'Lex': 1, 'television': 1, 'Arrow': 1, 'Philip': 1, 'Equal': 1, 'firearm': 1, 'Snow': 2, 'Tan': 1, 'alternative': 1, 'Lan': 2, 'Gar': 1, 'You': 1, 'London': 1, 'NFL': 1, 'Northern': 1, 'Rox': 1, 'Johnson': 1, 'Victor': 1, 'Low': 2, 'Jason': 1, 'Volkswagen': 2, 'Body': 1, 'Bur': 1, 'Regina': 1, 'Snake': 1, 'Gulf': 1, 'Final': 1, 'Sea': 3, 'body': 1, 'Republic': 1, 'Ari': 1, 'Adrian': 1, 'Turtle': 1, 'Bosnia': 1, 'ABC': 2, 'Change': 1, 'fashion': 1, 'insulin': 1, 'Iceland': 1, 'Outside': 1, 'hamburger': 1, 'Crypto': 1, 'Color': 1, 'D': 1, 'Doctor': 1, 'no volcanic': 1, 'Hart': 1, 'Income': 1, 'Fan': 1, 'Row': 1, 'Rachel': 1, 'Spencer': 1, 'Senate': 1, 'or': 1, 'Grade': 2, 'PlayStation': 1, 'perfect': 1, 'Spain': 1, 'Sum': 1, 'Nach': 1, 'Din': 2, 'Spider': 3, 'Everything': 1, 'Russia': 1, 'Reid': 1, 'La': 2, 'no statute': 1, 'Good': 2, 'Wild': 1, 'female': 1, 'Batman': 2, 'Serbia': 1, 'hair': 1, 'homo': 1, 'color': 1, 'Key': 1, 'Covenant': 1, 'Riviera': 1, 'Cedar': 1, 'terminal': 1, 'America': 1, 'WWE': 2, 'Ell': 1, 'Word': 1, 'Moment': 1, 'Nissan': 2, 'Harmon': 1, 'Rit': 2, 'artificial': 1, 'Contemporary': 1, 'Clar': 2, 'C': 2, 'option': 1, 'life': 1, 'Evil': 1, 'death': 1, 'Tu': 1, 'G': 2, 'Angel': 2, 'Well': 1, 'Channel': 2, 'Long': 1, 'Shell': 1, 'Human': 1, 'Family': 1, 'T': 4, 'Hyper': 2, 'Will': 2, 'no-': 1, 'Train': 1, 'Israel': 1, 'Dance': 1, 'Ronald': 1, 'fluid': 1, 'Jenny': 1, 'Five': 2, 'chef': 1, 'Prince': 1, 'Bull': 2, 'Beck': 2, 'Marion': 1, 'Geneva': 1, 'Pride': 2, 'King': 3, 'Fi': 1, 'Las': 1, 'Craft': 2, 'Co': 2, 'Cur': 1, 'Mercury': 1, 'War': 1, 'We': 2, 'natural': 2, 'Super': 4, 'lymph': 1, 'Milan': 1, 'Del': 1, 'Jersey': 1, 'Los': 2, 'diversity': 1, 'Abu': 1, 'no single': 1, 'Mother': 1, 'Things': 1, 'Cav': 1, 'Soul': 1, 'Steven': 1, 'M': 3, 'River': 1, 'Douglas': 1, 'Troy': 1, 'Cast': 1, 'Australian': 1, 'Jessica': 1, 'Patrick': 1, 'Derek': 1, 'right': 1, 'Wheel': 1, 'Coca': 1, 'bone': 1, 'Die': 1, 'Norway': 1, 'Turner': 1, 'every': 2, 'Re': 2, 'Arm': 1, 'Leather': 1, 'Lego': 1, 'Instruction': 1, 'Su': 2, 'Justice': 1, 'no team': 1, 'Rag': 1, 'Jackson': 1, 'Rem': 1, 'Colorado': 1, 'Spanish': 1, 'hot': 1, '3': 1, 'hydro': 1, 'Ch': 1, 'Travis': 1, 'Knight': 1, 'Steel': 1, 'Western': 1, 'Echo': 1, 'Peter': 1, 'She': 1, 'Anne': 1, 'Mc': 1, 'Pe': 1, 'Wade': 1, 'Once': 1, 'Make': 1, 'no permit': 1, 'Cont': 1, 'Over': 2, 'To': 1, 'Tampa': 1, 'Randy': 1, 'development': 1, 'Alaska': 1, 'uniform': 1, 'teeth': 1, 'Oakland': 2, 'Kansas': 1, 'Spring': 1, 'Remember': 1, 'Marshall': 1, 'Goose': 1, 'corporate': 1, 'Money': 1, 'Theory': 1, 'check': 1, 'Ga': 1, 'drag': 1, 'Four': 1, 'electron': 1, 'Shadow': 3, 'selection': 1, 'Wa': 1, 'Cru': 1, 'Brexit': 1, 'rod': 1, 'Poly': 1, 'Destin': 1, 'Drink': 1, 'Pet': 1, 'Denver': 1, 'Ar': 1, 'Cy': 1, 'Scotia': 1, 'Am': 1, 'Criminal': 1, 'Johnny': 1, 'Pul': 1, 'Intel': 1, 'Justin': 1, 'Ross': 1, 'ver': 1, 'circum': 1, 'Hawaii': 1, 'Jamaica': 1, 'Inter': 1, 'to': 1, 'gear': 1, 'chicken': 1, 'Your': 1, 'Ed': 1, 'Georgia': 1, 'Germany': 1, 'Bour': 1, 'Bailey': 1, 'corn': 1, 'fixed': 1, 'twenty': 1, 'Ker': 1, 'Tat': 1, 'Time': 1, 'bi': 1, 'Plant': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.6153, PEFT Model: 0.0000
+
+🎯 Config 9/48
+   LR: 0.0003, Balance: True, Prompt: ''
+
+🧪 Experiment 9
+   LR: 0.0003, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 2732, 'no': 538}
+   My Model Accuracy: 0.5697
+   Testing PEFT Model...
+Prediction counts: {'': 1203, 'True': 15, 'Harry': 2, 'zero': 1, 'not': 1630, 'spark': 1, 'Dead': 1, 'Ben': 3, 'the': 22, 'carbon': 1, 'Columbus': 1, 'New': 11, 'only': 1, 'Met': 1, 'Dam': 2, 'The': 20, 'no 1': 1, 'radio': 1, 'no': 16, 'de': 2, 'German': 2, 'Salt': 1, 'draft': 1, 'Scar': 1, 'federal': 1, 'public': 2, '5': 1, 'Who': 2, 'Murphy': 1, 'Need': 1, 'salt': 3, 'male': 3, 'Queen': 4, 'Joe': 1, 'St': 2, 'Henry': 1, 'Michael': 1, 'I': 9, 'Elena': 1, '29': 1, 'football': 1, 'City': 1, 'HBO': 1, 'Fal': 14, 'W': 1, 'Mu': 1, 'Article': 1, 'Ma': 1, 'who': 1, 'no physical': 1, 'national': 1, 'no government': 1, 'Boston': 1, 'William': 1, 'R': 2, 'red': 1, 'Lucas': 1, 'Race': 2, '50': 1, 'In': 2, 'FC': 1, 'friction': 1, 'joint': 1, 'Avengers': 2, 'Da': 1, 'Fa': 2, 'MLB': 1, 'cord': 1, 'Chase': 2, 'four': 1, 'U': 6, 'goal': 1, 'Cop': 1, 'vice': 1, 'Cold': 1, 'Dy': 2, 'Thompson': 1, 'How': 2, 'FIFA': 1, 'Mos': 1, 'ever': 1, 'short': 1, 'Ka': 1, 'Just': 1, 'Mol': 1, 'Al': 1, 'Space': 1, 'Sh': 1, 'Chicago': 1, 'Jo': 1, 'No': 4, 'Kenne': 1, 'sweat': 1, 'Independence': 1, 'Sarah': 1, 'E': 4, 'Tunis': 1, 'Vel': 1, 'Mile': 1, 'All': 1, 'no bodies': 1, 'Pokémon': 5, 'Tel': 1, 'God': 1, 'major': 1, 'no prison': 1, 'F': 4, 'Taylor': 1, 'American': 1, 'signature': 2, 'Stefan': 3, 'thread': 1, 'Dar': 1, 'Whole': 1, 'O': 2, 'Radi': 1, 'What': 1, 'Ro': 1, 'Seoul': 1, 'por': 1, 'Cristina': 1, 'Wy': 1, 'Range': 1, 'Foot': 1, 'Tom': 2, 'Heat': 2, 'be': 2, 'El': 1, 'Roma': 1, 'House': 1, 'Isle': 1, 'Canada': 6, 'Ho': 1, 'Better': 3, 'Royal': 1, 'Mary': 1, 'Han': 2, 'harmonic': 1, 'Google': 1, 'Se': 2, 'as': 1, 'Ann': 1, 'Tar': 2, 'Do': 1, '4': 1, 'Wi': 1, 'N': 2, 'Tim': 1, 'Danny': 1, 'vitamin': 1, 'Jerry': 1, 'Nobel': 1, 'Eight': 1, 'one': 1, 'Left': 1, 'Uncle': 1, 'Ford': 2, 'Total': 1, 'Mexico': 1, 'Father': 2, 'Multiple': 1, 'Eva': 1, 'Dor': 1, 'Minute': 1, 'Le': 1, 'Bla': 1, 'George': 1, 'Second': 1, 'Go': 1, 'Que': 1, 'va': 1, 'Mer': 1, 'Fantastic': 1, 'Blue': 3, 'Ellen': 1, 'nine': 1, 'cinnamon': 1, 'Triple': 1, 'Malcolm': 1, 'Lex': 1, 'P': 2, 'Low': 2, 'Volkswagen': 1, 'This': 1, 'Regina': 1, 'Snake': 1, 'Final': 1, 'Outside': 1, 'Andy': 1, 'D': 1, 'Sea': 1, 'Rachel': 1, 'Emma': 1, 'Spencer': 1, 'Con': 1, 'Sum': 1, 'Mari': 1, 'Everything': 1, 'Russia': 1, 'Reid': 1, 'Good': 1, 'Dragon': 1, 'Fresh': 1, 'Batman': 1, 'Serbia': 1, 'Key': 1, 'Rit': 2, 'A': 1, 'Cor': 1, 'Angel': 2, 'Ly': 1, 'Green': 1, 'no-': 1, 'no triangle': 1, 'Israel': 1, 'no no': 1, 'Ronald': 1, 'Jenny': 1, 'White': 1, 'Prince': 1, 'Pride': 2, 'United': 2, 'Washington': 2, 'Milan': 1, 'Abu': 1, 'Hell': 2, 'River': 1, 'no player': 1, 'Six': 1, 'Patrick': 1, 'T': 1, 'King': 1, 'no team': 1, 'hot': 1, 'Clark': 1, 'Su': 2, 'She': 1, 'Anne': 1, 'Wade': 1, 'Beck': 1, 'no permit': 1, 'nu': 1, 'Alex': 1, 'Red': 1, 'Great': 1, 'Money': 1, 'Ga': 1, 'drag': 1, 'Per': 1, 'Mickey': 1, 'Drink': 1, 'pet': 1, 'Cy': 1, 'Mount': 1, 'Justin': 1, 'Ross': 1, 'neutral': 1, 'Oslo': 1, 'Hawaii': 1, 'Nissan': 1, 'gear': 1, 'every': 1, 'Ed': 1, 'Will': 1, 'Tat': 1, 'Time': 1}
+   PEFT Model Accuracy: 0.0015
+   🎯 Results - My Model: 0.5697, PEFT Model: 0.0015
+   🏆 NEW BEST PEFT Model! Accuracy: 0.0015
+
+🎯 Config 10/48
+   LR: 0.0003, Balance: True, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 10
+   LR: 0.0003, Balance: True, Prompt: 'Based on the text, yes or no?'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'no': 896, 'not': 2358, '': 7, 'yes': 7, 'Stefan': 2}
+   PEFT Model Accuracy: 0.1040
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.1040
+   🏆 NEW BEST PEFT Model! Accuracy: 0.1040
+
+🎯 Config 11/48
+   LR: 0.0003, Balance: True, Prompt: 'Question answering:'
+
+🧪 Experiment 11
+   LR: 0.0003, Balance: True, Prompt: 'Question answering:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3261, 'no': 9}
+   My Model Accuracy: 0.6214
+   Testing PEFT Model...
+Prediction counts: {'not': 3206, 'zero': 1, 'Dam': 1, 'Man': 1, 'Who': 1, '': 29, 'Michael': 1, 'no': 2, 'the': 4, 'no jurisdiction': 1, 'no bodies': 1, 'Pokémon': 1, 'Stefan': 2, 'Wy': 1, 'Ben': 1, 'I': 1, 'Tim': 1, 'Bla': 1, 'Canada': 1, 'Lex': 1, 'Adrian': 1, 'Emma': 1, 'Reid': 1, 'F': 1, 'Rit': 1, 'Ly': 1, 'every': 1, 'no team': 1, 'Tar': 1, 'Beck': 1, 'no permit': 1, 'Alex': 1}
+   PEFT Model Accuracy: 0.0000
+   🎯 Results - My Model: 0.6214, PEFT Model: 0.0000
+
+🎯 Config 12/48
+   LR: 0.0003, Balance: True, Prompt: 'yes no:'
+
+🧪 Experiment 12
+   LR: 0.0003, Balance: True, Prompt: 'yes no:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3265, 'no': 5}
+   My Model Accuracy: 0.6208
+   Testing PEFT Model...
+Prediction counts: {'no': 2578, 'yes': 692}
+   PEFT Model Accuracy: 0.4297
+   🎯 Results - My Model: 0.6208, PEFT Model: 0.4297
+   🏆 NEW BEST PEFT Model! Accuracy: 0.4297
+
+🎯 Config 13/48
+   LR: 0.0003, Balance: False, Prompt: ''
+
+🧪 Experiment 13
+   LR: 0.0003, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'yes': 3092, 'no': 178}
+   PEFT Model Accuracy: 0.6095
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.6095
+   🏆 NEW BEST PEFT Model! Accuracy: 0.6095
+
+🎯 Config 14/48
+   LR: 0.0003, Balance: False, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 14
+   LR: 0.0003, Balance: False, Prompt: 'Based on the text, yes or no?'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3269, 'no': 1}
+   My Model Accuracy: 0.6214
+   Testing PEFT Model...
+Prediction counts: {'yes': 3234, 'not': 22, '': 13, 'no bodies': 1}
+   PEFT Model Accuracy: 0.6162
+   🎯 Results - My Model: 0.6214, PEFT Model: 0.6162
+   🏆 NEW BEST PEFT Model! Accuracy: 0.6162
+
+🎯 Config 15/48
+   LR: 0.0003, Balance: False, Prompt: 'Question answering:'
+
+🧪 Experiment 15
+   LR: 0.0003, Balance: False, Prompt: 'Question answering:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'no': 2690, 'yes': 580}
+   My Model Accuracy: 0.4272
+   Testing PEFT Model...
+Prediction counts: {'yes': 3241, 'not': 28, 'no': 1}
+   PEFT Model Accuracy: 0.6165
+   🎯 Results - My Model: 0.4272, PEFT Model: 0.6165
+   🏆 NEW BEST PEFT Model! Accuracy: 0.6165
+
+🎯 Config 16/48
+   LR: 0.0003, Balance: False, Prompt: 'yes no:'
+
+🧪 Experiment 16
+   LR: 0.0003, Balance: False, Prompt: 'yes no:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3158, 'no': 112}
+   My Model Accuracy: 0.6131
+   Testing PEFT Model...
+Prediction counts: {'yes': 2987, 'no': 271, 'not': 8, 'no jurisdiction': 1, 'no bodies': 1, 'Stefan': 1, 'no no': 1}
+   PEFT Model Accuracy: 0.5954
+   🎯 Results - My Model: 0.6131, PEFT Model: 0.5954
+
+🎯 Config 17/48
+   LR: 0.001, Balance: True, Prompt: ''
+
+🧪 Experiment 17
+   LR: 0.001, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'yes': 3135, 'not': 135}
+   PEFT Model Accuracy: 0.5957
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.5957
+
+🎯 Config 18/48
+   LR: 0.001, Balance: True, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 18
+   LR: 0.001, Balance: True, Prompt: 'Based on the text, yes or no?'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3189, 'no': 81}
+   My Model Accuracy: 0.6128
+   Testing PEFT Model...
+Prediction counts: {'yes': 3251, 'no': 19}
+   PEFT Model Accuracy: 0.6190
+   🎯 Results - My Model: 0.6128, PEFT Model: 0.6190
+   🏆 NEW BEST PEFT Model! Accuracy: 0.6190
+
+🎯 Config 19/48
+   LR: 0.001, Balance: True, Prompt: 'Question answering:'
+
+🧪 Experiment 19
+   LR: 0.001, Balance: True, Prompt: 'Question answering:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3257, 'no': 13}
+   My Model Accuracy: 0.6214
+   Testing PEFT Model...
+Prediction counts: {'yes': 3024, 'no': 246}
+   PEFT Model Accuracy: 0.6107
+   🎯 Results - My Model: 0.6214, PEFT Model: 0.6107
+
+🎯 Config 20/48
+   LR: 0.001, Balance: True, Prompt: 'yes no:'
+
+🧪 Experiment 20
+   LR: 0.001, Balance: True, Prompt: 'yes no:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3179, 'no': 90, 'no bodies': 1}
+   My Model Accuracy: 0.6174
+   Testing PEFT Model...
+Prediction counts: {'yes': 3252, 'no': 18}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6174, PEFT Model: 0.6217
+   🏆 NEW BEST PEFT Model! Accuracy: 0.6217
+
+🎯 Config 21/48
+   LR: 0.001, Balance: False, Prompt: ''
+
+🧪 Experiment 21
+   LR: 0.001, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3268, 'no': 2}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.6217
+
+🎯 Config 22/48
+   LR: 0.001, Balance: False, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 22
+   LR: 0.001, Balance: False, Prompt: 'Based on the text, yes or no?'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.6217
+
+🎯 Config 23/48
+   LR: 0.001, Balance: False, Prompt: 'Question answering:'
+
+🧪 Experiment 23
+   LR: 0.001, Balance: False, Prompt: 'Question answering:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3267, 'no': 3}
+   My Model Accuracy: 0.6208
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6208, PEFT Model: 0.6217
+
+🎯 Config 24/48
+   LR: 0.001, Balance: False, Prompt: 'yes no:'
+
+🧪 Experiment 24
+   LR: 0.001, Balance: False, Prompt: 'yes no:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3247, 'no': 23}
+   My Model Accuracy: 0.6196
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6196, PEFT Model: 0.6217
+
+🎯 Config 25/48
+   LR: 0.003, Balance: True, Prompt: ''
+
+🧪 Experiment 25
+   LR: 0.003, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3269, 'no': 1}
+   My Model Accuracy: 0.6214
+   Testing PEFT Model...
+Prediction counts: {'yes': 3269, 'no': 1}
+   PEFT Model Accuracy: 0.6220
+   🎯 Results - My Model: 0.6214, PEFT Model: 0.6220
+   🏆 NEW BEST PEFT Model! Accuracy: 0.6220
+
+🎯 Config 26/48
+   LR: 0.003, Balance: True, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 26
+   LR: 0.003, Balance: True, Prompt: 'Based on the text, yes or no?'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3269, 'no': 1}
+   My Model Accuracy: 0.6214
+   Testing PEFT Model...
+Prediction counts: {'yes': 3266, 'no': 4}
+   PEFT Model Accuracy: 0.6211
+   🎯 Results - My Model: 0.6214, PEFT Model: 0.6211
+
+🎯 Config 27/48
+   LR: 0.003, Balance: True, Prompt: 'Question answering:'
+
+🧪 Experiment 27
+   LR: 0.003, Balance: True, Prompt: 'Question answering:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.6217
+
+🎯 Config 28/48
+   LR: 0.003, Balance: True, Prompt: 'yes no:'
+
+🧪 Experiment 28
+   LR: 0.003, Balance: True, Prompt: 'yes no:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3198, 'no': 72}
+   My Model Accuracy: 0.6138
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6138, PEFT Model: 0.6217
+
+🎯 Config 29/48
+   LR: 0.003, Balance: False, Prompt: ''
+
+🧪 Experiment 29
+   LR: 0.003, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3269, 'no': 1}
+   My Model Accuracy: 0.6214
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6214, PEFT Model: 0.6217
+
+🎯 Config 30/48
+   LR: 0.003, Balance: False, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 30
+   LR: 0.003, Balance: False, Prompt: 'Based on the text, yes or no?'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3269, 'no': 1}
+   My Model Accuracy: 0.6214
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6214, PEFT Model: 0.6217
+
+🎯 Config 31/48
+   LR: 0.003, Balance: False, Prompt: 'Question answering:'
+
+🧪 Experiment 31
+   LR: 0.003, Balance: False, Prompt: 'Question answering:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3265, 'no': 5}
+   My Model Accuracy: 0.6214
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6214, PEFT Model: 0.6217
+
+🎯 Config 32/48
+   LR: 0.003, Balance: False, Prompt: 'yes no:'
+
+🧪 Experiment 32
+   LR: 0.003, Balance: False, Prompt: 'yes no:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 2755, 'no': 515}
+   My Model Accuracy: 0.5804
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.5804, PEFT Model: 0.6217
+
+🎯 Config 33/48
+   LR: 0.01, Balance: True, Prompt: ''
+
+🧪 Experiment 33
+   LR: 0.01, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 2553, 'no': 717}
+   My Model Accuracy: 0.5761
+   Testing PEFT Model...
+Prediction counts: {'yes': 3198, 'no': 72}
+   PEFT Model Accuracy: 0.6199
+   🎯 Results - My Model: 0.5761, PEFT Model: 0.6199
+
+🎯 Config 34/48
+   LR: 0.01, Balance: True, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 34
+   LR: 0.01, Balance: True, Prompt: 'Based on the text, yes or no?'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'no': 2252, 'yes': 1018}
+   My Model Accuracy: 0.4700
+   Testing PEFT Model...
+Prediction counts: {'yes': 3269, 'no': 1}
+   PEFT Model Accuracy: 0.6214
+   🎯 Results - My Model: 0.4700, PEFT Model: 0.6214
+
+🎯 Config 35/48
+   LR: 0.01, Balance: True, Prompt: 'Question answering:'
+
+🧪 Experiment 35
+   LR: 0.01, Balance: True, Prompt: 'Question answering:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'no': 587, 'yes': 2683}
+   My Model Accuracy: 0.5829
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.5829, PEFT Model: 0.6217
+
+🎯 Config 36/48
+   LR: 0.01, Balance: True, Prompt: 'yes no:'
+
+🧪 Experiment 36
+   LR: 0.01, Balance: True, Prompt: 'yes no:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 715, 'no': 2555}
+   My Model Accuracy: 0.4391
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.4391, PEFT Model: 0.6217
+
+🎯 Config 37/48
+   LR: 0.01, Balance: False, Prompt: ''
+
+🧪 Experiment 37
+   LR: 0.01, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.6217
+
+🎯 Config 38/48
+   LR: 0.01, Balance: False, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 38
+   LR: 0.01, Balance: False, Prompt: 'Based on the text, yes or no?'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'yes': 3270}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.6217
+
+🎯 Config 39/48
+   LR: 0.01, Balance: False, Prompt: 'Question answering:'
+
+🧪 Experiment 39
+   LR: 0.01, Balance: False, Prompt: 'Question answering:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3263, 'no': 7}
+   My Model Accuracy: 0.6214
+   Testing PEFT Model...
+Prediction counts: {'yes': 3243, 'no': 27}
+   PEFT Model Accuracy: 0.6196
+   🎯 Results - My Model: 0.6214, PEFT Model: 0.6196
+
+🎯 Config 40/48
+   LR: 0.01, Balance: False, Prompt: 'yes no:'
+
+🧪 Experiment 40
+   LR: 0.01, Balance: False, Prompt: 'yes no:'
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3270}
+   My Model Accuracy: 0.6217
+   Testing PEFT Model...
+Prediction counts: {'yes': 3268, 'no': 2}
+   PEFT Model Accuracy: 0.6217
+   🎯 Results - My Model: 0.6217, PEFT Model: 0.6217
+
+🎯 Config 41/48
+   LR: 0.03, Balance: True, Prompt: ''
+
+🧪 Experiment 41
+   LR: 0.03, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 2847, 'no': 423}
+   My Model Accuracy: 0.5878
+   Testing PEFT Model...
+Prediction counts: {'yes': 2620, 'no': 650}
+   PEFT Model Accuracy: 0.5685
+   🎯 Results - My Model: 0.5878, PEFT Model: 0.5685
+
+🎯 Config 42/48
+   LR: 0.03, Balance: True, Prompt: 'Based on the text, yes or no?'
+
+🧪 Experiment 42
+   LR: 0.03, Balance: True, Prompt: 'Based on the text, yes or no?'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 2176, 'no': 1094}
+   My Model Accuracy: 0.5495
+   Testing PEFT Model...
+Prediction counts: {'yes': 3269, 'no': 1}
+   PEFT Model Accuracy: 0.6214
+   🎯 Results - My Model: 0.5495, PEFT Model: 0.6214
+
+🎯 Config 43/48
+   LR: 0.03, Balance: True, Prompt: 'Question answering:'
+
+🧪 Experiment 43
+   LR: 0.03, Balance: True, Prompt: 'Question answering:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'no': 3225, 'yes': 45}
+   My Model Accuracy: 0.3847
+   Testing PEFT Model...
+Prediction counts: {'yes': 3251, 'no': 19}
+   PEFT Model Accuracy: 0.6190
+   🎯 Results - My Model: 0.3847, PEFT Model: 0.6190
+
+🎯 Config 44/48
+   LR: 0.03, Balance: True, Prompt: 'yes no:'
+
+🧪 Experiment 44
+   LR: 0.03, Balance: True, Prompt: 'yes no:'
+Total classes: 2, examples per class: 4713
+Class 1: took 4713 from 5874
+Class 0: took all 3553 (less than 4713)
+Final label distribution TRAIN: Counter({1: 4713, 0: 3553})
+   Testing My Model...
+Prediction counts: {'yes': 3031, 'no': 239}
+   My Model Accuracy: 0.6031
+   Testing PEFT Model...
+Prediction counts: {'yes': 3107, 'no': 163}
+   PEFT Model Accuracy: 0.6049
+   🎯 Results - My Model: 0.6031, PEFT Model: 0.6049
+
+🎯 Config 45/48
+   LR: 0.03, Balance: False, Prompt: ''
+
+🧪 Experiment 45
+   LR: 0.03, Balance: False, Prompt: ''
+Final label distribution TRAIN: Counter({1: 5874, 0: 3553})
+   Testing My Model...

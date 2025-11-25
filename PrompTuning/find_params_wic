@@ -1,0 +1,24 @@
+🚀 Starting hyperparameter search...
+
+======================================================================
+🚀 Running SMART strategy
+======================================================================
+
+📋 Task: wic
+🔧 Generated FULL grid: 36 configurations for wic
+   (LRs: 6, Balance: 2, Prompts: 3)
+🔍 Testing 36 configurations for wic (smart mode)
+
+🎯 Config 1/36
+   LR: 0.0001, Balance: True, Prompt: ''
+
+🧪 Experiment 1
+   LR: 0.0001, Balance: True, Prompt: ''
+Total classes: 2, examples per class: 2714
+Class 0: took 2714 from 2714
+Class 1: took 2714 from 2714
+Final label distribution TRAIN: Counter({1: 2714, 0: 2714})
+   Testing My Model...
+Prediction counts: {'': 638}
+   My Model Accuracy: 0.0000
+   Testing PEFT Model...

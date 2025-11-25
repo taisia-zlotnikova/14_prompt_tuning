@@ -36,6 +36,7 @@ def get_input_and_target(element, task_name):
             target_text = "first"
         else:
             target_text = "second"
+            
     elif task_name == 'wic':
         input_text = f"word: {element['word']}. 1: {element['sentence1']} 2: {element['sentence1']}"
         if label:

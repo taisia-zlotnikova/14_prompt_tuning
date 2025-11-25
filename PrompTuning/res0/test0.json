@@ -1,0 +1,563 @@
+{
+  "task": "cb",
+  "search_mode": "smart",
+  "best_my_model": {
+    "accuracy": 0.8,
+    "config": {
+      "lr": 0.03,
+      "balance_classes": false,
+      "init_prompt": ""
+    }
+  },
+  "best_peft_model": {
+    "accuracy": 0.5,
+    "config": {
+      "lr": 0.01,
+      "balance_classes": false,
+      "init_prompt": "Does the premise entail the hypothesis?"
+    }
+  },
+  "all_results": [
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": true,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": true,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": true,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.4,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": true,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": true,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": false,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.3,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": false,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": false,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.4,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": false,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0001,
+        "balance_classes": false,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": true,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.2
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": true,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": true,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.4,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": true,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": true,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": false,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": false,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": false,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.4,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": false,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.0003,
+        "balance_classes": false,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": true,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": true,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": true,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.4,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": true,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": true,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": false,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": false,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": false,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": false,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.001,
+        "balance_classes": false,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": true,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": true,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": true,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": true,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.2
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": true,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": false,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": false,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": false,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.4,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": false,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.2
+    },
+    {
+      "config": {
+        "lr": 0.003,
+        "balance_classes": false,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": true,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.0,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": true,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": true,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.6,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": true,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": true,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.4
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": false,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.3,
+      "peft_model_accuracy": 0.3
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": false,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.4,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": false,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.6,
+      "peft_model_accuracy": 0.5
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": false,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.4
+    },
+    {
+      "config": {
+        "lr": 0.01,
+        "balance_classes": false,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": true,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.5
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": true,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.3,
+      "peft_model_accuracy": 0.2
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": true,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.6,
+      "peft_model_accuracy": 0.3
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": true,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.0
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": true,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.1,
+      "peft_model_accuracy": 0.1
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": false,
+        "init_prompt": ""
+      },
+      "my_model_accuracy": 0.8,
+      "peft_model_accuracy": 0.5
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": false,
+        "init_prompt": "Classify the relationship:"
+      },
+      "my_model_accuracy": 0.3,
+      "peft_model_accuracy": 0.3
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": false,
+        "init_prompt": "Does the premise entail the hypothesis?"
+      },
+      "my_model_accuracy": 0.5,
+      "peft_model_accuracy": 0.3
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": false,
+        "init_prompt": "Is this entailment, contradiction, or neutral?"
+      },
+      "my_model_accuracy": 0.2,
+      "peft_model_accuracy": 0.3
+    },
+    {
+      "config": {
+        "lr": 0.03,
+        "balance_classes": false,
+        "init_prompt": "Text classification:"
+      },
+      "my_model_accuracy": 0.3,
+      "peft_model_accuracy": 0.4
+    }
+  ],
+  "timestamp": "20251124_225835"
+}

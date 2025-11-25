@@ -1,0 +1,176 @@
+🚀 Starting hyperparameter search...
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+🟢 Data loaded!
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'contradiction': 21, 'neutral': 32, 'not': 3}
+   My Model Accuracy: 0.3750
+🎯 Final My Model Accuracy: 0.3750
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'': 31, 'a': 10, '.': 5, 'not': 1, "'": 1, 'A': 3, 'rat': 1, 'u': 1, 'entailment': 2, 'he': 1}
+   PEFT Model Accuracy: 0.0357
+🎯 Final PEFT Model Accuracy: 0.0357
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+🟢 Data loaded!
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'contradiction': 44, 'neutral': 10, 'not': 1, 'entailment': 1}
+   My Model Accuracy: 0.5179
+🎯 Final My Model Accuracy: 0.5179
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'neutral': 19, 'entailment': 6, '': 17, 'Fal': 2, '.': 2, 'True': 6, 'contradiction': 1, 'u': 1, 'a': 1, 'not': 1}
+   PEFT Model Accuracy: 0.1429
+🎯 Final PEFT Model Accuracy: 0.1429
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+
+🟢 Data loaded!
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'': 16, 'contradiction': 19, 'entailment': 21}
+   My Model Accuracy: 0.6786
+🎯 Final My Model Accuracy: 0.6786
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'neutral': 10, '': 7, 'entailment': 13, 'contradiction': 26}
+   PEFT Model Accuracy: 0.6250
+🎯 Final PEFT Model Accuracy: 0.6250
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+🟢 Data loaded!
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'': 11, 'entailment': 18, 'contradiction': 27}
+   My Model Accuracy: 0.7143
+🎯 Final My Model Accuracy: 0.7143
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'contradiction': 42, '': 7, 'entailment': 6, 'neutral': 1}
+   PEFT Model Accuracy: 0.5357
+🎯 Final PEFT Model Accuracy: 0.5357
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+
+                                       🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                                                         ▶️  RUNNING TASK cb
+
+                                       Total classes: 3, examples per class: 83
+                                       Class 0: took 83 from 115
+                                       Class 1: took 83 from 119
+                                       Class 2: took all 16 (less than 83)
+                                       Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+                                       🟢 Data loaded!
+
+                                       ✏️  My Model:
+                                          Testing My Model...
+                                       Prediction counts: {'': 10, 'contradiction': 26, 'entailment': 20}
+                                          My Model Accuracy: 0.7679
+                                       🎯 Final My Model Accuracy: 0.7679
+
+                                       ✏️  PEFT Model:
+                                          Testing PEFT Model...
+                                       Prediction counts: {'contradiction': 37, '': 6, 'entailment': 13}
+                                          PEFT Model Accuracy: 0.6964
+                                       🎯 Final PEFT Model Accuracy: 0.6964
+                                       🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+
+🟢 Data loaded!
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'': 11, 'entailment': 19, 'contradiction': 23, 'neutral': 3}
+   My Model Accuracy: 0.7143
+🎯 Final My Model Accuracy: 0.7143
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'contradiction': 53, 'neutral': 3}
+   PEFT Model Accuracy: 0.5000
+🎯 Final PEFT Model Accuracy: 0.5000
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+🟢 Data loaded!
+
+✏️  My Model:
+   Testing My Model...
+Prediction counts: {'contradiction': 37, '': 7, 'entailment': 12}
+   My Model Accuracy: 0.6786
+🎯 Final My Model Accuracy: 0.6786
+
+✏️  PEFT Model:
+   Testing PEFT Model...
+Prediction counts: {'': 6, 'entailment': 12, 'contradiction': 37, 'neutral': 1}
+   PEFT Model Accuracy: 0.6786
+🎯 Final PEFT Model Accuracy: 0.6786
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
