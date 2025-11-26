@@ -575,8 +575,7 @@ def main():
 
     for approach_name in ['fine_tuning', 'prompt_tuning']:
         approach = approaches[approach_name]
-        trainer = a
-        pproach.prepare_trainer(
+        trainer = approach.prepare_trainer(
             train_dataset=dataset['train'],
             eval_dataset=dataset['validation']
         )
