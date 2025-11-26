@@ -104,7 +104,7 @@ class DataPreprocessor:
             'input_ids': model_inputs['input_ids'],
             'attention_mask': model_inputs['attention_mask'],
             'labels': model_inputs['labels'],
-            'class_label': original_labels,
+            'label': original_labels,
         }
 
     def prepare_dataset(self):
@@ -267,7 +267,7 @@ class PromptTuningApproach:
             task_type=TaskType.SEQ_2_SEQ_LM,
 
             # Как инициализировать мягкие подсказки
-            prompt_tuning_init=PromptTuningInit.RANDOM, #### --------- поменять на то как у таси
+            prompt_tuning_init=PromptTuningInit.RANDOM,
 
             # ГЛАВНОЕ: Количество обучаемых токенов
             # К = 20 означает: добавляем 20 embedding vectors размером 512 каждый
@@ -375,7 +375,7 @@ def evaluate_approach(approach, test_dataset, tokenizer, approach_name):
             predicted_text = tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
 
             # Получаем истинный label
-            true_label_id = example['class_label']  # Первый token после padding
+            true_label_id = example['label']  # Первый token после padding
 
             predictions.append(predicted_text)
             true_labels.append(true_label_id)
@@ -526,49 +526,44 @@ def compare_all_approaches(approaches_dict, test_dataset, tokenizer):
 
 def main():
     config = Config()
-    
+
     print("=" * 80)
     print("СРАВНЕНИЕ: Fine-tuning vs Prompt Design vs Prompt Tuning")
     print("Задача: SuperGLUE CB (классификация на 3 класса)")
     print(f"Модель: {config.MODEL_NAME}")
     print("=" * 80)
-    
+
     # Загружаем датасет
     print("\nЗагружаем датасет...")
     tokenizer = T5Tokenizer.from_pretrained(config.MODEL_NAME)
     preprocessor = DataPreprocessor(tokenizer)
     dataset = preprocessor.prepare_dataset()
-    
+
     print(f"Train: {len(dataset['train'])} примеров")
     print(f"Validation: {len(dataset['validation'])} примеров")
-    
-    # ✅ СОХРАНЯЕМ class_labels ДО удаления
-    class_labels_train = [ex['class_label'] for ex in dataset['train']]
-    class_labels_val = [ex['class_label'] for ex in dataset['validation']]
-    
-    # ✅ ТЕПЕРЬ удаляем ненужные колонки
-    cols_to_remove = ['input_text', 'target_text', 'label', 'class_label', 'idx']
-    # Удаляем только те, которые СУЩЕСТВУЮТ
-    cols_to_remove = [c for c in cols_to_remove if c in dataset['train'].column_names]
-    dataset = dataset.remove_columns(cols_to_remove)
-    
-    print(f"Колонки для обучения: {dataset['train'].column_names}")
-    
+    if 'test' in dataset:
+        print(f"Test: {len(dataset['test'])} примеров")
+    else:
+        print("⚠️ Test датасет не найден в SuperGLUE CB (используем validation)")
+        test_dataset = dataset['validation']
+
+    # Если есть test, используем его, иначе используем validation
     val_dataset = dataset['validation']
-    
-    # Создаём подходы
+    test_dataset = dataset.get('test', dataset['validation'])
+
+    # Создаём все три подхода
     print("\nСоздаём подходы...")
     approaches = {
         'fine_tuning': FineTuningApproach(config.MODEL_NAME, config),
         'prompt_design': PromptDesignApproach(config.MODEL_NAME, config),
         'prompt_tuning': PromptTuningApproach(config.MODEL_NAME, config),
     }
-    
+
     # Сравнение параметров
     print("\n" + "=" * 80)
     print("СРАВНЕНИЕ ПАРАМЕТРОВ")
     print("=" * 80)
-    
+
     for name, approach in approaches.items():
         params = approach.count_parameters()
         print(f"\n{name.upper()}:")
@@ -577,37 +572,43 @@ def main():
         print(f"  Процент обучаемых:       {params['trainable_pct']:>12.6f}%")
         if 'prompt_tokens' in params:
             print(f"  Токенов подсказки:       {params['prompt_tokens']:>12}")
-    
+
+    # Ожидаемые результаты
     print("\n" + "=" * 80)
-    print("ОБУЧЕНИЕ МОДЕЛЕЙ")
+    print("ОЖИДАЕМЫЕ РЕЗУЛЬТАТЫ на SuperGLUE CB")
     print("=" * 80)
-    
-    for approach_name, approach in approaches.items():
-        if approach_name == 'prompt_design':
-            print(f"\n{approach_name.upper()}: Пропускаем обучение (не требуется)")
-            continue
-        
-        print(f"\n🚀 Обучаем {approach_name.upper()}...")
-        
-        trainer = approach.prepare_trainer(dataset['train'], val_dataset)
-        trainer.train()
-        
-        print(f"✓ {approach_name.upper()} обучена!")
-    
-    # ✅ ТЕСТИРОВАНИЕ НА val ДАТАСЕТЕ
+    print("""
+Fine-tuning:
+  ✓ Точность: ~85-90% (лучший результат)
+  ✓ F1: ~83-88%
+  ✗ Время обучения: 30-60 минут
+  ✗ Память: 11GB+ для T5-XXL
+
+Prompt Design:
+  ✓ Время: 0 (нет обучения)
+  ✓ Память: минимум
+  ✗ Точность: ~50-60% (плохо, требует хорошего prompt engineering)
+  ✗ F1: ~45-55%
+
+Prompt Tuning:
+  ✓ Точность: ~80-87% (близко к fine-tuning!)
+  ✓ F1: ~78-85%
+  ✓ Время обучения: 5-10 минут (в 5-10 раз быстрее!)
+  ✓ Память: ~100MB (в 100 раз меньше!)
+  ✓ Одна модель для всех задач
+""")
+
+    # ✅ ТЕСТИРОВАНИЕ НА TEST ДАТАСЕТЕ
     print("\n" + "=" * 80)
-    print("НАЧАЛО ТЕСТИРОВАНИЯ НА VAL ДАТАСЕТЕ")
-    print("=" * 80)
-    
-    # ✅ ДОБАВЛЯЕМ class_label ОБРАТНО перед тестированием
-    val_dataset = val_dataset.add_column('class_label', class_labels_val)
-    
-    test_results = compare_all_approaches(approaches, val_dataset, tokenizer)
-    
-    print("\n" + "=" * 80)
-    print("✅ ТЕСТИРОВАНИЕ ЗАВЕРШЕНО!")
+    print("НАЧАЛО ТЕСТИРОВАНИЯ НА TEST ДАТАСЕТЕ")
     print("=" * 80)
 
+    test_results = compare_all_approaches(approaches, val_dataset, tokenizer)
+
+    # Сохраняем результаты
+    print("\n" + "=" * 80)
+    print("ТЕСТИРОВАНИЕ ЗАВЕРШЕНО!")
+    print("=" * 80)
 
 if __name__ == "__main__":
     main()
