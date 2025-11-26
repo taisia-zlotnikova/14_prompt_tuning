@@ -104,7 +104,7 @@ class DataPreprocessor:
             'input_ids': model_inputs['input_ids'],
             'attention_mask': model_inputs['attention_mask'],
             'labels': model_inputs['labels'],
-            'label': original_labels,
+            'class_label': original_labels,
         }
 
     def prepare_dataset(self):
@@ -375,7 +375,7 @@ def evaluate_approach(approach, test_dataset, tokenizer, approach_name):
             predicted_text = tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
 
             # Получаем истинный label
-            true_label_id = example['label']  # Первый token после padding
+            true_label_id = example['class_label']  # Первый token после padding
 
             predictions.append(predicted_text)
             true_labels.append(true_label_id)
