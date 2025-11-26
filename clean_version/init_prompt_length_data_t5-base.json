@@ -1,0 +1,271 @@
+{
+  "copa": {
+    "params": {
+      "lr": 0.003,
+      "balance_classes": true,
+      "init_prompt": "first second"
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.003,
+        "init_prompt": "first second",
+        "balance_classes": true,
+        "my_accuracy": 0.0,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T15:25:54.612084"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.003,
+        "init_prompt": "first second",
+        "balance_classes": true,
+        "my_accuracy": 0.3,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T15:26:57.520417"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.003,
+        "init_prompt": "first second",
+        "balance_classes": true,
+        "my_accuracy": 0.55,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T15:28:00.442573"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.003,
+        "init_prompt": "first second",
+        "balance_classes": true,
+        "my_accuracy": 0.54,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T15:29:09.958144"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.003,
+        "init_prompt": "first second",
+        "balance_classes": true,
+        "my_accuracy": 0.45,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T15:30:20.505971"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.003,
+        "init_prompt": "first second",
+        "balance_classes": true,
+        "my_accuracy": 0.51,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T15:31:37.413082"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.51,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T09:55:16.091344"
+      }
+    ],
+    "created_at": "2025-11-25T15:24:51.472644",
+    "updated_at": "2025-11-26T09:55:16.091366"
+  },
+  "rte": {
+    "params": {
+      "lr": 0.001,
+      "balance_classes": true,
+      "init_prompt": "entailment contradiction"
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.001,
+        "init_prompt": "entailment contradiction",
+        "balance_classes": true,
+        "my_accuracy": 0.3212996389891697,
+        "peft_accuracy": 0.17689530685920576,
+        "timestamp": "2025-11-25T15:37:26.753634"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.001,
+        "init_prompt": "entailment contradiction",
+        "balance_classes": true,
+        "my_accuracy": 0.12274368231046931,
+        "peft_accuracy": 0.33212996389891697,
+        "timestamp": "2025-11-25T15:43:24.171301"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.001,
+        "init_prompt": "entailment contradiction",
+        "balance_classes": true,
+        "my_accuracy": 0.5270758122743683,
+        "peft_accuracy": 0.22743682310469315,
+        "timestamp": "2025-11-25T15:49:58.769111"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.001,
+        "init_prompt": "entailment contradiction",
+        "balance_classes": true,
+        "my_accuracy": 0.49097472924187724,
+        "peft_accuracy": 0.37906137184115524,
+        "timestamp": "2025-11-25T15:57:07.142710"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.001,
+        "init_prompt": "entailment contradiction",
+        "balance_classes": true,
+        "my_accuracy": 0.5451263537906137,
+        "peft_accuracy": 0.4693140794223827,
+        "timestamp": "2025-11-25T17:30:51.069807"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.001,
+        "init_prompt": "entailment contradiction",
+        "balance_classes": true,
+        "my_accuracy": 0.48375451263537905,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T11:10:31.807356"
+      }
+    ],
+    "created_at": "2025-11-25T15:31:37.420840",
+    "updated_at": "2025-11-26T11:10:31.807378"
+  },
+  "boolq": {
+    "params": {
+      "lr": 0.0003,
+      "balance_classes": true,
+      "init_prompt": "yes no"
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.0003,
+        "init_prompt": "yes no",
+        "balance_classes": true,
+        "my_accuracy": 0.0012232415902140672,
+        "peft_accuracy": 0.0009174311926605505,
+        "timestamp": "2025-11-26T09:05:58.640902"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.0003,
+        "init_prompt": "yes no",
+        "balance_classes": true,
+        "my_accuracy": 0.6201834862385321,
+        "peft_accuracy": 0.0003058103975535168,
+        "timestamp": "2025-11-26T09:28:57.875456"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.0003,
+        "init_prompt": "yes no",
+        "balance_classes": true,
+        "my_accuracy": 0.6333333333333333,
+        "peft_accuracy": 0.0009174311926605505,
+        "timestamp": "2025-11-26T09:51:35.111952"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.0003,
+        "init_prompt": "yes no",
+        "balance_classes": true,
+        "my_accuracy": 0.3785932721712538,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T10:12:00.031628"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.0003,
+        "init_prompt": "yes no",
+        "balance_classes": true,
+        "my_accuracy": 0.38837920489296635,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T10:24:28.141186"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.0003,
+        "init_prompt": "yes no",
+        "balance_classes": true,
+        "my_accuracy": 0.41100917431192663,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T10:38:23.604946"
+      }
+    ],
+    "created_at": "2025-11-26T08:42:53.319610",
+    "updated_at": "2025-11-26T10:38:23.604976"
+  },
+  "cb": {
+    "params": {
+      "lr": 0.07,
+      "balance_classes": true,
+      "init_prompt": "entailment contradiction neutral"
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.07,
+        "init_prompt": "entailment contradiction neutral",
+        "balance_classes": true,
+        "my_accuracy": 0.6607142857142857,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T11:22:15.152227"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.07,
+        "init_prompt": "entailment contradiction neutral",
+        "balance_classes": true,
+        "my_accuracy": 0.6785714285714286,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T11:22:44.991405"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.07,
+        "init_prompt": "entailment contradiction neutral",
+        "balance_classes": true,
+        "my_accuracy": 0.6607142857142857,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T11:23:12.470121"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.07,
+        "init_prompt": "entailment contradiction neutral",
+        "balance_classes": true,
+        "my_accuracy": 0.6428571428571429,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T11:23:43.345408"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.07,
+        "init_prompt": "entailment contradiction neutral",
+        "balance_classes": true,
+        "my_accuracy": 0.5357142857142857,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T11:24:14.652176"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.07,
+        "init_prompt": "entailment contradiction neutral",
+        "balance_classes": true,
+        "my_accuracy": 0.7321428571428571,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T11:24:48.020631"
+      }
+    ],
+    "created_at": "2025-11-26T11:21:40.650861",
+    "updated_at": "2025-11-26T11:24:48.020648"
+  }
+}

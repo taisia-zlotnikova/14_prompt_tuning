@@ -7,14 +7,17 @@ from param_search import run_individual_task
 from best_params import best_params
 
 name_model = os.getenv('NAME_MODEL', 't5-small')
-data_file_name = f"prompt_length_data_{name_model}.json"
+pref = os.getenv('PREF', '')
 
-def collect_prompt_length_data(name_model = 't5-small'):
+data_file_name = f"{pref}prompt_length_data_{name_model}.json"
+
+def collect_prompt_length_data(name_model):
     """Собирает данные по зависимости accuracy от длины промпта"""
     
     best_params_dict = best_params()
     task_names = list(best_params_dict.keys())
     prompt_lengths = [1, 5, 10, 20, 50, 100]
+    # prompt_lengths = [100]
     
     # Файл для хранения данных
     data_file = data_file_name

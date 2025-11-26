@@ -7,8 +7,10 @@ import numpy as np
 from datetime import datetime
 
 name_model = os.getenv('NAME_MODEL', 't5-small')
-data_file_name = f"prompt_length_data_{name_model}.json"
-plots_dir = f'plots_{name_model}'
+pref = os.getenv('PREF', '')
+
+data_file_name = f"{pref}prompt_length_data_{name_model}.json"
+plots_dir = f'{pref}plots_{name_model}'
 
 def load_data():
     """Загружает данные из файла"""

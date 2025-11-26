@@ -1,0 +1,164 @@
+name model = t5-base
+🎯 Prompt Length Analysis System
+1. Collect new data
+2. Generate plots from existing data
+3. Show data summary
+
+Select mode (1-3): 
+🚀 Starting data collection...
+
+============================================================
+📊 Collecting data for: cb
+============================================================
+
+🔍 Testing prompt_length = 1
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'entailment contradiction neutral', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+prompt len = 1, init_prompt = entailment contradiction neutral, name_model = t5-base
+Prediction counts: {'contradiction': 30, '': 3, 'entailment': 8, 'neutral': 15}
+   My Model Accuracy: 0.6607
+🎯 Final My Model Accuracy: 0.6607
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   💾 Saved: My=0.6607, PEFT=0.0000
+
+🔍 Testing prompt_length = 5
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'entailment contradiction neutral', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+prompt len = 5, init_prompt = entailment contradiction neutral, name_model = t5-base
+Prediction counts: {'': 7, 'entailment': 12, 'contradiction': 27, 'neutral': 10}
+   My Model Accuracy: 0.6786
+🎯 Final My Model Accuracy: 0.6786
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   💾 Saved: My=0.6786, PEFT=0.0000
+
+🔍 Testing prompt_length = 10
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'entailment contradiction neutral', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+prompt len = 10, init_prompt = entailment contradiction neutral, name_model = t5-base
+Prediction counts: {'contradiction': 29, '': 5, 'entailment': 9, 'neutral': 13}
+   My Model Accuracy: 0.6607
+🎯 Final My Model Accuracy: 0.6607
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   💾 Saved: My=0.6607, PEFT=0.0000
+
+🔍 Testing prompt_length = 20
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({1: 83, 0: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'entailment contradiction neutral', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+prompt len = 20, init_prompt = entailment contradiction neutral, name_model = t5-base
+Prediction counts: {'contradiction': 34, 'entailment': 7, 'neutral': 13, '': 2}
+   My Model Accuracy: 0.6429
+🎯 Final My Model Accuracy: 0.6429
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   💾 Saved: My=0.6429, PEFT=0.0000
+
+🔍 Testing prompt_length = 50
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'entailment contradiction neutral', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+prompt len = 50, init_prompt = entailment contradiction neutral, name_model = t5-base
+Prediction counts: {'contradiction': 47, '': 5, 'entailment': 4}
+   My Model Accuracy: 0.5357
+🎯 Final My Model Accuracy: 0.5357
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   💾 Saved: My=0.5357, PEFT=0.0000
+
+🔍 Testing prompt_length = 100
+
+🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻
+                   ▶️  RUNNING TASK cb
+
+Total classes: 3, examples per class: 83
+Class 0: took 83 from 115
+Class 1: took 83 from 119
+Class 2: took all 16 (less than 83)
+Final label distribution TRAIN: Counter({0: 83, 1: 83, 2: 16})
+
+🟢 Data loaded!
+
+🧩  config = {'lr': 0.07, 'init_prompt': 'entailment contradiction neutral', 'balance_classes': True}
+
+✏️  My Model:
+   Testing My Model...
+prompt len = 100, init_prompt = entailment contradiction neutral, name_model = t5-base
+Prediction counts: {'': 9, 'entailment': 17, 'contradiction': 25, 'neutral': 5}
+   My Model Accuracy: 0.7321
+🎯 Final My Model Accuracy: 0.7321
+🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
+
+   💾 Saved: My=0.7321, PEFT=0.0000
+
+✅ Data collection completed! Data saved to init_prompt_length_data_t5-base.json

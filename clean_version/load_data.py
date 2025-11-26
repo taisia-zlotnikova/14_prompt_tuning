@@ -28,7 +28,7 @@ def get_input_and_target(element, task_name):
         if label == 0:
             target_text = "entailment"
         else:
-            target_text = "not"
+            target_text = "contradiction"
 
     elif task_name == 'copa':
         input_text = f"premise: {element['premise']} question: {element['question']}. 1: {element['choice1']}. 2: {element['choice2']}"

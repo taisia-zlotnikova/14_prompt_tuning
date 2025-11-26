@@ -8,7 +8,7 @@ from transformers import T5ForConditionalGeneration
 from config import device
 
 # DEVICE
-torch.cuda.set_device(4)
+# torch.cuda.set_device(4)
 torch.cuda.empty_cache()
 
 def my_model(tokenizer, prompt_length=20, init_prompt='', name_model='t5-small'):

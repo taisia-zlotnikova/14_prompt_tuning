@@ -63,5 +63,173 @@
     ],
     "created_at": "2025-11-25T13:29:28.212359",
     "updated_at": "2025-11-25T13:33:23.064927"
+  },
+  "copa": {
+    "params": {
+      "lr": 0.003,
+      "balance_classes": true,
+      "init_prompt": ""
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.0,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:21:23.285717"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.0,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:22:45.930413"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.0,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:24:18.378947"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.39,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:26:49.893303"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.45,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:28:15.912568"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.52,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:29:33.073549"
+      }
+    ],
+    "created_at": "2025-11-25T14:19:54.990023",
+    "updated_at": "2025-11-25T14:29:33.073571"
+  },
+  "rte": {
+    "params": {
+      "lr": 0.001,
+      "balance_classes": true,
+      "init_prompt": ""
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.04693140794223827,
+        "peft_accuracy": 0.04332129963898917,
+        "timestamp": "2025-11-25T14:35:31.230561"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.0,
+        "peft_accuracy": 0.01444043321299639,
+        "timestamp": "2025-11-25T14:41:26.668806"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.17689530685920576,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:47:34.925474"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.1588447653429603,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:53:58.770754"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.49097472924187724,
+        "peft_accuracy": 0.4729241877256318,
+        "timestamp": "2025-11-25T15:00:23.835394"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.5018050541516246,
+        "peft_accuracy": 0.5126353790613718,
+        "timestamp": "2025-11-25T15:07:40.110630"
+      }
+    ],
+    "created_at": "2025-11-25T14:29:33.075129",
+    "updated_at": "2025-11-25T15:07:40.110650"
+  },
+  "boolq": {
+    "params": {
+      "lr": 0.003,
+      "balance_classes": true,
+      "init_prompt": ""
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.0030581039755351682,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T10:56:48.612112"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.636085626911315,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T11:08:49.213225"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6256880733944954,
+        "peft_accuracy": 0,
+        "timestamp": "2025-11-26T11:20:44.834390"
+      }
+    ],
+    "created_at": "2025-11-26T10:45:25.369018",
+    "updated_at": "2025-11-26T11:20:44.834415"
   }
 }

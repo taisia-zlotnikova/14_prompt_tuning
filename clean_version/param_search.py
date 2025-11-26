@@ -43,7 +43,9 @@ def run_individual_task(task_name, max_sizes, lr=0.01, init_prompt='', balance_c
 
     results = {}
     
-    for model_name, model_func in [("My Model", my_model), ("PEFT Model", peft_model)]:
+    # for model_name, model_func in [("My Model", my_model), ("PEFT Model", peft_model)]:
+    for model_name, model_func in [("My Model", my_model)]:
+
         print(f"\n✏️  {model_name}:")
         
         try:

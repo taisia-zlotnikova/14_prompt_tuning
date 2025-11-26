@@ -63,5 +63,254 @@
     ],
     "created_at": "2025-11-25T13:25:41.668644",
     "updated_at": "2025-11-25T13:27:39.903374"
+  },
+  "rte": {
+    "params": {
+      "lr": 0.001,
+      "balance_classes": true,
+      "init_prompt": ""
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.3140794223826715,
+        "peft_accuracy": 0.4043321299638989,
+        "timestamp": "2025-11-25T13:52:03.075177"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.2527075812274368,
+        "peft_accuracy": 0.20938628158844766,
+        "timestamp": "2025-11-25T13:54:34.968356"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.4584837545126354,
+        "peft_accuracy": 0.2527075812274368,
+        "timestamp": "2025-11-25T13:57:06.895603"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.2490974729241877,
+        "peft_accuracy": 0.18772563176895307,
+        "timestamp": "2025-11-25T13:59:41.862611"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.4729241877256318,
+        "peft_accuracy": 0.09025270758122744,
+        "timestamp": "2025-11-25T14:02:42.412063"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.4729241877256318,
+        "peft_accuracy": 0.09025270758122744,
+        "timestamp": "2025-11-25T14:05:49.407035"
+      }
+    ],
+    "created_at": "2025-11-25T13:49:25.134128",
+    "updated_at": "2025-11-25T14:05:49.407060"
+  },
+  "copa": {
+    "params": {
+      "lr": 0.003,
+      "balance_classes": true,
+      "init_prompt": ""
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.0,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:10:34.743802"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.0,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:11:05.146819"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.0,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:11:39.668315"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.45,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:12:08.665650"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.45,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:12:41.132173"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.45,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T14:13:13.829640"
+      }
+    ],
+    "created_at": "2025-11-25T14:09:54.169503",
+    "updated_at": "2025-11-25T14:13:13.829659"
+  },
+  "boolq": {
+    "params": {
+      "lr": 0.001,
+      "balance_classes": true,
+      "init_prompt": ""
+    },
+    "experiments": [
+      {
+        "prompt_length": 1,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.001834862385321101,
+        "peft_accuracy": 0.0003058103975535168,
+        "timestamp": "2025-11-25T14:25:58.384658"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6214067278287462,
+        "peft_accuracy": 0.4651376146788991,
+        "timestamp": "2025-11-25T14:36:08.243747"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6217125382262997,
+        "peft_accuracy": 0.6214067278287462,
+        "timestamp": "2025-11-25T14:45:45.459364"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6214067278287462,
+        "peft_accuracy": 0.6217125382262997,
+        "timestamp": "2025-11-25T14:55:15.042956"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6217125382262997,
+        "peft_accuracy": 0.6140672782874618,
+        "timestamp": "2025-11-25T15:04:53.231805"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.001,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6174311926605505,
+        "peft_accuracy": 0.6217125382262997,
+        "timestamp": "2025-11-25T15:15:16.210340"
+      },
+      {
+        "prompt_length": 1,
+        "lr": 0.0003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.0006116207951070336,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T19:01:44.872054"
+      },
+      {
+        "prompt_length": 5,
+        "lr": 0.0003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6217125382262997,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T19:13:30.168165"
+      },
+      {
+        "prompt_length": 10,
+        "lr": 0.0003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6214067278287462,
+        "peft_accuracy": 0.0015290519877675841,
+        "timestamp": "2025-11-25T19:25:21.057768"
+      },
+      {
+        "prompt_length": 20,
+        "lr": 0.0003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6217125382262997,
+        "peft_accuracy": 0.0,
+        "timestamp": "2025-11-25T19:37:27.496567"
+      },
+      {
+        "prompt_length": 50,
+        "lr": 0.0003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.40244648318042814,
+        "peft_accuracy": 0.6217125382262997,
+        "timestamp": "2025-11-25T19:49:47.901758"
+      },
+      {
+        "prompt_length": 100,
+        "lr": 0.0003,
+        "init_prompt": "",
+        "balance_classes": true,
+        "my_accuracy": 0.6217125382262997,
+        "peft_accuracy": 0.6217125382262997,
+        "timestamp": "2025-11-25T20:02:49.671764"
+      }
+    ],
+    "created_at": "2025-11-25T14:16:42.607752",
+    "updated_at": "2025-11-25T20:02:49.671796"
   }
 }
