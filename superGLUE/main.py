@@ -267,7 +267,7 @@ class PromptTuningApproach:
             task_type=TaskType.SEQ_2_SEQ_LM,
 
             # Как инициализировать мягкие подсказки
-            prompt_tuning_init=PromptTuningInit.RANDOM,
+            prompt_tuning_init=PromptTuningInit.RANDOM, #### --------- поменять на то как у таси
 
             # ГЛАВНОЕ: Количество обучаемых токенов
             # К = 20 означает: добавляем 20 embedding vectors размером 512 каждый
@@ -547,6 +547,13 @@ def main():
         print("⚠️ Test датасет не найден в SuperGLUE CB (используем validation)")
         test_dataset = dataset['validation']
 
+    class_labels_train = [ex['class_label'] for ex in dataset['train']]
+    class_labels_val = [ex['class_label'] for ex in dataset['validation']]
+
+    dataset = dataset.remove_columns(['input_text', 'target_text', 'label', 'class_label', 'idx'])
+
+    print(f"Колонки для обучения: {dataset['train'].column_names}")
+
     # Если есть test, используем его, иначе используем validation
     val_dataset = dataset['validation']
     test_dataset = dataset.get('test', dataset['validation'])
@@ -589,10 +596,14 @@ def main():
         
         print(f"✓ {approach_name.upper()} обучена!")
 
-    # ✅ ТЕСТИРОВАНИЕ НА TEST ДАТАСЕТЕ
+    # ✅ ТЕСТИРОВАНИЕ НА val ДАТАСЕТЕ
     print("\n" + "=" * 80)
     print("НАЧАЛО ТЕСТИРОВАНИЯ НА VAL ДАТАСЕТЕ")
     print("=" * 80)
+
+    dataset['train'] = dataset['train'].add_column('class_label', class_labels_train)
+    dataset['validation'] = dataset['validation'].add_column('class_label', class_labels_val)
+    val_dataset = dataset['validation']
 
     test_results = compare_all_approaches(approaches, val_dataset, tokenizer)
 
