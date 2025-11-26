@@ -101,9 +101,9 @@ class DataPreprocessor:
         model_inputs["labels"][model_inputs["labels"] == self.tokenizer.pad_token_id] = -100
 
         return {
-            'input_ids': model_inputs['input_ids'],
-            'attention_mask': model_inputs['attention_mask'],
-            'labels': model_inputs['labels'],
+            'input_ids': model_inputs['input_ids'].numpy().tolist(),
+            'attention_mask': model_inputs['attention_mask'].numpy().tolist(),
+            'labels': model_inputs['labels'].numpy().tolist(),
             'label': original_labels,
         }
 
@@ -575,7 +575,8 @@ def main():
 
     for approach_name in ['fine_tuning', 'prompt_tuning']:
         approach = approaches[approach_name]
-        trainer = approach.prepare_trainer(
+        trainer = a
+        pproach.prepare_trainer(
             train_dataset=dataset['train'],
             eval_dataset=dataset['validation']
         )
