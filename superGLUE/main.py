@@ -573,34 +573,25 @@ def main():
         if 'prompt_tokens' in params:
             print(f"  Токенов подсказки:       {params['prompt_tokens']:>12}")
 
-    # Ожидаемые результаты
     print("\n" + "=" * 80)
-    print("ОЖИДАЕМЫЕ РЕЗУЛЬТАТЫ на SuperGLUE CB")
+    print("ОБУЧЕНИЕ МОДЕЛЕЙ")
     print("=" * 80)
-    print("""
-Fine-tuning:
-  ✓ Точность: ~85-90% (лучший результат)
-  ✓ F1: ~83-88%
-  ✗ Время обучения: 30-60 минут
-  ✗ Память: 11GB+ для T5-XXL
-
-Prompt Design:
-  ✓ Время: 0 (нет обучения)
-  ✓ Память: минимум
-  ✗ Точность: ~50-60% (плохо, требует хорошего prompt engineering)
-  ✗ F1: ~45-55%
-
-Prompt Tuning:
-  ✓ Точность: ~80-87% (близко к fine-tuning!)
-  ✓ F1: ~78-85%
-  ✓ Время обучения: 5-10 минут (в 5-10 раз быстрее!)
-  ✓ Память: ~100MB (в 100 раз меньше!)
-  ✓ Одна модель для всех задач
-""")
+    
+    for approach_name, approach in approaches.items():
+        if approach_name == 'prompt_design':
+            print(f"\n{approach_name.upper()}: Пропускаем обучение (не требуется)")
+            continue
+        
+        print(f"\n🚀 Обучаем {approach_name.upper()}...")
+        
+        trainer = approach.prepare_trainer(dataset['train'], val_dataset)
+        trainer.train()
+        
+        print(f"✓ {approach_name.upper()} обучена!")
 
     # ✅ ТЕСТИРОВАНИЕ НА TEST ДАТАСЕТЕ
     print("\n" + "=" * 80)
-    print("НАЧАЛО ТЕСТИРОВАНИЯ НА TEST ДАТАСЕТЕ")
+    print("НАЧАЛО ТЕСТИРОВАНИЯ НА VAL ДАТАСЕТЕ")
     print("=" * 80)
 
     test_results = compare_all_approaches(approaches, val_dataset, tokenizer)
