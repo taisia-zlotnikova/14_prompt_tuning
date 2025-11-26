@@ -546,6 +546,7 @@ def main():
         test_dataset = dataset['validation']
     
     # Если есть test, используем его, иначе используем validation
+    val_dataset = dataset['validation']
     test_dataset = dataset.get('test', dataset['validation'])
     
     # Создаём все три подхода
@@ -600,7 +601,7 @@ Prompt Tuning:
     print("НАЧАЛО ТЕСТИРОВАНИЯ НА TEST ДАТАСЕТЕ")
     print("=" * 80)
     
-    test_results = compare_all_approaches(approaches, test_dataset, tokenizer)
+    test_results = compare_all_approaches(approaches, val_dataset, tokenizer)
     
     # Сохраняем результаты
     print("\n" + "=" * 80)
