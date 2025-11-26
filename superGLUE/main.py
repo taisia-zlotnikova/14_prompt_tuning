@@ -98,10 +98,13 @@ class DataPreprocessor:
         model_inputs["labels"] = labels["input_ids"]
         model_inputs["labels"][model_inputs["labels"] == self.tokenizer.pad_token_id] = -100
 
+        model_inputs["label"] = labels_class
+
         return {
             'input_ids': model_inputs['input_ids'],
             'attention_mask': model_inputs['attention_mask'],
             'labels': model_inputs['labels'],
+            'label': model_inputs['label'],
         }
 
     def prepare_dataset(self):
@@ -114,8 +117,7 @@ class DataPreprocessor:
 
         # Применяем форматирование
         dataset = dataset.map(
-            self.format_for_t5,
-            remove_columns=['premise', 'hypothesis', 'label']
+            self.format_for_t5
         )
 
         print(dataset['train'].column_names)
@@ -373,7 +375,7 @@ def evaluate_approach(approach, test_dataset, tokenizer, approach_name):
             predicted_text = tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
             
             # Получаем истинный label
-            true_label_id = example['labels'][0]  # Первый token после padding
+            true_label_id = example['label']  # Первый token после padding
             
             predictions.append(predicted_text)
             true_labels.append(true_label_id)
